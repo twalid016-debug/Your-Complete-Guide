@@ -15,6 +15,7 @@ body {
     line-height: 1.6;
 }
 
+
 /* =========================
    Header & Navigation
 ========================= */
@@ -56,6 +57,7 @@ nav h2 {
 .nav-links a:hover {
     opacity: 0.75;
 }
+
 
 /* =========================
    Language Switch
@@ -100,6 +102,7 @@ nav h2 {
     background-color: white;
 }
 
+
 /* =========================
    Hero Section
 ========================= */
@@ -139,6 +142,7 @@ nav h2 {
     box-shadow: 0 6px 15px rgba(30, 58, 138, 0.25);
 }
 
+
 /* =========================
    About Section
 ========================= */
@@ -162,6 +166,7 @@ nav h2 {
     line-height: 1.8;
     color: #475569;
 }
+
 
 /* =========================
    Platforms Section
@@ -237,6 +242,7 @@ nav h2 {
     background-color: #162d6b;
 }
 
+
 /* =========================
    Benefits Section
 ========================= */
@@ -283,6 +289,7 @@ nav h2 {
     color: #475569;
 }
 
+
 /* =========================
    Platform Pages
 ========================= */
@@ -296,43 +303,156 @@ nav h2 {
 .platform-page h1 {
     text-align: center;
     font-size: 42px;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     color: #1e3a8a;
 }
 
-.platform-page > img {
+.platform-intro {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: #64748b;
+    font-size: 17px;
+}
+
+
+/* =========================
+   Platform Tabs
+========================= */
+
+.platform-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0 auto 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.platform-tab {
+    border: none;
+    background-color: #f1f5f9;
+    color: #1e3a8a;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.platform-tab:hover {
+    background-color: #dbeafe;
+    transform: translateY(-2px);
+}
+
+.platform-tab.active {
+    background-color: #1e3a8a;
+    color: white;
+}
+
+
+/* =========================
+   Platform Content
+========================= */
+
+.platform-content {
+    display: none;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+
+    background-color: #f8fafc;
+
+    border-radius: 14px;
+
+    grid-template-columns: 1.5fr 0.8fr;
+    gap: 35px;
+
+    align-items: center;
+
+    animation: platformFade 0.3s ease;
+}
+
+.platform-content.active {
+    display: grid;
+}
+
+
+/* =========================
+   Platform Animation
+========================= */
+
+@keyframes platformFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   Platform Content Text
+========================= */
+
+.platform-content h2 {
+    color: #1e3a8a;
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+
+.platform-content p {
+    color: #475569;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.platform-content ol,
+.platform-content ul {
+    padding-left: 22px;
+    line-height: 1.9;
+}
+
+.platform-content li {
+    color: #334155;
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+
+/* =========================
+   Platform Content Image
+========================= */
+
+.platform-content > img {
     width: 100%;
-    height: 350px;
+    max-width: 220px;
+    height: 180px;
     object-fit: contain;
     display: block;
-    margin: 0 auto 55px;
+    margin: auto;
 }
 
-.platform-page h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    margin-top: 40px;
-    color: #1e3a8a;
+
+/* =========================
+   Arabic Platform Content
+========================= */
+
+body[dir="rtl"] .platform-content ol,
+body[dir="rtl"] .platform-content ul {
+    padding-right: 22px;
+    padding-left: 0;
 }
 
-.platform-page p {
-    font-size: 17px;
-    line-height: 1.9;
-    margin-bottom: 20px;
-    color: #475569;
-}
-
-.platform-page ol,
-.platform-page ul {
-    padding-left: 30px;
-    line-height: 2;
-}
-
-.platform-page li {
-    font-size: 17px;
-    margin-bottom: 8px;
-    color: #334155;
-}
 
 /* =========================
    Footer
@@ -349,6 +469,7 @@ footer {
 footer p {
     margin: 0;
 }
+
 
 /* =========================
    Responsive Design
@@ -375,6 +496,9 @@ footer p {
         gap: 15px;
     }
 
+
+    /* Hero */
+
     .hero {
         padding: 80px 20px;
     }
@@ -386,6 +510,9 @@ footer p {
     .hero p {
         font-size: 16px;
     }
+
+
+    /* Homepage sections */
 
     #about,
     #platforms,
@@ -399,6 +526,9 @@ footer p {
         font-size: 28px;
     }
 
+
+    /* Platform cards */
+
     .platforms-container {
         flex-direction: column;
         align-items: center;
@@ -408,6 +538,9 @@ footer p {
         width: 90%;
     }
 
+
+    /* Benefits */
+
     .benefits-container {
         flex-direction: column;
     }
@@ -415,6 +548,9 @@ footer p {
     .benefit {
         width: 100%;
     }
+
+
+    /* Platform pages */
 
     .platform-page {
         padding: 45px 20px;
@@ -424,147 +560,24 @@ footer p {
         font-size: 32px;
     }
 
-    .platform-page > img {
-        height: 250px;
-        margin-bottom: 40px;
-    }
-
-    .platform-page h2 {
-        font-size: 24px;
-    }
-
-    .platform-page p,
-    .platform-page li {
+    .platform-intro {
         font-size: 16px;
     }
-}
-/* =========================
-   Platform Tabs
-========================= */
-
-.platform-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: 20px auto 40px;
-}
-
-.platform-tab {
-    border: none;
-    background-color: #f1f5f9;
-    color: #1e3a8a;
-    padding: 13px 22px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.platform-tab:hover {
-    background-color: #dbeafe;
-    transform: translateY(-2px);
-}
-
-.platform-tab.active {
-    background-color: #1e3a8a;
-    color: white;
-}
 
 
-/* =========================
-   Platform Content
-========================= */
-
-.platform-content {
-    display: none;
-    max-width: 1000px;
-    margin: auto;
-    padding: 35px;
-    background-color: #f8fafc;
-    border-radius: 15px;
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.platform-content.active {
-    display: grid;
-}
-
-
-/* =========================
-   Platform Content Text
-========================= */
-
-.platform-content-text h2 {
-    color: #1e3a8a;
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.platform-content-text p {
-    color: #475569;
-    font-size: 17px;
-    line-height: 1.8;
-    margin-bottom: 18px;
-}
-
-.platform-content-text ol,
-.platform-content-text ul {
-    padding-left: 25px;
-    line-height: 2;
-}
-
-.platform-content-text li {
-    color: #334155;
-    margin-bottom: 8px;
-}
-
-
-/* =========================
-   Platform Content Image
-========================= */
-
-.platform-content-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.platform-content-image img {
-    width: 100%;
-    max-width: 350px;
-    height: 250px;
-    object-fit: contain;
-}
-
-
-/* =========================
-   Arabic Platform Content
-========================= */
-
-body[dir="rtl"] .platform-content-text ol,
-body[dir="rtl"] .platform-content-text ul {
-    padding-right: 25px;
-    padding-left: 0;
-}
-
-
-/* =========================
-   Mobile
-========================= */
-
-@media (max-width: 768px) {
+    /* Tabs */
 
     .platform-tabs {
         flex-direction: column;
+        gap: 8px;
     }
 
     .platform-tab {
         width: 100%;
     }
+
+
+    /* Content */
 
     .platform-content {
         grid-template-columns: 1fr;
@@ -572,16 +585,21 @@ body[dir="rtl"] .platform-content-text ul {
         gap: 20px;
     }
 
-    .platform-content-text h2 {
+    .platform-content h2 {
         font-size: 24px;
     }
 
-    .platform-content-text p,
-    .platform-content-text li {
+    .platform-content p,
+    .platform-content li {
         font-size: 16px;
     }
 
-    .platform-content-image img {
-        height: 200px;
+
+    /* Content images */
+
+    .platform-content > img {
+        max-width: 180px;
+        height: 150px;
     }
+
 }
