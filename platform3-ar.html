@@ -4,137 +4,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>منصة مدرستنا</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
+<header>
+    <nav>
+        <h2>دليلك الكامل</h2>
 
-            <h2>دليلك الكامل</h2>
+        <div class="nav-links">
+            <a href="index-ar.html">الرئيسية</a>
+            <a href="index-ar.html#about">عن الموقع</a>
+            <a href="index-ar.html#platforms">المنصات</a>
+            <a href="index-ar.html#benefits">الفوائد</a>
+        </div>
 
-            <div class="nav-links">
-                <a href="index-ar.html">الرئيسية</a>
-                <a href="index-ar.html#about">عن الموقع</a>
-                <a href="index-ar.html#platforms">المنصات</a>
-                <a href="index-ar.html#benefits">الفوائد</a>
+        <div class="language-switch ar" onclick="changeLanguage()">
+            <span class="language-label">AR</span>
+
+            <div class="switch">
+                <div class="switch-knob"></div>
             </div>
+        </div>
+    </nav>
+</header>
 
-            <div class="language-switch ar" onclick="changeLanguage()">
+<main class="platform-page">
 
-                <span class="language-label">AR</span>
+    <h1>منصة مدرستنا</h1>
 
-                <div class="switch">
-                    <div class="switch-knob"></div>
-                </div>
+    <img src="madrasa.png" alt="منصة مدرستنا"
+        class="platform-main-image">
 
-            </div>
+    <div class="platform-tabs">
 
-        </nav>
-    </header>
+        <button class="platform-tab active"
+            onclick="showPlatformSection('about-platform', this)">
+            عن المنصة
+        </button>
 
+        <button class="platform-tab"
+            onclick="showPlatformSection('login-platform', this)">
+            تسجيل الدخول
+        </button>
 
-    <section class="platform-page">
+        <button class="platform-tab"
+            onclick="showPlatformSection('use-platform', this)">
+            كيفية الاستخدام
+        </button>
 
-        <h1>منصة مدرستنا</h1>
+        <button class="platform-tab"
+            onclick="showPlatformSection('benefits-platform', this)">
+            الفوائد
+        </button>
 
-        <img src="madrasa.png" alt="منصة مدرستنا">
-
-
-        <h2>عن المنصة</h2>
-
-        <p>
-            منصة مدرستنا هي إحدى المنصات التعليمية التي توفرها وزارة التربية والتعليم
-            والتعليم الفني في مصر، وتهدف إلى دعم الطلاب من خلال توفير محتوى تعليمي
-            ومصادر تساعدهم على متابعة دراستهم والاستفادة من التعلم الرقمي.
-        </p>
-
-
-        <h2>كيفية استخدام المنصة</h2>
-
-        <p>
-            يمكن للطالب الاستفادة من المحتوى التعليمي المتاح على المنصة
-            من خلال اتباع الخطوات التالية:
-        </p>
-
-        <ol>
-
-            <li>افتح منصة مدرستنا.</li>
-
-            <li>اختر المحتوى أو الخدمة التعليمية التي تريد استخدامها.</li>
-
-            <li>اختر المرحلة أو الصف الدراسي المناسب عند الحاجة.</li>
-
-            <li>اختر المادة أو الدرس الذي تريد دراسته.</li>
-
-            <li>تابع المحتوى التعليمي واستفد من المصادر المتاحة.</li>
-
-        </ol>
+    </div>
 
 
-        <h2>تسجيل الدخول</h2>
+    <section id="about-platform" class="platform-content active">
 
-        <p>
-            تختلف طريقة الوصول إلى المحتوى والخدمات الإلكترونية حسب الخدمة التي
-            يستخدمها الطالب. لذلك، يجب اتباع تعليمات تسجيل الدخول الموجودة على
-            الخدمة أو المنصة التي يريد الطالب استخدامها.
-        </p>
+        <div class="platform-content-text">
+            <h2>عن المنصة</h2>
 
+            <p>
+                منصة مدرستنا هي منصة تعليمية توفر محتوى وموارد
+                تعليمية رقمية للطلاب.
+            </p>
 
-        <h2>ماذا يستفيد الطالب من المنصة؟</h2>
+            <p>
+                تساعد المنصة الطلاب خلال رحلتهم التعليمية من خلال
+                توفير مواد وموارد تعليمية مفيدة.
+            </p>
+        </div>
 
-        <ul>
-
-            <li>
-                الوصول إلى محتوى تعليمي رقمي يساعد على متابعة الدراسة.
-            </li>
-
-            <li>
-                الاستفادة من مصادر تعليمية إضافية بجانب الدراسة في المدرسة.
-            </li>
-
-            <li>
-                متابعة الدروس والمحتوى التعليمي المتاح للطلاب.
-            </li>
-
-            <li>
-                الاستفادة من القنوات التعليمية التابعة لمنظومة مدرستنا،
-                والتي تقدم محتوى تعليميًا لمراحل دراسية مختلفة.
-            </li>
-
-            <li>
-                دعم التعلم الذاتي من خلال إتاحة المحتوى التعليمي
-                بصورة رقمية يمكن للطالب الرجوع إليها.
-            </li>
-
-        </ul>
-
-
-        <h2>نصيحة للطلاب</h2>
-
-        <p>
-            يمكنك استخدام المنصة كمصدر إضافي للمراجعة والتعلم، وتنظيم وقتك
-            للاستفادة من المحتوى المتاح إلى جانب الدراسة والمذاكرة.
-        </p>
+        <div class="platform-content-image">
+            <img src="madrasa.png" alt="منصة مدرستنا">
+        </div>
 
     </section>
 
 
-    <footer>
+    <section id="login-platform" class="platform-content">
 
-        <p>
-            وزارة التربية والتعليم والتعليم الفني
-        </p>
+        <div class="platform-content-text">
+            <h2>تسجيل الدخول</h2>
 
-    </footer>
+            <p>
+                يمكن للطلاب الوصول إلى المحتوى التعليمي المتاح
+                من خلال منصة مدرستنا.
+            </p>
+
+            <ol>
+                <li>افتح منصة مدرستنا.</li>
+                <li>اختر الخدمة أو المحتوى المطلوب.</li>
+                <li>أدخل البيانات المطلوبة إذا لزم الأمر.</li>
+                <li>انتقل إلى المحتوى الذي اخترته.</li>
+            </ol>
+        </div>
+
+        <div class="platform-content-image">
+            <img src="madrasa.png" alt="تسجيل الدخول إلى مدرستنا">
+        </div>
+
+    </section>
 
 
-    <script src="script.js"></script>
+    <section id="use-platform" class="platform-content">
+
+        <div class="platform-content-text">
+            <h2>كيفية استخدام المنصة</h2>
+
+            <p>
+                يمكن للطلاب تصفح الموارد التعليمية المتاحة واختيار
+                المحتوى المرتبط بدراستهم.
+            </p>
+
+            <ol>
+                <li>افتح المنصة.</li>
+                <li>اختر المحتوى التعليمي المطلوب.</li>
+                <li>اقرأ أو شاهد المادة المتاحة.</li>
+                <li>استخدم الموارد لدعم دراستك.</li>
+            </ol>
+        </div>
+
+        <div class="platform-content-image">
+            <img src="madrasa.png" alt="استخدام مدرستنا">
+        </div>
+
+    </section>
+
+
+    <section id="benefits-platform" class="platform-content">
+
+        <div class="platform-content-text">
+            <h2>الفوائد للطلاب</h2>
+
+            <ul>
+                <li>توفر موارد تعليمية رقمية.</li>
+                <li>تدعم تعلم الطلاب.</li>
+                <li>تساعد الطلاب على الوصول إلى المحتوى التعليمي.</li>
+                <li>تشجع على التعلم المستقل.</li>
+            </ul>
+        </div>
+
+        <div class="platform-content-image">
+            <img src="madrasa.png" alt="فوائد مدرستنا">
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>وزارة التربية والتعليم والتعليم الفني</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
