@@ -4,105 +4,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>منصة البوابة التعليمية</title>
-
+    <title>البوابة التعليمية لوزارة التربية والتعليم</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
+<header>
+    <nav>
+        <h2>دليلك الكامل</h2>
 
-            <h2>دليلك الكامل</h2>
+        <div class="nav-links">
+            <a href="index-ar.html">الرئيسية</a>
+            <a href="index-ar.html#about">عن الموقع</a>
+            <a href="index-ar.html#platforms">المنصات</a>
+            <a href="index-ar.html#benefits">الفوائد</a>
+        </div>
 
-            <div class="nav-links">
-                <a href="index-ar.html">الرئيسية</a>
-                <a href="index-ar.html#about">عن الموقع</a>
-                <a href="index-ar.html#platforms">المنصات</a>
-                <a href="index-ar.html#benefits">الفوائد</a>
+        <div class="language-switch ar" onclick="changeLanguage()">
+            <span class="language-label">AR</span>
+            <div class="switch">
+                <div class="switch-knob"></div>
             </div>
+        </div>
+    </nav>
+</header>
 
-            <div class="language-switch ar" onclick="changeLanguage()">
+<main class="platform-page">
 
-                <span class="language-label">AR</span>
+    <h1>البوابة التعليمية لوزارة التربية والتعليم</h1>
 
-                <div class="switch">
-                    <div class="switch-knob"></div>
-                </div>
+    <img src="moe.png" alt="البوابة التعليمية لوزارة التربية والتعليم"
+        class="platform-main-image">
 
-            </div>
+    <div class="platform-tabs">
 
-        </nav>
-    </header>
+        <button class="platform-tab active"
+            onclick="showPlatformSection('about-platform', this)">
+            عن المنصة
+        </button>
 
+        <button class="platform-tab"
+            onclick="showPlatformSection('login-platform', this)">
+            تسجيل الدخول
+        </button>
 
-    <section class="platform-page">
+        <button class="platform-tab"
+            onclick="showPlatformSection('use-platform', this)">
+            كيفية الاستخدام
+        </button>
 
-        <h1>منصة البوابة التعليمية</h1>
+        <button class="platform-tab"
+            onclick="showPlatformSection('benefits-platform', this)">
+            الفوائد
+        </button>
 
-        <img src="moe.png" alt="منصة البوابة التعليمية">
-
-
-        <h2>عن المنصة</h2>
-
-        <p>
-            بوابة وزارة التربية والتعليم هي البوابة الرسمية للوزارة، وتوفر للطلاب
-            وأولياء الأمور والمعلمين مجموعة من الخدمات والمصادر التعليمية الإلكترونية.
-            وتشمل خدمات الوزارة الوصول إلى المنصات التعليمية والمحتوى التعليمي
-            والكتب والخدمات الإلكترونية المختلفة.
-        </p>
-
-
-        <h2>كيفية استخدام المنصة</h2>
-
-        <p>
-            اتبع الخطوات التالية لمعرفة كيفية استخدام المنصة
-            بسهولة وفعالية.
-        </p>
-
-        <ol>
-
-            <li>افتح بوابة وزارة التربية والتعليم.</li>
-
-            <li>اختر الخدمة أو المنصة التعليمية التي تريد استخدامها.</li>
-
-            <li>إذا كانت الخدمة تتطلب تسجيل دخول، أدخل بيانات الحساب المطلوبة.</li>
-
-            <li>اتبع التعليمات الموجودة على المنصة للوصول إلى الخدمة المطلوبة.</li>
-
-        </ol>
+    </div>
 
 
-        <h2>ماذا يمكن أن يستفيد الطالب منها؟</h2>
+    <section id="about-platform" class="platform-content active">
 
-        <ul>
+        <div class="platform-content-text">
+            <h2>عن المنصة</h2>
 
-            <li>الوصول إلى المصادر التعليمية الإلكترونية.</li>
+            <p>
+                البوابة التعليمية لوزارة التربية والتعليم هي البوابة
+                الرقمية الرسمية لوزارة التربية والتعليم والتعليم الفني.
+            </p>
 
-            <li>الاطلاع على المحتوى التعليمي والمواد الدراسية.</li>
+            <p>
+                توفر البوابة للطلاب المعلومات التعليمية والخدمات الرقمية
+                والوصول إلى عدد من المنصات التعليمية.
+            </p>
+        </div>
 
-            <li>الوصول إلى عدد من المنصات والخدمات التابعة للوزارة.</li>
-
-            <li>متابعة الخدمات والمعلومات التعليمية التي توفرها الوزارة.</li>
-
-        </ul>
+        <div class="platform-content-image">
+            <img src="moe.png" alt="البوابة التعليمية">
+        </div>
 
     </section>
 
 
-    <footer>
+    <section id="login-platform" class="platform-content">
 
-        <p>
-            وزارة التربية والتعليم والتعليم الفني
-        </p>
+        <div class="platform-content-text">
+            <h2>تسجيل الدخول</h2>
 
-    </footer>
+            <p>
+                يمكن للطلاب الوصول إلى الخدمات المتاحة من خلال
+                البوابة الرسمية لوزارة التربية والتعليم.
+            </p>
+
+            <ol>
+                <li>افتح البوابة التعليمية لوزارة التربية والتعليم.</li>
+                <li>اختر الخدمة التعليمية المطلوبة.</li>
+                <li>أدخل البيانات المطلوبة.</li>
+                <li>انتقل إلى الخدمة التي اخترتها.</li>
+            </ol>
+        </div>
+
+        <div class="platform-content-image">
+            <img src="moe.png" alt="تسجيل الدخول">
+        </div>
+
+    </section>
 
 
-    <script src="script.js"></script>
+    <section id="use-platform" class="platform-content">
+
+        <div class="platform-content-text">
+            <h2>كيفية الاستخدام</h2>
+
+            <p>
+                يمكن استخدام البوابة للوصول إلى الخدمات التعليمية
+                والمعلومات المهمة التي تقدمها الوزارة.
+            </p>
+
+            <ol>
+                <li>افتح البوابة الرسمية.</li>
+                <li>ابحث عن الخدمة التي تحتاج إليها.</li>
+                <li>اتبع التعليمات الموجودة.</li>
+                <li>أكمل الخطوات المطلوبة.</li>
+            </ol>
+        </div>
+
+        <div class="platform-content-image">
+            <img src="moe.png" alt="استخدام البوابة">
+        </div>
+
+    </section>
+
+
+    <section id="benefits-platform" class="platform-content">
+
+        <div class="platform-content-text">
+            <h2>الفوائد للطلاب</h2>
+
+            <ul>
+                <li>سهولة الوصول إلى المعلومات التعليمية.</li>
+                <li>الوصول إلى الخدمات التعليمية الرقمية.</li>
+                <li>المساعدة في الوصول إلى الموارد المهمة.</li>
+                <li>جمع المعلومات التعليمية في مكان واحد.</li>
+            </ul>
+        </div>
+
+        <div class="platform-content-image">
+            <img src="moe.png" alt="فوائد البوابة">
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>وزارة التربية والتعليم والتعليم الفني</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
