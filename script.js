@@ -1,3 +1,4 @@
+```javascript
 function changeLanguage() {
 
     const currentPage = window.location.pathname;
@@ -79,3 +80,4 @@ function showPlatformSection() {
 /* Start the platform tabs */
 
 showPlatformSection();
+```
