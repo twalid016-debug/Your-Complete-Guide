@@ -4,132 +4,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Japanese SPRIX Platform</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
+<header>
+    <nav>
+        <h2>Your Complete Guide</h2>
 
-            <h2>Your Complete Guide</h2>
+        <div class="nav-links">
+            <a href="index-en.html">Home</a>
+            <a href="index-en.html#about">About</a>
+            <a href="index-en.html#platforms">Platforms</a>
+            <a href="index-en.html#benefits">Benefits</a>
+        </div>
 
-            <div class="nav-links">
-                <a href="index-en.html">Home</a>
-                <a href="index-en.html#about">About</a>
-                <a href="index-en.html#platforms">Platforms</a>
-                <a href="index-en.html#benefits">Benefits</a>
+        <div class="language-switch" onclick="changeLanguage()">
+            <span class="language-label">EN</span>
+
+            <div class="switch">
+                <div class="switch-knob"></div>
             </div>
+        </div>
+    </nav>
+</header>
 
-            <div class="language-switch" onclick="changeLanguage()">
+<main class="platform-page">
 
-                <span class="language-label">EN</span>
+    <h1>Japanese SPRIX Platform</h1>
 
-                <div class="switch">
-                    <div class="switch-knob"></div>
-                </div>
+    <img src="sprix.png" alt="Japanese SPRIX Platform"
+        class="platform-main-image">
 
-            </div>
+    <div class="platform-tabs">
 
-        </nav>
-    </header>
+        <button class="platform-tab active"
+            onclick="showPlatformSection('about-platform', this)">
+            About the Platform
+        </button>
 
+        <button class="platform-tab"
+            onclick="showPlatformSection('login-platform', this)">
+            How to Log In
+        </button>
 
-    <section class="platform-page">
+        <button class="platform-tab"
+            onclick="showPlatformSection('use-platform', this)">
+            How to Use
+        </button>
 
-        <h1>Japanese SPRIX Platform</h1>
+        <button class="platform-tab"
+            onclick="showPlatformSection('benefits-platform', this)">
+            Benefits
+        </button>
 
-        <img src="sprix.png" alt="Japanese SPRIX Platform">
-
-
-        <h2>About the Platform</h2>
-
-        <p>
-            SPRIX is a Japanese educational technology company that works in the field of education
-            and cooperates with the Ministry of Education in Egypt in several educational programs.
-            One of its main programs is QUREO, an interactive educational program designed to teach
-            programming and develop students' skills in this field.
-        </p>
-
-
-        <h2>How to Use the Platform</h2>
-
-        <p>
-            Students can access their programming content by following these steps:
-        </p>
-
-        <ol>
-
-            <li>Open the SPRIX platform.</li>
-
-            <li>Enter your student code.</li>
-
-            <li>Enter the password provided to you by the Ministry of Education.</li>
-
-            <li>Click on Login.</li>
-
-            <li>After logging in, you can access the programming content assigned to you.</li>
-
-            <li>Start the required lessons and activities and follow the instructions provided on the platform.</li>
-
-        </ol>
+    </div>
 
 
-        <h2>Login</h2>
+    <section id="about-platform" class="platform-content active">
 
-        <p>
-            Students need their student code and the password provided by the Ministry of Education
-            to log in to their accounts.
-            If a student does not know their student code or password, they should contact
-            their programming teacher at school to find out the required information
-            or the appropriate procedure for obtaining it.
-        </p>
+        <div class="platform-content-text">
+            <h2>About the Platform</h2>
 
+            <p>
+                SPRIX is an educational technology platform that supports
+                programming education and digital learning.
+            </p>
 
-        <h2>What Does the Student Learn?</h2>
+            <p>
+                It helps students develop programming skills through
+                interactive educational activities and learning resources.
+            </p>
+        </div>
 
-        <ul>
-
-            <li>
-                Students learn programming in an interactive and gradual way through educational
-                programs such as QUREO, with activities that help them understand programming
-                fundamentals and apply them in practice.
-            </li>
-
-            <li>
-                Programming activities help students develop logical thinking and problem-solving skills.
-            </li>
-
-            <li>
-                Students can improve their skills in creating projects and applying the programming
-                concepts they learn in practical ways.
-            </li>
-
-            <li>
-                SPRIX educational programs provide students with opportunities to participate
-                in different educational activities and programs according to the available
-                programs and their specific participation requirements.
-            </li>
-
-        </ul>
+        <div class="platform-content-image">
+            <img src="sprix.png" alt="SPRIX Platform">
+        </div>
 
     </section>
 
 
-    <footer>
+    <section id="login-platform" class="platform-content">
 
-        <p>
-            Ministry of Education and Technical Education
-        </p>
+        <div class="platform-content-text">
+            <h2>How to Log In</h2>
 
-    </footer>
+            <p>
+                Students need the login information provided by their school
+                to access the SPRIX platform.
+            </p>
+
+            <ol>
+                <li>Open the SPRIX platform.</li>
+                <li>Enter your student code.</li>
+                <li>Enter your password.</li>
+                <li>Continue to your learning page.</li>
+            </ol>
+        </div>
+
+        <div class="platform-content-image">
+            <img src="sprix.png" alt="SPRIX Login">
+        </div>
+
+    </section>
 
 
-    <script src="script.js"></script>
+    <section id="use-platform" class="platform-content">
+
+        <div class="platform-content-text">
+            <h2>How to Use the Platform</h2>
+
+            <p>
+                After logging in, students can access the available
+                programming and educational activities.
+            </p>
+
+            <ol>
+                <li>Open the available learning activity.</li>
+                <li>Read the instructions carefully.</li>
+                <li>Complete the required activities.</li>
+                <li>Review your work.</li>
+            </ol>
+        </div>
+
+        <div class="platform-content-image">
+            <img src="sprix.png" alt="Using SPRIX">
+        </div>
+
+    </section>
+
+
+    <section id="benefits-platform" class="platform-content">
+
+        <div class="platform-content-text">
+            <h2>Benefits for Students</h2>
+
+            <ul>
+                <li>Develops programming skills.</li>
+                <li>Supports digital learning.</li>
+                <li>Improves problem-solving skills.</li>
+                <li>Encourages independent learning.</li>
+            </ul>
+        </div>
+
+        <div class="platform-content-image">
+            <img src="sprix.png" alt="SPRIX Benefits">
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>Ministry of Education and Technical Education</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
