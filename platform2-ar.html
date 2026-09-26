@@ -35,125 +35,107 @@
 
     <h1>منصة سبريكس اليابانية</h1>
 
-    <img src="sprix.png" alt="منصة سبريكس اليابانية"
-        class="platform-main-image">
+    <p class="platform-intro">
+        تعرف على منصة سبريكس وكيفية استخدامها في تعليم البرمجة.
+    </p>
 
     <div class="platform-tabs">
 
-        <button class="platform-tab active"
-            onclick="showPlatformSection('about-platform', this)">
+        <button class="platform-tab active" data-target="about">
             عن المنصة
         </button>
 
-        <button class="platform-tab"
-            onclick="showPlatformSection('login-platform', this)">
+        <button class="platform-tab" data-target="login">
             تسجيل الدخول
         </button>
 
-        <button class="platform-tab"
-            onclick="showPlatformSection('use-platform', this)">
+        <button class="platform-tab" data-target="use">
             كيفية الاستخدام
         </button>
 
-        <button class="platform-tab"
-            onclick="showPlatformSection('benefits-platform', this)">
+        <button class="platform-tab" data-target="benefits">
             الفوائد
         </button>
 
     </div>
 
+    <div class="platform-sections">
 
-    <section id="about-platform" class="platform-content active">
+        <section class="platform-content active" data-section="about">
 
-        <div class="platform-content-text">
-            <h2>عن المنصة</h2>
+            <div class="platform-text">
+                <h2>عن المنصة</h2>
 
-            <p>
-                منصة سبريكس هي منصة تكنولوجية تعليمية تدعم تعليم
-                البرمجة والتعلم الرقمي.
-            </p>
+                <p>
+                    منصة سبريكس هي منصة تكنولوجية تعليمية تدعم تعليم
+                    البرمجة والتعلم الرقمي.
+                </p>
 
-            <p>
-                تساعد الطلاب على تطوير مهارات البرمجة من خلال
-                الأنشطة التعليمية والموارد التفاعلية.
-            </p>
-        </div>
+                <p>
+                    تساعد الطلاب على تطوير مهارات البرمجة من خلال
+                    الأنشطة التعليمية والموارد التفاعلية.
+                </p>
+            </div>
 
-        <div class="platform-content-image">
             <img src="sprix.png" alt="منصة سبريكس">
-        </div>
 
-    </section>
-
-
-    <section id="login-platform" class="platform-content">
-
-        <div class="platform-content-text">
-            <h2>تسجيل الدخول</h2>
-
-            <p>
-                يحتاج الطلاب إلى بيانات تسجيل الدخول التي توفرها
-                لهم المدرسة للوصول إلى منصة سبريكس.
-            </p>
-
-            <ol>
-                <li>افتح منصة سبريكس.</li>
-                <li>أدخل كود الطالب.</li>
-                <li>أدخل كلمة المرور.</li>
-                <li>انتقل إلى صفحة التعلم الخاصة بك.</li>
-            </ol>
-        </div>
-
-        <div class="platform-content-image">
-            <img src="sprix.png" alt="تسجيل الدخول إلى سبريكس">
-        </div>
-
-    </section>
+        </section>
 
 
-    <section id="use-platform" class="platform-content">
+        <section class="platform-content" data-section="login">
 
-        <div class="platform-content-text">
-            <h2>كيفية استخدام المنصة</h2>
+            <div class="platform-text">
+                <h2>تسجيل الدخول</h2>
 
-            <p>
-                بعد تسجيل الدخول، يمكن للطلاب الوصول إلى الأنشطة
-                البرمجية والتعليمية المتاحة.
-            </p>
+                <ol>
+                    <li>افتح منصة سبريكس.</li>
+                    <li>أدخل كود الطالب.</li>
+                    <li>أدخل كلمة المرور.</li>
+                    <li>انتقل إلى صفحة التعلم.</li>
+                </ol>
+            </div>
 
-            <ol>
-                <li>افتح النشاط التعليمي المتاح.</li>
-                <li>اقرأ التعليمات جيدًا.</li>
-                <li>أكمل الأنشطة المطلوبة.</li>
-                <li>راجع إجاباتك.</li>
-            </ol>
-        </div>
+            <img src="sprix.png" alt="تسجيل الدخول">
 
-        <div class="platform-content-image">
+        </section>
+
+
+        <section class="platform-content" data-section="use">
+
+            <div class="platform-text">
+                <h2>كيفية الاستخدام</h2>
+
+                <ol>
+                    <li>افتح النشاط التعليمي المتاح.</li>
+                    <li>اقرأ التعليمات جيدًا.</li>
+                    <li>أكمل الأنشطة المطلوبة.</li>
+                    <li>راجع إجاباتك.</li>
+                </ol>
+            </div>
+
             <img src="sprix.png" alt="استخدام سبريكس">
-        </div>
 
-    </section>
+        </section>
 
 
-    <section id="benefits-platform" class="platform-content">
+        <section class="platform-content" data-section="benefits">
 
-        <div class="platform-content-text">
-            <h2>الفوائد للطلاب</h2>
+            <div class="platform-text">
+                <h2>الفوائد للطلاب</h2>
 
-            <ul>
-                <li>تنمية مهارات البرمجة.</li>
-                <li>دعم التعلم الرقمي.</li>
-                <li>تنمية مهارات حل المشكلات.</li>
-                <li>تشجيع التعلم المستقل.</li>
-            </ul>
-        </div>
+                <ul>
+                    <li>تنمية مهارات البرمجة.</li>
+                    <li>دعم التعلم الرقمي.</li>
+                    <li>تنمية مهارات حل المشكلات.</li>
+                    <li>تشجيع التعلم المستقل.</li>
+                </ul>
+            </div>
 
-        <div class="platform-content-image">
             <img src="sprix.png" alt="فوائد سبريكس">
-        </div>
 
-    </section>
+        </section>
+
+    </div>
 
 </main>
 
