@@ -438,3 +438,150 @@ footer p {
         font-size: 16px;
     }
 }
+/* =========================
+   Platform Tabs
+========================= */
+
+.platform-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px auto 40px;
+}
+
+.platform-tab {
+    border: none;
+    background-color: #f1f5f9;
+    color: #1e3a8a;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.platform-tab:hover {
+    background-color: #dbeafe;
+    transform: translateY(-2px);
+}
+
+.platform-tab.active {
+    background-color: #1e3a8a;
+    color: white;
+}
+
+
+/* =========================
+   Platform Content
+========================= */
+
+.platform-content {
+    display: none;
+    max-width: 1000px;
+    margin: auto;
+    padding: 35px;
+    background-color: #f8fafc;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.platform-content.active {
+    display: grid;
+}
+
+
+/* =========================
+   Platform Content Text
+========================= */
+
+.platform-content-text h2 {
+    color: #1e3a8a;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.platform-content-text p {
+    color: #475569;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.platform-content-text ol,
+.platform-content-text ul {
+    padding-left: 25px;
+    line-height: 2;
+}
+
+.platform-content-text li {
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   Platform Content Image
+========================= */
+
+.platform-content-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.platform-content-image img {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+    object-fit: contain;
+}
+
+
+/* =========================
+   Arabic Platform Content
+========================= */
+
+body[dir="rtl"] .platform-content-text ol,
+body[dir="rtl"] .platform-content-text ul {
+    padding-right: 25px;
+    padding-left: 0;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+
+    .platform-tabs {
+        flex-direction: column;
+    }
+
+    .platform-tab {
+        width: 100%;
+    }
+
+    .platform-content {
+        grid-template-columns: 1fr;
+        padding: 25px;
+        gap: 20px;
+    }
+
+    .platform-content-text h2 {
+        font-size: 24px;
+    }
+
+    .platform-content-text p,
+    .platform-content-text li {
+        font-size: 16px;
+    }
+
+    .platform-content-image img {
+        height: 200px;
+    }
+}
