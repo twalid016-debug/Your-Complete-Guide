@@ -4,130 +4,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>منصة سبريكس اليابانية</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
+<header>
+    <nav>
+        <h2>دليلك الكامل</h2>
 
-            <h2>دليلك الكامل</h2>
+        <div class="nav-links">
+            <a href="index-ar.html">الرئيسية</a>
+            <a href="index-ar.html#about">عن الموقع</a>
+            <a href="index-ar.html#platforms">المنصات</a>
+            <a href="index-ar.html#benefits">الفوائد</a>
+        </div>
 
-            <div class="nav-links">
-                <a href="index-ar.html">الرئيسية</a>
-                <a href="index-ar.html#about">عن الموقع</a>
-                <a href="index-ar.html#platforms">المنصات</a>
-                <a href="index-ar.html#benefits">الفوائد</a>
+        <div class="language-switch ar" onclick="changeLanguage()">
+            <span class="language-label">AR</span>
+
+            <div class="switch">
+                <div class="switch-knob"></div>
             </div>
+        </div>
+    </nav>
+</header>
 
-            <div class="language-switch ar" onclick="changeLanguage()">
+<main class="platform-page">
 
-                <span class="language-label">AR</span>
+    <h1>منصة سبريكس اليابانية</h1>
 
-                <div class="switch">
-                    <div class="switch-knob"></div>
-                </div>
+    <img src="sprix.png" alt="منصة سبريكس اليابانية"
+        class="platform-main-image">
 
-            </div>
+    <div class="platform-tabs">
 
-        </nav>
-    </header>
+        <button class="platform-tab active"
+            onclick="showPlatformSection('about-platform', this)">
+            عن المنصة
+        </button>
 
+        <button class="platform-tab"
+            onclick="showPlatformSection('login-platform', this)">
+            تسجيل الدخول
+        </button>
 
-    <section class="platform-page">
+        <button class="platform-tab"
+            onclick="showPlatformSection('use-platform', this)">
+            كيفية الاستخدام
+        </button>
 
-        <h1>منصة سبريكس اليابانية</h1>
+        <button class="platform-tab"
+            onclick="showPlatformSection('benefits-platform', this)">
+            الفوائد
+        </button>
 
-        <img src="sprix.png" alt="منصة سبريكس اليابانية">
-
-
-        <h2>عن المنصة</h2>
-
-        <p>
-            SPRIX هي شركة تكنولوجيا تعليمية يابانية تعمل في مجال التعليم،
-            وتتعاون مع وزارة التربية والتعليم في مصر في عدد من البرامج التعليمية.
-            ومن أبرز برامجها QUREO، وهو برنامج تعليمي تفاعلي يهدف إلى تعليم البرمجة
-            وتنمية مهارات الطلاب في هذا المجال.
-        </p>
-
-
-        <h2>كيفية استخدام المنصة</h2>
-
-        <p>
-            يمكن للطالب الوصول إلى محتوى البرمجة الخاص به من خلال اتباع الخطوات التالية:
-        </p>
-
-        <ol>
-
-            <li>افتح منصة SPRIX.</li>
-
-            <li>أدخل كود الطالب الخاص بك.</li>
-
-            <li>أدخل كلمة المرور التي تم توفيرها لك من وزارة التربية والتعليم.</li>
-
-            <li>اضغط على تسجيل الدخول.</li>
-
-            <li>بعد تسجيل الدخول، يمكنك الوصول إلى محتوى البرمجة المخصص لك.</li>
-
-            <li>ابدأ الدروس والأنشطة المطلوبة واتبع التعليمات الموجودة داخل المنصة.</li>
-
-        </ol>
+    </div>
 
 
-        <h2>تسجيل الدخول</h2>
+    <section id="about-platform" class="platform-content active">
 
-        <p>
-            يحتاج الطالب إلى كود الطالب وكلمة المرور التي يحصل عليها من وزارة التربية والتعليم
-            لتسجيل الدخول إلى حسابه.
-            إذا لم يكن الطالب يعرف كود الطالب أو كلمة المرور الخاصة به،
-            فعليه التواصل مع معلم مادة البرمجة في المدرسة لمعرفة البيانات المطلوبة
-            أو الإجراء المتبع للحصول عليها.
-        </p>
+        <div class="platform-content-text">
+            <h2>عن المنصة</h2>
 
+            <p>
+                منصة سبريكس هي منصة تكنولوجية تعليمية تدعم تعليم
+                البرمجة والتعلم الرقمي.
+            </p>
 
-        <h2>ماذا يتعلم الطالب؟</h2>
+            <p>
+                تساعد الطلاب على تطوير مهارات البرمجة من خلال
+                الأنشطة التعليمية والموارد التفاعلية.
+            </p>
+        </div>
 
-        <ul>
-
-            <li>
-                يتعلم الطلاب البرمجة بطريقة تفاعلية وتدريجية من خلال البرامج التعليمية
-                مثل QUREO، مع أنشطة تساعدهم على فهم أساسيات البرمجة وتطبيقها عمليًا.
-            </li>
-
-            <li>
-                تساعد الأنشطة البرمجية على تنمية مهارات التفكير المنطقي وحل المشكلات.
-            </li>
-
-            <li>
-                يمكن للطالب تطوير مهاراته في إنشاء المشروعات وتطبيق ما يتعلمه
-                من مفاهيم البرمجة بطريقة عملية.
-            </li>
-
-            <li>
-                تتيح برامج SPRIX التعليمية للطلاب فرصًا للمشاركة في أنشطة وبرامج
-                تعليمية مختلفة وفقًا للبرامج المتاحة وشروط المشاركة الخاصة بكل برنامج.
-            </li>
-
-        </ul>
+        <div class="platform-content-image">
+            <img src="sprix.png" alt="منصة سبريكس">
+        </div>
 
     </section>
 
 
-    <footer>
+    <section id="login-platform" class="platform-content">
 
-        <p>
-            وزارة التربية والتعليم والتعليم الفني
-        </p>
+        <div class="platform-content-text">
+            <h2>تسجيل الدخول</h2>
 
-    </footer>
+            <p>
+                يحتاج الطلاب إلى بيانات تسجيل الدخول التي توفرها
+                لهم المدرسة للوصول إلى منصة سبريكس.
+            </p>
+
+            <ol>
+                <li>افتح منصة سبريكس.</li>
+                <li>أدخل كود الطالب.</li>
+                <li>أدخل كلمة المرور.</li>
+                <li>انتقل إلى صفحة التعلم الخاصة بك.</li>
+            </ol>
+        </div>
+
+        <div class="platform-content-image">
+            <img src="sprix.png" alt="تسجيل الدخول إلى سبريكس">
+        </div>
+
+    </section>
 
 
-    <script src="script.js"></script>
+    <section id="use-platform" class="platform-content">
+
+        <div class="platform-content-text">
+            <h2>كيفية استخدام المنصة</h2>
+
+            <p>
+                بعد تسجيل الدخول، يمكن للطلاب الوصول إلى الأنشطة
+                البرمجية والتعليمية المتاحة.
+            </p>
+
+            <ol>
+                <li>افتح النشاط التعليمي المتاح.</li>
+                <li>اقرأ التعليمات جيدًا.</li>
+                <li>أكمل الأنشطة المطلوبة.</li>
+                <li>راجع إجاباتك.</li>
+            </ol>
+        </div>
+
+        <div class="platform-content-image">
+            <img src="sprix.png" alt="استخدام سبريكس">
+        </div>
+
+    </section>
+
+
+    <section id="benefits-platform" class="platform-content">
+
+        <div class="platform-content-text">
+            <h2>الفوائد للطلاب</h2>
+
+            <ul>
+                <li>تنمية مهارات البرمجة.</li>
+                <li>دعم التعلم الرقمي.</li>
+                <li>تنمية مهارات حل المشكلات.</li>
+                <li>تشجيع التعلم المستقل.</li>
+            </ul>
+        </div>
+
+        <div class="platform-content-image">
+            <img src="sprix.png" alt="فوائد سبريكس">
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>وزارة التربية والتعليم والتعليم الفني</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
