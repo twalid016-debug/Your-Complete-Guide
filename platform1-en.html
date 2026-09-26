@@ -4,104 +4,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Ministry of Education Portal</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
+<header>
+    <nav>
+        <h2>Your Complete Guide</h2>
 
-            <h2>Your Complete Guide</h2>
+        <div class="nav-links">
+            <a href="index-en.html">Home</a>
+            <a href="index-en.html#about">About</a>
+            <a href="index-en.html#platforms">Platforms</a>
+            <a href="index-en.html#benefits">Benefits</a>
+        </div>
 
-            <div class="nav-links">
-                <a href="index-en.html">Home</a>
-                <a href="index-en.html#about">About</a>
-                <a href="index-en.html#platforms">Platforms</a>
-                <a href="index-en.html#benefits">Benefits</a>
+        <div class="language-switch" onclick="changeLanguage()">
+            <span class="language-label">EN</span>
+            <div class="switch">
+                <div class="switch-knob"></div>
             </div>
+        </div>
+    </nav>
+</header>
 
-            <div class="language-switch" onclick="changeLanguage()">
+<main class="platform-page">
 
-                <span class="language-label">EN</span>
+    <h1>Ministry of Education Portal</h1>
 
-                <div class="switch">
-                    <div class="switch-knob"></div>
-                </div>
+    <img src="moe.png" alt="Ministry of Education Portal" class="platform-main-image">
 
-            </div>
+    <div class="platform-tabs">
 
-        </nav>
-    </header>
+        <button class="platform-tab active"
+            onclick="showPlatformSection('about-platform', this)">
+            About the Platform
+        </button>
 
+        <button class="platform-tab"
+            onclick="showPlatformSection('login-platform', this)">
+            How to Log In
+        </button>
 
-    <section class="platform-page">
+        <button class="platform-tab"
+            onclick="showPlatformSection('use-platform', this)">
+            How to Use
+        </button>
 
-        <h1>Ministry of Education Portal</h1>
+        <button class="platform-tab"
+            onclick="showPlatformSection('benefits-platform', this)">
+            Benefits
+        </button>
 
-        <img src="moe.png" alt="Ministry of Education Portal">
-
-
-        <h2>About the Platform</h2>
-
-        <p>
-            The Ministry of Education Portal is the official website of the Ministry of Education and Technical Education.
-            It provides students, parents, and teachers with access to educational resources, digital services,
-            educational platforms, and other useful information.
-        </p>
-
-
-        <h2>How to Use the Platform</h2>
-
-        <p>
-            Follow the steps below to learn how to use the platform
-            easily and effectively.
-        </p>
-
-        <ol>
-
-            <li>Open the Ministry of Education Portal.</li>
-
-            <li>Choose the educational service or platform you want to use.</li>
-
-            <li>If the service requires a login, enter the required account information.</li>
-
-            <li>Follow the instructions provided on the platform to access the required service.</li>
-
-        </ol>
+    </div>
 
 
-        <h2>What Can Students Benefit From?</h2>
+    <section id="about-platform" class="platform-content active">
 
-        <ul>
+        <div class="platform-content-text">
+            <h2>About the Platform</h2>
 
-            <li>Access educational resources and digital learning materials.</li>
+            <p>
+                The Ministry of Education Portal is the official digital
+                portal of the Ministry of Education and Technical Education.
+            </p>
 
-            <li>View educational content and study materials.</li>
+            <p>
+                It provides students with educational information,
+                digital services, and access to different educational
+                platforms.
+            </p>
+        </div>
 
-            <li>Access various educational platforms and services provided by the Ministry.</li>
-
-            <li>Stay informed about educational services and information provided by the Ministry.</li>
-
-        </ul>
+        <div class="platform-content-image">
+            <img src="moe.png" alt="Ministry of Education Portal">
+        </div>
 
     </section>
 
 
-    <footer>
+    <section id="login-platform" class="platform-content">
 
-        <p>
-            Ministry of Education and Technical Education
-        </p>
+        <div class="platform-content-text">
+            <h2>How to Log In</h2>
 
-    </footer>
+            <p>
+                Students can access the available services through
+                the official Ministry of Education portal.
+            </p>
+
+            <ol>
+                <li>Open the Ministry of Education Portal.</li>
+                <li>Choose the required educational service.</li>
+                <li>Enter the required information.</li>
+                <li>Continue to the selected service.</li>
+            </ol>
+        </div>
+
+        <div class="platform-content-image">
+            <img src="moe.png" alt="Portal Login">
+        </div>
+
+    </section>
 
 
-    <script src="script.js"></script>
+    <section id="use-platform" class="platform-content">
+
+        <div class="platform-content-text">
+            <h2>How to Use the Platform</h2>
+
+            <p>
+                The portal can be used to access educational services
+                and important information provided by the Ministry.
+            </p>
+
+            <ol>
+                <li>Open the official portal.</li>
+                <li>Find the service you need.</li>
+                <li>Follow the instructions provided.</li>
+                <li>Complete the required steps.</li>
+            </ol>
+        </div>
+
+        <div class="platform-content-image">
+            <img src="moe.png" alt="Using the Portal">
+        </div>
+
+    </section>
+
+
+    <section id="benefits-platform" class="platform-content">
+
+        <div class="platform-content-text">
+            <h2>Benefits for Students</h2>
+
+            <ul>
+                <li>Easy access to educational information.</li>
+                <li>Access to digital educational services.</li>
+                <li>Helps students find important resources.</li>
+                <li>Provides educational information in one place.</li>
+            </ul>
+        </div>
+
+        <div class="platform-content-image">
+            <img src="moe.png" alt="Portal Benefits">
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>Ministry of Education and Technical Education</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
