@@ -34,125 +34,107 @@
 
     <h1>Ministry of Education Portal</h1>
 
-    <img src="moe.png" alt="Ministry of Education Portal" class="platform-main-image">
+    <p class="platform-intro">
+        Learn about the platform, how to access it, how to use it, and its benefits.
+    </p>
 
     <div class="platform-tabs">
 
-        <button class="platform-tab active"
-            onclick="showPlatformSection('about-platform', this)">
+        <button class="platform-tab active" data-target="about">
             About the Platform
         </button>
 
-        <button class="platform-tab"
-            onclick="showPlatformSection('login-platform', this)">
+        <button class="platform-tab" data-target="login">
             How to Log In
         </button>
 
-        <button class="platform-tab"
-            onclick="showPlatformSection('use-platform', this)">
+        <button class="platform-tab" data-target="use">
             How to Use
         </button>
 
-        <button class="platform-tab"
-            onclick="showPlatformSection('benefits-platform', this)">
+        <button class="platform-tab" data-target="benefits">
             Benefits
         </button>
 
     </div>
 
+    <div class="platform-sections">
 
-    <section id="about-platform" class="platform-content active">
+        <section class="platform-content active" data-section="about">
 
-        <div class="platform-content-text">
-            <h2>About the Platform</h2>
+            <div class="platform-text">
+                <h2>About the Platform</h2>
 
-            <p>
-                The Ministry of Education Portal is the official digital
-                portal of the Ministry of Education and Technical Education.
-            </p>
+                <p>
+                    The Ministry of Education Portal is the official digital
+                    portal of the Ministry of Education and Technical Education.
+                </p>
 
-            <p>
-                It provides students with educational information,
-                digital services, and access to different educational
-                platforms.
-            </p>
-        </div>
+                <p>
+                    It provides educational information, digital services,
+                    and access to different educational platforms.
+                </p>
+            </div>
 
-        <div class="platform-content-image">
             <img src="moe.png" alt="Ministry of Education Portal">
-        </div>
 
-    </section>
+        </section>
 
 
-    <section id="login-platform" class="platform-content">
+        <section class="platform-content" data-section="login">
 
-        <div class="platform-content-text">
-            <h2>How to Log In</h2>
+            <div class="platform-text">
+                <h2>How to Log In</h2>
 
-            <p>
-                Students can access the available services through
-                the official Ministry of Education portal.
-            </p>
+                <ol>
+                    <li>Open the Ministry of Education Portal.</li>
+                    <li>Choose the required educational service.</li>
+                    <li>Enter the required information.</li>
+                    <li>Continue to the selected service.</li>
+                </ol>
+            </div>
 
-            <ol>
-                <li>Open the Ministry of Education Portal.</li>
-                <li>Choose the required educational service.</li>
-                <li>Enter the required information.</li>
-                <li>Continue to the selected service.</li>
-            </ol>
-        </div>
-
-        <div class="platform-content-image">
             <img src="moe.png" alt="Portal Login">
-        </div>
 
-    </section>
+        </section>
 
 
-    <section id="use-platform" class="platform-content">
+        <section class="platform-content" data-section="use">
 
-        <div class="platform-content-text">
-            <h2>How to Use the Platform</h2>
+            <div class="platform-text">
+                <h2>How to Use</h2>
 
-            <p>
-                The portal can be used to access educational services
-                and important information provided by the Ministry.
-            </p>
+                <ol>
+                    <li>Open the official portal.</li>
+                    <li>Find the service you need.</li>
+                    <li>Follow the instructions.</li>
+                    <li>Complete the required steps.</li>
+                </ol>
+            </div>
 
-            <ol>
-                <li>Open the official portal.</li>
-                <li>Find the service you need.</li>
-                <li>Follow the instructions provided.</li>
-                <li>Complete the required steps.</li>
-            </ol>
-        </div>
-
-        <div class="platform-content-image">
             <img src="moe.png" alt="Using the Portal">
-        </div>
 
-    </section>
+        </section>
 
 
-    <section id="benefits-platform" class="platform-content">
+        <section class="platform-content" data-section="benefits">
 
-        <div class="platform-content-text">
-            <h2>Benefits for Students</h2>
+            <div class="platform-text">
+                <h2>Benefits for Students</h2>
 
-            <ul>
-                <li>Easy access to educational information.</li>
-                <li>Access to digital educational services.</li>
-                <li>Helps students find important resources.</li>
-                <li>Provides educational information in one place.</li>
-            </ul>
-        </div>
+                <ul>
+                    <li>Easy access to educational information.</li>
+                    <li>Access to digital educational services.</li>
+                    <li>Helps students find important resources.</li>
+                    <li>Provides information in one place.</li>
+                </ul>
+            </div>
 
-        <div class="platform-content-image">
             <img src="moe.png" alt="Portal Benefits">
-        </div>
 
-    </section>
+        </section>
+
+    </div>
 
 </main>
 
