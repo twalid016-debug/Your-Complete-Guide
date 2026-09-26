@@ -4,139 +4,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Madrasetna Platform</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
+<header>
+    <nav>
+        <h2>Your Complete Guide</h2>
 
-            <h2>Your Complete Guide</h2>
+        <div class="nav-links">
+            <a href="index-en.html">Home</a>
+            <a href="index-en.html#about">About</a>
+            <a href="index-en.html#platforms">Platforms</a>
+            <a href="index-en.html#benefits">Benefits</a>
+        </div>
 
-            <div class="nav-links">
-                <a href="index-en.html">Home</a>
-                <a href="index-en.html#about">About</a>
-                <a href="index-en.html#platforms">Platforms</a>
-                <a href="index-en.html#benefits">Benefits</a>
+        <div class="language-switch" onclick="changeLanguage()">
+            <span class="language-label">EN</span>
+
+            <div class="switch">
+                <div class="switch-knob"></div>
             </div>
+        </div>
+    </nav>
+</header>
 
-            <div class="language-switch" onclick="changeLanguage()">
+<main class="platform-page">
 
-                <span class="language-label">EN</span>
+    <h1>Madrasetna Platform</h1>
 
-                <div class="switch">
-                    <div class="switch-knob"></div>
-                </div>
+    <img src="madrasa.png" alt="Madrasetna Platform"
+        class="platform-main-image">
 
-            </div>
+    <div class="platform-tabs">
 
-        </nav>
-    </header>
+        <button class="platform-tab active"
+            onclick="showPlatformSection('about-platform', this)">
+            About the Platform
+        </button>
 
+        <button class="platform-tab"
+            onclick="showPlatformSection('login-platform', this)">
+            How to Log In
+        </button>
 
-    <section class="platform-page">
+        <button class="platform-tab"
+            onclick="showPlatformSection('use-platform', this)">
+            How to Use
+        </button>
 
-        <h1>Madrasetna Platform</h1>
+        <button class="platform-tab"
+            onclick="showPlatformSection('benefits-platform', this)">
+            Benefits
+        </button>
 
-        <img src="madrasa.png" alt="Madrasetna Platform">
-
-
-        <h2>About the Platform</h2>
-
-        <p>
-            Madrasetna is one of the educational platforms provided by the
-            Ministry of Education and Technical Education in Egypt. It aims
-            to support students by providing educational content and resources
-            that help them continue their studies and benefit from digital learning.
-        </p>
-
-
-        <h2>How to Use the Platform</h2>
-
-        <p>
-            Students can benefit from the educational content available on the
-            platform by following these steps:
-        </p>
-
-        <ol>
-
-            <li>Open the Madrasetna platform.</li>
-
-            <li>Choose the educational content or service you want to use.</li>
-
-            <li>Select the appropriate educational stage or grade when needed.</li>
-
-            <li>Choose the subject or lesson you want to study.</li>
-
-            <li>Follow the educational content and make use of the available resources.</li>
-
-        </ol>
+    </div>
 
 
-        <h2>Login</h2>
+    <section id="about-platform" class="platform-content active">
 
-        <p>
-            The way students access content and digital services may vary
-            depending on the service they are using. Therefore, students should
-            follow the login instructions provided by the specific service or platform.
-        </p>
+        <div class="platform-content-text">
+            <h2>About the Platform</h2>
 
+            <p>
+                Madrasetna is an educational platform that provides
+                digital educational content and resources for students.
+            </p>
 
-        <h2>What Can Students Benefit From?</h2>
+            <p>
+                It supports students throughout their learning journey
+                by providing useful educational materials.
+            </p>
+        </div>
 
-        <ul>
-
-            <li>
-                Access digital educational content that supports their studies.
-            </li>
-
-            <li>
-                Benefit from additional educational resources alongside school studies.
-            </li>
-
-            <li>
-                Follow lessons and educational content available for students.
-            </li>
-
-            <li>
-                Benefit from the educational channels within the Madrasetna system,
-                which provide educational content for different educational stages.
-            </li>
-
-            <li>
-                Support self-learning by providing digital educational content
-                that students can return to whenever needed.
-            </li>
-
-        </ul>
-
-
-        <h2>Tip for Students</h2>
-
-        <p>
-            You can use the platform as an additional source for learning and
-            revision, and organize your time to benefit from the available
-            content alongside your regular studies.
-        </p>
+        <div class="platform-content-image">
+            <img src="madrasa.png" alt="Madrasetna Platform">
+        </div>
 
     </section>
 
 
-    <footer>
+    <section id="login-platform" class="platform-content">
 
-        <p>
-            Ministry of Education and Technical Education
-        </p>
+        <div class="platform-content-text">
+            <h2>How to Log In</h2>
 
-    </footer>
+            <p>
+                Students can access the available educational content
+                through the Madrasetna platform.
+            </p>
+
+            <ol>
+                <li>Open the Madrasetna platform.</li>
+                <li>Choose the required service or content.</li>
+                <li>Enter the required information if needed.</li>
+                <li>Continue to the selected content.</li>
+            </ol>
+        </div>
+
+        <div class="platform-content-image">
+            <img src="madrasa.png" alt="Madrasetna Login">
+        </div>
+
+    </section>
 
 
-    <script src="script.js"></script>
+    <section id="use-platform" class="platform-content">
+
+        <div class="platform-content-text">
+            <h2>How to Use the Platform</h2>
+
+            <p>
+                Students can browse the available educational resources
+                and choose the content related to their studies.
+            </p>
+
+            <ol>
+                <li>Open the platform.</li>
+                <li>Choose the required educational content.</li>
+                <li>Read or watch the available material.</li>
+                <li>Use the resources to support your studies.</li>
+            </ol>
+        </div>
+
+        <div class="platform-content-image">
+            <img src="madrasa.png" alt="Using Madrasetna">
+        </div>
+
+    </section>
+
+
+    <section id="benefits-platform" class="platform-content">
+
+        <div class="platform-content-text">
+            <h2>Benefits for Students</h2>
+
+            <ul>
+                <li>Provides digital educational resources.</li>
+                <li>Supports students' learning.</li>
+                <li>Helps students access educational content.</li>
+                <li>Encourages independent learning.</li>
+            </ul>
+        </div>
+
+        <div class="platform-content-image">
+            <img src="madrasa.png" alt="Madrasetna Benefits">
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>Ministry of Education and Technical Education</p>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
