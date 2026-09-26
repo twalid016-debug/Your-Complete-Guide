@@ -35,125 +35,107 @@
 
     <h1>منصة مدرستنا</h1>
 
-    <img src="madrasa.png" alt="منصة مدرستنا"
-        class="platform-main-image">
+    <p class="platform-intro">
+        تعرف على منصة مدرستنا وكيف يمكن للطلاب الاستفادة منها.
+    </p>
 
     <div class="platform-tabs">
 
-        <button class="platform-tab active"
-            onclick="showPlatformSection('about-platform', this)">
+        <button class="platform-tab active" data-target="about">
             عن المنصة
         </button>
 
-        <button class="platform-tab"
-            onclick="showPlatformSection('login-platform', this)">
+        <button class="platform-tab" data-target="login">
             تسجيل الدخول
         </button>
 
-        <button class="platform-tab"
-            onclick="showPlatformSection('use-platform', this)">
+        <button class="platform-tab" data-target="use">
             كيفية الاستخدام
         </button>
 
-        <button class="platform-tab"
-            onclick="showPlatformSection('benefits-platform', this)">
+        <button class="platform-tab" data-target="benefits">
             الفوائد
         </button>
 
     </div>
 
+    <div class="platform-sections">
 
-    <section id="about-platform" class="platform-content active">
+        <section class="platform-content active" data-section="about">
 
-        <div class="platform-content-text">
-            <h2>عن المنصة</h2>
+            <div class="platform-text">
+                <h2>عن المنصة</h2>
 
-            <p>
-                منصة مدرستنا هي منصة تعليمية توفر محتوى وموارد
-                تعليمية رقمية للطلاب.
-            </p>
+                <p>
+                    منصة مدرستنا هي منصة تعليمية توفر محتوى وموارد
+                    تعليمية رقمية للطلاب.
+                </p>
 
-            <p>
-                تساعد المنصة الطلاب خلال رحلتهم التعليمية من خلال
-                توفير مواد وموارد تعليمية مفيدة.
-            </p>
-        </div>
+                <p>
+                    تساعد الطلاب خلال رحلتهم التعليمية وتوفر لهم
+                    مواد تعليمية مفيدة.
+                </p>
+            </div>
 
-        <div class="platform-content-image">
             <img src="madrasa.png" alt="منصة مدرستنا">
-        </div>
 
-    </section>
-
-
-    <section id="login-platform" class="platform-content">
-
-        <div class="platform-content-text">
-            <h2>تسجيل الدخول</h2>
-
-            <p>
-                يمكن للطلاب الوصول إلى المحتوى التعليمي المتاح
-                من خلال منصة مدرستنا.
-            </p>
-
-            <ol>
-                <li>افتح منصة مدرستنا.</li>
-                <li>اختر الخدمة أو المحتوى المطلوب.</li>
-                <li>أدخل البيانات المطلوبة إذا لزم الأمر.</li>
-                <li>انتقل إلى المحتوى الذي اخترته.</li>
-            </ol>
-        </div>
-
-        <div class="platform-content-image">
-            <img src="madrasa.png" alt="تسجيل الدخول إلى مدرستنا">
-        </div>
-
-    </section>
+        </section>
 
 
-    <section id="use-platform" class="platform-content">
+        <section class="platform-content" data-section="login">
 
-        <div class="platform-content-text">
-            <h2>كيفية استخدام المنصة</h2>
+            <div class="platform-text">
+                <h2>تسجيل الدخول</h2>
 
-            <p>
-                يمكن للطلاب تصفح الموارد التعليمية المتاحة واختيار
-                المحتوى المرتبط بدراستهم.
-            </p>
+                <ol>
+                    <li>افتح منصة مدرستنا.</li>
+                    <li>اختر الخدمة أو المحتوى المطلوب.</li>
+                    <li>أدخل البيانات المطلوبة إذا لزم الأمر.</li>
+                    <li>انتقل إلى المحتوى الذي اخترته.</li>
+                </ol>
+            </div>
 
-            <ol>
-                <li>افتح المنصة.</li>
-                <li>اختر المحتوى التعليمي المطلوب.</li>
-                <li>اقرأ أو شاهد المادة المتاحة.</li>
-                <li>استخدم الموارد لدعم دراستك.</li>
-            </ol>
-        </div>
+            <img src="madrasa.png" alt="تسجيل الدخول">
 
-        <div class="platform-content-image">
+        </section>
+
+
+        <section class="platform-content" data-section="use">
+
+            <div class="platform-text">
+                <h2>كيفية الاستخدام</h2>
+
+                <ol>
+                    <li>افتح المنصة.</li>
+                    <li>اختر المحتوى التعليمي المطلوب.</li>
+                    <li>اقرأ أو شاهد المادة المتاحة.</li>
+                    <li>استخدم الموارد لدعم دراستك.</li>
+                </ol>
+            </div>
+
             <img src="madrasa.png" alt="استخدام مدرستنا">
-        </div>
 
-    </section>
+        </section>
 
 
-    <section id="benefits-platform" class="platform-content">
+        <section class="platform-content" data-section="benefits">
 
-        <div class="platform-content-text">
-            <h2>الفوائد للطلاب</h2>
+            <div class="platform-text">
+                <h2>الفوائد للطلاب</h2>
 
-            <ul>
-                <li>توفر موارد تعليمية رقمية.</li>
-                <li>تدعم تعلم الطلاب.</li>
-                <li>تساعد الطلاب على الوصول إلى المحتوى التعليمي.</li>
-                <li>تشجع على التعلم المستقل.</li>
-            </ul>
-        </div>
+                <ul>
+                    <li>توفر موارد تعليمية رقمية.</li>
+                    <li>تدعم تعلم الطلاب.</li>
+                    <li>تساعد الطلاب على الوصول إلى المحتوى التعليمي.</li>
+                    <li>تشجع على التعلم المستقل.</li>
+                </ul>
+            </div>
 
-        <div class="platform-content-image">
             <img src="madrasa.png" alt="فوائد مدرستنا">
-        </div>
 
-    </section>
+        </section>
+
+    </div>
 
 </main>
 
