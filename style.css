@@ -4,19 +4,38 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
+    color: #1e293b;
+    background-color: #ffffff;
+    line-height: 1.6;
 }
+
+/* =========================
+   Header & Navigation
+========================= */
+
 header {
     background-color: #1e3a8a;
     padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: auto;
 }
+
 nav h2 {
     color: white;
     font-size: 24px;
@@ -31,185 +50,17 @@ nav h2 {
     color: white;
     text-decoration: none;
     font-size: 16px;
-}
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-    background-color: #f1f5f9;
+    transition: opacity 0.3s ease;
 }
 
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
+.nav-links a:hover {
+    opacity: 0.75;
 }
 
-.hero p {
-    font-size: 18px;
-    max-width: 700px;
-    margin: 0 auto 30px;
-    line-height: 1.6;
-}
+/* =========================
+   Language Switch
+========================= */
 
-.hero a {
-    display: inline-block;
-    background-color: #1e3a8a;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 8px;
-}
-.hero a {
-    transition: 0.3s;
-}
-
-.hero a:hover {
-    transform: scale(1.05);
-}
-#about {
-    padding: 60px 20px;
-}
-#about h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-#about p {
-    max-width: 800px;
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
-#platforms {
-    padding: 60px 40px;
-    text-align: center;
-}
-.platforms-container {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-.platform-card {
-    width: 350px;
-    background-color: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-.platform-card {
-    transition: transform 0.3s;
-}
-
-.platform-card:hover {
-    transform: scale(1.05);
-}
-.platform-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    display: block;
-}
-.platform-card h3,
-.platform-card p {
-    padding: 0 20px;
-}
-.platform-card h3 {
-    font-size: 22px;
-    margin: 20px 20px 10px;
-}
-.platform-card p {
-    padding: 0 20px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-.platform-card a {
-    display: inline-block;
-    background-color: #1e3a8a;
-    color: white;
-    padding: 10px 20px;
-    margin: 0 20px 20px;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-.platform-card a {
-    display: inline-block;
-    background-color: #1e3a8a;
-    color: white;
-    padding: 10px 20px;
-    margin: 0 20px 20px;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-.platform-card a:hover {
-    transform: scale(1.05);
-}
-#benefits {
-    padding: 60px 40px;
-}
-#benefits h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 30px;
-}
-.benefits-container {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-.benefit {
-    flex: 1;
-    padding: 25px;
-    background-color: #f1f5f9;
-    border-radius: 12px;
-}
-.benefit h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-.benefit p {
-    line-height: 1.6;
-}
-footer {
-    background-color: #1e3a8a;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .platforms-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .platform-card {
-        width: 90%;
-    }
-
-    .benefits-container {
-        flex-direction: column;
-    }
-
-    .benefit {
-        width: 100%;
-    }
-}
 .language-switch {
     display: flex;
     align-items: center;
@@ -220,6 +71,7 @@ footer {
 .language-label {
     color: white;
     font-size: 16px;
+    font-weight: bold;
 }
 
 .switch {
@@ -239,25 +91,213 @@ footer {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* Arabic state */
 .language-switch.ar .switch {
-    background-color: #142a64;
+    background-color: #1e3a8a;
 }
 
 .language-switch.ar .switch-knob {
     transform: translateX(-24px);
     background-color: white;
 }
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 110px 20px;
+    background: linear-gradient(135deg, #eff6ff, #f8fafc);
+}
+
+.hero h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+    color: #1e3a8a;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 35px;
+    line-height: 1.8;
+    color: #475569;
+}
+
+.hero a {
+    display: inline-block;
+    background-color: #1e3a8a;
+    color: white;
+    padding: 13px 28px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(30, 58, 138, 0.25);
+}
+
+/* =========================
+   About Section
+========================= */
+
+#about {
+    padding: 75px 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+#about h2 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 30px;
+    color: #1e3a8a;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 0 auto 18px;
+    line-height: 1.8;
+    color: #475569;
+}
+
+/* =========================
+   Platforms Section
+========================= */
+
+#platforms {
+    padding: 75px 40px;
+    text-align: center;
+    background-color: #f8fafc;
+}
+
+#platforms > h2 {
+    font-size: 34px;
+    color: #1e3a8a;
+}
+
+.platforms-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.platform-card {
+    width: 340px;
+    background-color: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.platform-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.13);
+}
+
+.platform-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+    padding: 15px;
+}
+
+.platform-card h3 {
+    font-size: 22px;
+    margin: 20px 20px 10px;
+    color: #1e3a8a;
+}
+
+.platform-card p {
+    padding: 0 20px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+    color: #475569;
+}
+
+.platform-card a {
+    display: inline-block;
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px 22px;
+    margin: 0 20px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.platform-card a:hover {
+    transform: translateY(-2px);
+    background-color: #162d6b;
+}
+
+/* =========================
+   Benefits Section
+========================= */
+
+#benefits {
+    padding: 75px 40px;
+}
+
+#benefits > h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #1e3a8a;
+}
+
+.benefits-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.benefit {
+    flex: 1;
+    padding: 28px;
+    background-color: #f1f5f9;
+    border-radius: 12px;
+    border-left: 4px solid #1e3a8a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.benefit h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1e3a8a;
+}
+
+.benefit p {
+    line-height: 1.7;
+    color: #475569;
+}
+
+/* =========================
+   Platform Pages
+========================= */
+
 .platform-page {
-    padding: 60px 40px;
+    padding: 70px 40px;
     max-width: 1000px;
     margin: auto;
 }
 
 .platform-page h1 {
     text-align: center;
-    font-size: 40px;
-    margin-bottom: 30px;
+    font-size: 42px;
+    margin-bottom: 35px;
+    color: #1e3a8a;
 }
 
 .platform-page > img {
@@ -265,33 +305,119 @@ footer {
     height: 350px;
     object-fit: contain;
     display: block;
-    margin: 0 auto 50px;
+    margin: 0 auto 55px;
 }
 
 .platform-page h2 {
     font-size: 28px;
     margin-bottom: 15px;
-    margin-top: 35px;
+    margin-top: 40px;
+    color: #1e3a8a;
 }
 
 .platform-page p {
     font-size: 17px;
-    line-height: 1.8;
+    line-height: 1.9;
     margin-bottom: 20px;
+    color: #475569;
 }
 
-.platform-page ol {
-    padding-left: 25px;
+.platform-page ol,
+.platform-page ul {
+    padding-left: 30px;
     line-height: 2;
 }
 
 .platform-page li {
     font-size: 17px;
+    margin-bottom: 8px;
+    color: #334155;
 }
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
 @media (max-width: 768px) {
 
+    header {
+        padding: 15px 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav h2 {
+        font-size: 21px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    #about,
+    #platforms,
+    #benefits {
+        padding: 55px 20px;
+    }
+
+    #about h2,
+    #platforms > h2,
+    #benefits > h2 {
+        font-size: 28px;
+    }
+
+    .platforms-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .platform-card {
+        width: 90%;
+    }
+
+    .benefits-container {
+        flex-direction: column;
+    }
+
+    .benefit {
+        width: 100%;
+    }
+
     .platform-page {
-        padding: 40px 20px;
+        padding: 45px 20px;
     }
 
     .platform-page h1 {
@@ -300,6 +426,7 @@ footer {
 
     .platform-page > img {
         height: 250px;
+        margin-bottom: 40px;
     }
 
     .platform-page h2 {
@@ -310,5 +437,4 @@ footer {
     .platform-page li {
         font-size: 16px;
     }
-
 }
