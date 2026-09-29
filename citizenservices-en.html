@@ -1,1 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Citizen Services | Your Complete Guide</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         Header
+    ========================= -->
+
+    <header class="main-header">
+
+        <nav>
+
+            <h2 class="site-name">
+                Your Complete Guide
+            </h2>
+
+            <div class="settings-container">
+
+                <button class="settings-button" onclick="toggleSettings()">
+                    ⚙️
+                </button>
+
+                <div class="settings-menu" id="settingsMenu">
+
+                    <button onclick="changeLanguage()">
+                        🌐 Change Language
+                    </button>
+
+                    <button onclick="toggleTheme()">
+                        🌙 Dark / Light Mode
+                    </button>
+
+                    <button onclick="showAbout()">
+                        ℹ️ About
+                    </button>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         Citizen Services
+    ========================= -->
+
+    <main class="platform-page">
+
+        <h1>
+            Citizen Services
+        </h1>
+
+        <p class="platform-intro">
+            Explore important digital services available
+            for citizens and learn how to access them easily.
+        </p>
+
+
+        <section id="platforms">
+
+            <h2>
+                Available Services
+            </h2>
+
+
+            <div class="platforms-container">
+
+                <!-- Service 1 -->
+
+                <div class="platform-card">
+
+                    <img src="service1.png" alt="Government Services">
+
+                    <h3>
+                        Government Services
+                    </h3>
+
+                    <p>
+                        Access a variety of digital government
+                        services in an easy and organized way.
+                    </p>
+
+                    <a href="service1-en.html">
+                        Learn More
+                    </a>
+
+                </div>
+
+
+                <!-- Service 2 -->
+
+                <div class="platform-card">
+
+                    <img src="service2.png" alt="Education Services">
+
+                    <h3>
+                        Education Services
+                    </h3>
+
+                    <p>
+                        Explore educational services and platforms
+                        available for citizens and students.
+                    </p>
+
+                    <a href="service2-en.html">
+                        Learn More
+                    </a>
+
+                </div>
+
+
+                <!-- Service 3 -->
+
+                <div class="platform-card">
+
+                    <img src="service3.png" alt="Document Services">
+
+                    <h3>
+                        Document Services
+                    </h3>
+
+                    <p>
+                        Find information about digital document
+                        services and official procedures.
+                    </p>
+
+                    <a href="service3-en.html">
+                        Learn More
+                    </a>
+
+                </div>
+
+
+                <!-- Service 4 -->
+
+                <div class="platform-card">
+
+                    <img src="service4.png" alt="Health Services">
+
+                    <h3>
+                        Health Services
+                    </h3>
+
+                    <p>
+                        Explore digital health services and
+                        useful information available for citizens.
+                    </p>
+
+                    <a href="service4-en.html">
+                        Learn More
+                    </a>
+
+                </div>
+
+
+                <!-- Service 5 -->
+
+                <div class="platform-card">
+
+                    <img src="service5.png" alt="Public Information">
+
+                    <h3>
+                        Public Information Services
+                    </h3>
+
+                    <p>
+                        Access general digital information and
+                        services that can help citizens.
+                    </p>
+
+                    <a href="service5-en.html">
+                        Learn More
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         About Popup
+    ========================= -->
+
+    <div class="about-overlay" id="aboutOverlay">
+
+        <div class="about-box">
+
+            <button class="close-about" onclick="closeAbout()">
+                ×
+            </button>
+
+            <h2>
+                About the Website
+            </h2>
+
+            <p>
+                Your Complete Guide is a website designed
+                to help students and citizens access
+                digital platforms and services
+                in an easy and organized way.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JavaScript
+    ========================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
