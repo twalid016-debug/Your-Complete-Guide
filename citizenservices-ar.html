@@ -1,1 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>خدمات المواطنين | دليلك الكامل</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         Header
+    ========================= -->
+
+    <header class="main-header">
+
+        <nav>
+
+            <h2 class="site-name">
+                دليلك الكامل
+            </h2>
+
+            <div class="settings-container">
+
+                <button class="settings-button" onclick="toggleSettings()">
+                    ⚙️
+                </button>
+
+                <div class="settings-menu" id="settingsMenu">
+
+                    <button onclick="changeLanguage()">
+                        🌐 تغيير اللغة
+                    </button>
+
+                    <button onclick="toggleTheme()">
+                        🌙 الوضع الداكن / الفاتح
+                    </button>
+
+                    <button onclick="showAbout()">
+                        ℹ️ عن الموقع
+                    </button>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         Citizen Services
+    ========================= -->
+
+    <main class="platform-page">
+
+        <h1>
+            خدمات المواطنين
+        </h1>
+
+        <p class="platform-intro">
+            تعرف على أهم الخدمات الرقمية المتاحة للمواطنين
+            وكيفية الوصول إليها واستخدامها بسهولة.
+        </p>
+
+
+        <section id="platforms">
+
+            <h2>
+                الخدمات المتاحة
+            </h2>
+
+
+            <div class="platforms-container">
+
+                <!-- Service 1 -->
+
+                <div class="platform-card">
+
+                    <img src="service1.png" alt="الخدمات الحكومية">
+
+                    <h3>
+                        الخدمات الحكومية
+                    </h3>
+
+                    <p>
+                        الوصول إلى مجموعة من الخدمات الحكومية
+                        الرقمية بطريقة سهلة ومنظمة.
+                    </p>
+
+                    <a href="service1-ar.html">
+                        اعرف المزيد
+                    </a>
+
+                </div>
+
+
+                <!-- Service 2 -->
+
+                <div class="platform-card">
+
+                    <img src="service2.png" alt="الخدمات التعليمية">
+
+                    <h3>
+                        الخدمات التعليمية
+                    </h3>
+
+                    <p>
+                        التعرف على الخدمات والمنصات التعليمية
+                        المتاحة للمواطنين والطلاب.
+                    </p>
+
+                    <a href="service2-ar.html">
+                        اعرف المزيد
+                    </a>
+
+                </div>
+
+
+                <!-- Service 3 -->
+
+                <div class="platform-card">
+
+                    <img src="service3.png" alt="خدمات المستندات">
+
+                    <h3>
+                        خدمات المستندات
+                    </h3>
+
+                    <p>
+                        معلومات حول الخدمات الرقمية المتعلقة
+                        بالمستندات والإجراءات الرسمية.
+                    </p>
+
+                    <a href="service3-ar.html">
+                        اعرف المزيد
+                    </a>
+
+                </div>
+
+
+                <!-- Service 4 -->
+
+                <div class="platform-card">
+
+                    <img src="service4.png" alt="الخدمات الصحية">
+
+                    <h3>
+                        الخدمات الصحية
+                    </h3>
+
+                    <p>
+                        التعرف على الخدمات والمعلومات الصحية
+                        الرقمية المتاحة للمواطنين.
+                    </p>
+
+                    <a href="service4-ar.html">
+                        اعرف المزيد
+                    </a>
+
+                </div>
+
+
+                <!-- Service 5 -->
+
+                <div class="platform-card">
+
+                    <img src="service5.png" alt="المعلومات العامة">
+
+                    <h3>
+                        المعلومات العامة
+                    </h3>
+
+                    <p>
+                        الوصول إلى المعلومات والخدمات الرقمية
+                        العامة التي تساعد المواطنين.
+                    </p>
+
+                    <a href="service5-ar.html">
+                        اعرف المزيد
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         About Popup
+    ========================= -->
+
+    <div class="about-overlay" id="aboutOverlay">
+
+        <div class="about-box">
+
+            <button class="close-about" onclick="closeAbout()">
+                ×
+            </button>
+
+            <h2>
+                عن الموقع
+            </h2>
+
+            <p>
+                دليلك الكامل هو موقع يهدف إلى مساعدة
+                الطلاب والمواطنين على الوصول إلى
+                المنصات والخدمات الرقمية بطريقة سهلة
+                ومنظمة.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JavaScript
+    ========================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
