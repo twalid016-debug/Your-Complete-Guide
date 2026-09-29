@@ -12,17 +12,14 @@
 
 <body>
 
-    <!-- =========================
-         Header
-    ========================= -->
-
-    <header>
+    <header class="main-header">
 
         <nav>
 
-            <h2>
+            <h2 class="site-name">
                 Your Complete Guide
             </h2>
+
 
             <div class="nav-links">
 
@@ -48,14 +45,32 @@
 
             </div>
 
-            <div class="language-switch en" onclick="changeLanguage()">
 
-                <span class="language-label">
-                    EN
-                </span>
+            <div class="settings-container">
 
-                <div class="switch">
-                    <div class="switch-knob"></div>
+                <button class="settings-button"
+                        onclick="toggleSettings()">
+
+                    ⚙️
+
+                </button>
+
+
+                <div class="settings-menu"
+                     id="settingsMenu">
+
+                    <button onclick="changeLanguage()">
+                        🌐 Change Language
+                    </button>
+
+                    <button onclick="toggleTheme()">
+                        🌙 Dark / Light Mode
+                    </button>
+
+                    <button onclick="showAbout()">
+                        ℹ️ About
+                    </button>
+
                 </div>
 
             </div>
@@ -65,9 +80,10 @@
     </header>
 
 
-    <!-- =========================
-         Hero
-    ========================= -->
+    <div id="particles"></div>
+
+
+    <!-- Hero -->
 
     <section class="hero">
 
@@ -76,8 +92,8 @@
         </h1>
 
         <p>
-            Explore important educational platforms and
-            digital resources available for students.
+            Discover important educational platforms
+            and digital resources available for students.
         </p>
 
         <a href="#platforms">
@@ -87,9 +103,7 @@
     </section>
 
 
-    <!-- =========================
-         About
-    ========================= -->
+    <!-- About -->
 
     <section id="about">
 
@@ -98,25 +112,24 @@
         </h2>
 
         <p>
-            Your Complete Guide is a website designed to help
-            students access educational platforms and digital
-            resources in an easy and organized way.
+            Your Complete Guide is a website designed
+            to help students access educational platforms
+            and digital resources in an easy and organized way.
         </p>
 
         <p>
-            The website collects important information about
-            each platform, what students can benefit from,
-            and how to access its available resources.
+            The website provides important information
+            about each platform, its benefits,
+            and how students can access its resources.
         </p>
 
     </section>
 
 
-    <!-- =========================
-         Goals
-    ========================= -->
+    <!-- Goals -->
 
-    <section id="goals" class="goals-section">
+    <section id="goals"
+             class="goals-section">
 
         <div class="goals-container">
 
@@ -125,21 +138,24 @@
             </h2>
 
             <p class="goals-subtitle">
-                Our goal is to make educational platforms
-                and digital resources easier for students to access.
+                The project aims to make digital educational
+                resources and platforms easier for students to access.
             </p>
+
 
             <div class="goals-grid">
 
+
                 <div class="goal-card">
 
                     <h3 class="goal-card-title">
-                        Easier Access to Resources
+                        Easy Access to Resources
                     </h3>
 
                     <p class="goal-card-text">
-                        Provide a unified guide that helps students
-                        access important educational platforms and resources.
+                        Provide one organized guide that helps
+                        students access important educational
+                        platforms and resources.
                     </p>
 
                 </div>
@@ -148,12 +164,12 @@
                 <div class="goal-card">
 
                     <h3 class="goal-card-title">
-                        Supporting Digital Learning
+                        Support Digital Learning
                     </h3>
 
                     <p class="goal-card-text">
-                        Help students use digital educational resources
-                        and benefit from them in a more organized way.
+                        Help students use digital educational
+                        resources in a more organized way.
                     </p>
 
                 </div>
@@ -162,15 +178,17 @@
                 <div class="goal-card">
 
                     <h3 class="goal-card-title">
-                        Saving Time and Effort
+                        Save Time and Effort
                     </h3>
 
                     <p class="goal-card-text">
-                        Collect important links and information in one
-                        place instead of searching for each platform separately.
+                        Collect important links and information
+                        in one place instead of searching for
+                        every platform separately.
                     </p>
 
                 </div>
+
 
             </div>
 
@@ -179,9 +197,7 @@
     </section>
 
 
-    <!-- =========================
-         Educational Platforms
-    ========================= -->
+    <!-- Platforms -->
 
     <section id="platforms">
 
@@ -189,28 +205,26 @@
             Educational Platforms
         </h2>
 
+
         <div class="platforms-container">
 
 
-            <!-- =========================
-                 SPRIX + QUREO
-            ========================= -->
+            <!-- SPRIX -->
 
             <div class="platform-card">
 
-                <img
-                    src="sprix.png"
-                    alt="SPRIX and QUREO"
-                >
+                <img src="sprix.png"
+                     alt="SPRIX and QUREO">
 
                 <h3>
                     SPRIX + QUREO
                 </h3>
 
                 <p>
-                    An educational portal for secondary students
-                    covering programming, information technology,
-                    TOFAS tests, results, and certificates.
+                    An educational portal for secondary
+                    students covering programming,
+                    information technology, TOFAS tests,
+                    results, and certificates.
                 </p>
 
                 <a href="platform1-en.html">
@@ -220,25 +234,21 @@
             </div>
 
 
-            <!-- =========================
-                 E-Learning Portal
-            ========================= -->
+            <!-- E-Learning -->
 
             <div class="platform-card">
 
-                <img
-                    src="moe.png"
-                    alt="E-Learning Portal"
-                >
+                <img src="moe.png"
+                     alt="E-Learning Portal">
 
                 <h3>
                     E-Learning Portal
                 </h3>
 
                 <p>
-                    An educational portal connected to the Ministry
-                    of Education that provides digital learning
-                    content and resources for students.
+                    An educational portal connected to
+                    the Ministry of Education that provides
+                    digital educational content and resources.
                 </p>
 
                 <a href="platform2-en.html">
@@ -248,24 +258,21 @@
             </div>
 
 
-            <!-- =========================
-                 Madrasetna
-            ========================= -->
+            <!-- Madrasetna -->
 
             <div class="platform-card">
 
-                <img
-                    src="madrasa.png"
-                    alt="Madrasetna Platform"
-                >
+                <img src="madrasa.png"
+                     alt="Madrasetna Platform">
 
                 <h3>
                     Madrasetna Platform
                 </h3>
 
                 <p>
-                    A digital educational platform that helps students
-                    access lessons, content, and educational resources online.
+                    A digital educational platform that helps
+                    students access lessons, content,
+                    and educational resources online.
                 </p>
 
                 <a href="platform3-en.html">
@@ -275,24 +282,21 @@
             </div>
 
 
-            <!-- =========================
-                 EKB
-            ========================= -->
+            <!-- EKB -->
 
             <div class="platform-card">
 
-                <img
-                    src="ekb.png"
-                    alt="Egyptian Knowledge Bank"
-                >
+                <img src="ekb.png"
+                     alt="Egyptian Knowledge Bank">
 
                 <h3>
                     Egyptian Knowledge Bank
                 </h3>
 
                 <p>
-                    A knowledge portal providing diverse educational
-                    and research resources for learning and research.
+                    A knowledge portal providing diverse
+                    educational and research resources
+                    for students.
                 </p>
 
                 <a href="platform4-en.html">
@@ -301,14 +305,13 @@
 
             </div>
 
+
         </div>
 
     </section>
 
 
-    <!-- =========================
-         Benefits
-    ========================= -->
+    <!-- Benefits -->
 
     <section id="benefits">
 
@@ -316,7 +319,9 @@
             Benefits for Students
         </h2>
 
+
         <div class="benefits-container">
+
 
             <div class="benefit">
 
@@ -325,8 +330,9 @@
                 </h3>
 
                 <p>
-                    The website helps students access information
-                    about educational platforms in one place.
+                    The website helps students access
+                    information about educational platforms
+                    from one place.
                 </p>
 
             </div>
@@ -335,12 +341,13 @@
             <div class="benefit">
 
                 <h3>
-                    Supporting Study and Learning
+                    Support for Studying
                 </h3>
 
                 <p>
-                    It provides links and information that help students
-                    access educational resources during their studies.
+                    Links and information help students
+                    find educational resources to use
+                    during their studies.
                 </p>
 
             </div>
@@ -349,24 +356,51 @@
             <div class="benefit">
 
                 <h3>
-                    Developing Skills
+                    Skill Development
                 </h3>
 
                 <p>
-                    Some platforms can help students develop programming,
-                    research, logical thinking, and self-learning skills.
+                    Some platforms can support programming,
+                    research, logical thinking,
+                    and independent learning skills.
                 </p>
 
             </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- =========================
-         Footer
-    ========================= -->
+    <!-- About Popup -->
+
+    <div class="about-overlay"
+         id="aboutOverlay">
+
+        <div class="about-box">
+
+            <button class="close-about"
+                    onclick="closeAbout()">
+
+                ×
+
+            </button>
+
+            <h2>
+                About the Website
+            </h2>
+
+            <p>
+                Your Complete Guide helps students
+                access educational platforms and
+                digital resources in an easy and organized way.
+            </p>
+
+        </div>
+
+    </div>
+
 
     <footer>
 
