@@ -24,6 +24,6 @@ https://twalid016-debug.github.io/Your-Complete-Guide/index-en.html
 
 إعداد الطالبات:
 
- ميرنا نجيب 
- ياسمين هشام
- تاليا وليد
+ ميرنا نجيب ،
+ ياسمين هشام ،
+ تاليا وليد 
