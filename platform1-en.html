@@ -12,38 +12,78 @@
 
 <body>
 
-    <header>
+    <header class="main-header">
+
         <nav>
 
-            <h2>Your Complete Guide</h2>
+            <h2 class="site-name">
+                Your Complete Guide
+            </h2>
 
             <div class="nav-links">
-                <a href="loginas-en.html">Home</a>
-                <a href="studentplatforms-en.html">Platforms</a>
-                <a href="#about">About</a>
-                <a href="#benefits">Benefits</a>
+
+                <a href="loginas-en.html">
+                    Home
+                </a>
+
+                <a href="studentplatforms-en.html">
+                    Platforms
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#benefits">
+                    Benefits
+                </a>
+
             </div>
 
-            <div class="language-switch en" onclick="changeLanguage()">
-                <span class="language-label">EN</span>
+            <div class="settings-container">
 
-                <div class="switch">
-                    <div class="switch-knob"></div>
+                <button class="settings-button"
+                        onclick="toggleSettings()">
+                    ⚙️
+                </button>
+
+                <div class="settings-menu"
+                     id="settingsMenu">
+
+                    <button onclick="changeLanguage()">
+                        🌐 Change Language
+                    </button>
+
+                    <button onclick="toggleTheme()">
+                        🌙 Dark / Light Mode
+                    </button>
+
+                    <button onclick="showAbout()">
+                        ℹ️ About
+                    </button>
+
                 </div>
+
             </div>
 
         </nav>
+
     </header>
+
+
+    <div id="particles"></div>
 
 
     <section class="hero">
 
-        <h1>SPRIX + QUREO</h1>
+        <h1>
+            SPRIX + QUREO
+        </h1>
 
         <p>
-            An educational platform for secondary school students
-            that combines programming, information technology,
-            and interactive learning.
+            An educational platform for secondary
+            school students focusing on programming,
+            information technology, and interactive learning.
         </p>
 
         <a href="https://sprixportal.jp/" target="_blank">
@@ -55,24 +95,25 @@
 
     <section id="about">
 
-        <h2>About the Platform</h2>
+        <h2>
+            About the Platform
+        </h2>
 
         <p>
-            SPRIX is an educational portal for secondary school
-            students that provides programming and information
-            technology content.
+            SPRIX is an educational portal for secondary
+            school students that provides programming
+            and information technology content.
         </p>
 
         <p>
-            The platform includes an electronic textbook,
-            a programming learning platform, TOFAS tests,
-            results, and certificates.
+            The portal includes a textbook,
+            a programming platform, TOFAS tests,
+            and results and certificates.
         </p>
 
         <p>
-            When students access the programming platform
-            through SPRIX, they can be redirected to QUREO
-            for programming learning.
+            QUREO is connected to the programming
+            learning experience available through SPRIX.
         </p>
 
     </section>
@@ -80,31 +121,25 @@
 
     <section>
 
-        <h2>What Can You Learn?</h2>
+        <h2>
+            What Can You Learn?
+        </h2>
 
         <div class="benefits-container">
 
             <div class="benefit">
                 <h3>Programming Basics</h3>
                 <p>
-                    Learn programming fundamentals and how
-                    to solve problems using code.
+                    Learn programming fundamentals
+                    and problem-solving concepts.
                 </p>
             </div>
 
             <div class="benefit">
                 <h3>Python</h3>
                 <p>
-                    The educational content includes
-                    a full chapter about Python programming.
-                </p>
-            </div>
-
-            <div class="benefit">
-                <h3>JavaScript</h3>
-                <p>
-                    Learn about JavaScript and some of its
-                    uses in programming and web development.
+                    The textbook includes a chapter
+                    dedicated to Python programming.
                 </p>
             </div>
 
@@ -112,39 +147,55 @@
                 <h3>Visual Programming</h3>
                 <p>
                     Learn visual programming concepts
-                    such as Scratch.
+                    through interactive learning.
                 </p>
             </div>
 
             <div class="benefit">
                 <h3>Algorithms and Problem Solving</h3>
                 <p>
-                    Develop logical thinking and learn
-                    how to design steps for solving problems.
+                    Develop logical thinking and
+                    understand problem-solving steps.
                 </p>
             </div>
 
             <div class="benefit">
-                <h3>Databases and Networks</h3>
+                <h3>Databases</h3>
                 <p>
-                    Learn about databases, networks,
-                    communication, and information transfer.
+                    Learn about databases and their
+                    role in information technology.
                 </p>
             </div>
 
             <div class="benefit">
-                <h3>Data Analysis and Simulation</h3>
+                <h3>Networks and Communications</h3>
                 <p>
-                    Learn about data analysis and the use
-                    of simulations to study systems and problems.
+                    Learn about networks, communication,
+                    and information transfer.
+                </p>
+            </div>
+
+            <div class="benefit">
+                <h3>Data Analysis</h3>
+                <p>
+                    Learn the basics of data analysis
+                    and understanding information.
+                </p>
+            </div>
+
+            <div class="benefit">
+                <h3>Simulation</h3>
+                <p>
+                    Learn how simulations can be used
+                    to study systems and problems.
                 </p>
             </div>
 
             <div class="benefit">
                 <h3>Information Security</h3>
                 <p>
-                    Learn the basics of protecting information
-                    and using technology safely.
+                    Learn the basics of information
+                    security and data protection.
                 </p>
             </div>
 
@@ -155,40 +206,64 @@
 
     <section>
 
-        <h2>SPRIX + QUREO Features</h2>
+        <h2>
+            SPRIX + QUREO Features
+        </h2>
 
         <div class="benefits-container">
 
             <div class="benefit">
-                <h3>Interactive Learning</h3>
+
+                <h3>
+                    Interactive Learning
+                </h3>
+
                 <p>
-                    Stories and game-based activities make
-                    the learning experience more interactive.
+                    SPRIX Learning uses a story-based
+                    and game-based approach to teach
+                    programming fundamentals.
                 </p>
+
             </div>
 
             <div class="benefit">
-                <h3>Practical Programming</h3>
+
+                <h3>
+                    Practical Learning
+                </h3>
+
                 <p>
-                    Students can apply programming concepts
-                    instead of relying only on theory.
+                    Programming activities help students
+                    turn concepts into practical skills.
                 </p>
+
             </div>
 
             <div class="benefit">
-                <h3>Electronic Textbook</h3>
+
+                <h3>
+                    Electronic Textbook
+                </h3>
+
                 <p>
-                    Students can access the educational
-                    content and electronic textbook.
+                    The textbook is available electronically
+                    through the SPRIX portal.
                 </p>
+
             </div>
 
             <div class="benefit">
-                <h3>TOFAS Assessment</h3>
+
+                <h3>
+                    TOFAS Assessment
+                </h3>
+
                 <p>
-                    TOFAS tests can be used to assess skills
-                    and provide results and certificates.
+                    TOFAS provides standardized assessment
+                    of programming skills and available
+                    results and certificates.
                 </p>
+
             </div>
 
         </div>
@@ -198,40 +273,62 @@
 
     <section id="benefits">
 
-        <h2>Benefits for Students</h2>
+        <h2>
+            Benefits for Students
+        </h2>
 
         <div class="benefits-container">
 
             <div class="benefit">
-                <h3>Programming Foundation</h3>
+
+                <h3>
+                    Programming Foundation
+                </h3>
+
                 <p>
-                    The platform can help students build
-                    a foundation in programming and IT.
+                    Helps students understand programming
+                    and information technology fundamentals.
                 </p>
+
             </div>
 
             <div class="benefit">
-                <h3>Logical Thinking</h3>
+
+                <h3>
+                    Logical Thinking
+                </h3>
+
                 <p>
-                    Programming exercises and problem solving
-                    can develop logical thinking skills.
+                    Programming and problem-solving activities
+                    give students practice in logical thinking.
                 </p>
+
             </div>
 
             <div class="benefit">
-                <h3>Preparation for Advanced Learning</h3>
+
+                <h3>
+                    Preparation for Advanced Learning
+                </h3>
+
                 <p>
-                    Programming knowledge can help students
-                    prepare for advanced areas such as AI.
+                    Programming knowledge can provide
+                    a foundation for later technical learning.
                 </p>
+
             </div>
 
             <div class="benefit">
-                <h3>Skill Assessment</h3>
+
+                <h3>
+                    Skill Assessment
+                </h3>
+
                 <p>
-                    TOFAS tests provide a way to assess skills
-                    and view available results.
+                    TOFAS can be used to assess
+                    programming skills.
                 </p>
+
             </div>
 
         </div>
@@ -241,25 +338,41 @@
 
     <section>
 
-        <h2>How to Access</h2>
+        <h2>
+            How to Access
+        </h2>
 
         <div class="about-content">
 
-            <p>1. Open the SPRIX website.</p>
+            <p>
+                1. Open the SPRIX website.
+            </p>
 
-            <p>2. Choose your grade.</p>
+            <p>
+                2. Choose your grade.
+            </p>
 
-            <p>3. Choose Programming and IT.</p>
+            <p>
+                3. Choose Programming and IT.
+            </p>
 
-            <p>4. Choose the programming platform.</p>
+            <p>
+                4. Choose the programming platform.
+            </p>
 
-            <p>5. Click Login.</p>
+            <p>
+                5. Click Login.
+            </p>
 
-            <p>6. You will be redirected to QUREO.</p>
+            <p>
+                6. Continue to QUREO
+                if you are redirected there.
+            </p>
 
             <p>
                 7. Use the credentials provided by
-                your educational authority or school if requested.
+                your educational authority or school
+                when requested.
             </p>
 
         </div>
@@ -269,38 +382,65 @@
 
     <section>
 
-        <h2>Important Links</h2>
+        <h2>
+            Important Links
+        </h2>
 
         <div class="benefits-container">
 
             <div class="benefit">
-                <h3>SPRIX</h3>
+
+                <h3>
+                    SPRIX
+                </h3>
+
                 <p>
-                    Official platform website.
+                    Official portal.
                 </p>
-                <a href="https://sprixportal.jp/" target="_blank">
+
+                <a href="https://sprixportal.jp/"
+                   target="_blank">
                     Open SPRIX
                 </a>
+
             </div>
 
+
             <div class="benefit">
-                <h3>QUREO</h3>
+
+                <h3>
+                    QUREO
+                </h3>
+
                 <p>
-                    The programming learning platform connected to SPRIX.
+                    Programming learning platform
+                    connected to SPRIX.
                 </p>
-                <a href="https://me-portal.qureo.education/" target="_blank">
+
+                <a href="https://me-portal.qureo.education/"
+                   target="_blank">
                     Open QUREO
                 </a>
+
             </div>
 
+
             <div class="benefit">
-                <h3>TOFAS Results</h3>
-                <p>
-                    View available results and certificates.
-                </p>
-                <a href="https://result.egy.programming-testing.com/" target="_blank">
+
+                <h3>
                     TOFAS Results
+                </h3>
+
+                <p>
+                    View available results
+                    and certificates.
+                </p>
+
+                <a href="https://result.egy.programming-testing.com/"
+                   target="_blank">
+                    Open Results
                 </a>
+
             </div>
 
         </div>
@@ -308,8 +448,37 @@
     </section>
 
 
+    <div class="about-overlay"
+         id="aboutOverlay">
+
+        <div class="about-box">
+
+            <button class="close-about"
+                    onclick="closeAbout()">
+                ×
+            </button>
+
+            <h2>
+                About the Website
+            </h2>
+
+            <p>
+                Your Complete Guide helps students
+                access educational platforms and
+                digital resources in an organized way.
+            </p>
+
+        </div>
+
+    </div>
+
+
     <footer>
-        <p>SPRIX + QUREO | Your Complete Guide</p>
+
+        <p>
+            SPRIX + QUREO | Your Complete Guide
+        </p>
+
     </footer>
 
 
