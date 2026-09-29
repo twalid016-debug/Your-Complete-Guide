@@ -16,34 +16,46 @@
          Header
     ========================= -->
 
-    <header class="main-header">
+    <header>
 
         <nav>
 
-            <h2 class="site-name">
+            <h2>
                 دليلك الكامل
             </h2>
 
-            <div class="settings-container">
+            <div class="nav-links">
 
-                <button class="settings-button" onclick="toggleSettings()">
-                    ⚙️
-                </button>
+                <a href="loginas-ar.html">
+                    الرئيسية
+                </a>
 
-                <div class="settings-menu" id="settingsMenu">
+                <a href="#about">
+                    عن الموقع
+                </a>
 
-                    <button onclick="changeLanguage()">
-                        🌐 تغيير اللغة
-                    </button>
+                <a href="#services">
+                    الخدمات
+                </a>
 
-                    <button onclick="toggleTheme()">
-                        🌙 الوضع الداكن / الفاتح
-                    </button>
+                <a href="#benefits">
+                    الفوائد
+                </a>
 
-                    <button onclick="showAbout()">
-                        ℹ️ عن الموقع
-                    </button>
+                <a href="#goals">
+                    الأهداف
+                </a>
 
+            </div>
+
+            <div class="language-switch ar" onclick="changeLanguage()">
+
+                <span class="language-label">
+                    AR
+                </span>
+
+                <div class="switch">
+                    <div class="switch-knob"></div>
                 </div>
 
             </div>
@@ -54,155 +66,307 @@
 
 
     <!-- =========================
-         Citizen Services
+         Hero
     ========================= -->
 
-    <main class="platform-page">
+    <section class="hero">
 
         <h1>
-            خدمات المواطنين
+            مرحبًا بك في خدمات المواطنين
         </h1>
 
-        <p class="platform-intro">
-            تعرف على أهم الخدمات الرقمية المتاحة للمواطنين
-            وكيفية الوصول إليها واستخدامها بسهولة.
+        <p>
+            تعرف على أهم الخدمات الحكومية والرقمية
+            المتاحة للمواطنين وكيفية الوصول إليها بسهولة.
         </p>
 
+        <a href="#services">
+            استكشف الخدمات
+        </a>
 
-        <section id="platforms">
+    </section>
 
-            <h2>
-                الخدمات المتاحة
+
+    <!-- =========================
+         About
+    ========================= -->
+
+    <section id="about">
+
+        <h2>
+            عن الموقع
+        </h2>
+
+        <p>
+            دليلك الكامل هو موقع يهدف إلى مساعدة المواطنين
+            على الوصول إلى الخدمات الرقمية والحكومية
+            بطريقة سهلة ومنظمة.
+        </p>
+
+        <p>
+            يجمع الموقع أهم المعلومات والإرشادات الخاصة
+            بالخدمات في مكان واحد، مع توضيح طريقة الوصول
+            إليها والخدمات التي يمكن الاستفادة منها.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         Goals
+    ========================= -->
+
+    <section id="goals" class="goals-section">
+
+        <div class="goals-container">
+
+            <h2 class="goals-title">
+                أهداف المشروع
             </h2>
 
+            <p class="goals-subtitle">
+                نسعى من خلال الموقع إلى تسهيل الوصول
+                إلى الخدمات الرقمية للمواطنين.
+            </p>
 
-            <div class="platforms-container">
+            <div class="goals-grid">
 
-                <!-- Service 1: Electricity -->
+                <div class="goal-card">
 
-                <div class="platform-card">
-
-                    <img src="service1.png" alt="خدمات التموين">
-
-                    <h3>
-                        خدمات التموين
+                    <h3 class="goal-card-title">
+                        تيسير الوصول للخدمات
                     </h3>
 
-                    <p>
-                        تعرف على خدمات التموين وأهم الخدمات
-                        الإلكترونية المتعلقة ببطاقات التموين.
+                    <p class="goal-card-text">
+                        توفير دليل موحد يساعد المواطنين
+                        على الوصول إلى أهم الخدمات الحكومية
+                        والرقمية من مكان واحد.
                     </p>
-
-                    <a href="service1-ar.html">
-                        اعرف المزيد
-                    </a>
 
                 </div>
 
 
-                <!-- Service 2: Traffic -->
+                <div class="goal-card">
 
-                <div class="platform-card">
-
-                    <img src="service2.png" alt="خدمات المرور">
-
-                    <h3>
-                        خدمات المرور
+                    <h3 class="goal-card-title">
+                        التوعية بالخدمات الرقمية
                     </h3>
 
-                    <p>
-                        تعرف على خدمات المركبات ورخص القيادة
-                        والاستعلام عن المخالفات المرورية.
+                    <p class="goal-card-text">
+                        مساعدة المواطنين على معرفة الخدمات
+                        الإلكترونية المتاحة وكيفية الاستفادة منها.
                     </p>
-
-                    <a href="service2-ar.html">
-                        اعرف المزيد
-                    </a>
 
                 </div>
 
 
-                <!-- Service 3: Electricity -->
+                <div class="goal-card">
 
-                <div class="platform-card">
-
-                    <img src="service3.png" alt="خدمات الكهرباء">
-
-                    <h3>
-                        خدمات الكهرباء
+                    <h3 class="goal-card-title">
+                        توفير الوقت والجهد
                     </h3>
 
-                    <p>
-                        تعرف على خدمات الكهرباء والفواتير
-                        والعدادات والشكاوى والخدمات الإلكترونية.
+                    <p class="goal-card-text">
+                        توضيح طرق الوصول إلى الخدمات وتقليل
+                        الوقت والجهد المطلوبين للحصول عليها.
                     </p>
-
-                    <a href="service3-ar.html">
-                        اعرف المزيد
-                    </a>
-
-                </div>
-
-
-                <!-- Service 4: Water -->
-
-                <div class="platform-card">
-
-                    <img src="service4.png" alt="خدمات المياه">
-
-                    <h3>
-                        خدمات المياه
-                    </h3>
-
-                    <p>
-                        تعرف على خدمات المياه والفواتير وقراءة
-                        العدادات والشكاوى وخدمات الصرف الصحي.
-                    </p>
-
-                    <a href="service4-ar.html">
-                        اعرف المزيد
-                    </a>
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </section>
 
 
     <!-- =========================
-         About Popup
+         Services
     ========================= -->
 
-    <div class="about-overlay" id="aboutOverlay">
+    <section id="services">
 
-        <div class="about-box">
+        <h2>
+            خدمات المواطنين
+        </h2>
 
-            <button class="close-about" onclick="closeAbout()">
-                ×
-            </button>
+        <div class="platforms-container">
 
-            <h2>
-                عن الموقع
-            </h2>
 
-            <p>
-                دليلك الكامل هو موقع يهدف إلى مساعدة
-                الطلاب والمواطنين على الوصول إلى
-                المنصات والخدمات الرقمية بطريقة سهلة
-                ومنظمة.
-            </p>
+            <!-- Ration -->
+
+            <div class="platform-card">
+
+                <img
+                    src="service1.png"
+                    alt="خدمات التموين"
+                >
+
+                <h3>
+                    خدمات التموين
+                </h3>
+
+                <p>
+                    تعرف على خدمات التموين وأهم الخدمات
+                    الإلكترونية المتعلقة ببطاقات التموين.
+                </p>
+
+                <a href="service1-ar.html">
+                    اعرف المزيد
+                </a>
+
+            </div>
+
+
+            <!-- Traffic -->
+
+            <div class="platform-card">
+
+                <img
+                    src="service2.png"
+                    alt="خدمات المرور"
+                >
+
+                <h3>
+                    خدمات المرور
+                </h3>
+
+                <p>
+                    تعرف على خدمات المركبات ورخص القيادة
+                    والاستعلام عن المخالفات المرورية.
+                </p>
+
+                <a href="service2-ar.html">
+                    اعرف المزيد
+                </a>
+
+            </div>
+
+
+            <!-- Electricity -->
+
+            <div class="platform-card">
+
+                <img
+                    src="service3.png"
+                    alt="خدمات الكهرباء"
+                >
+
+                <h3>
+                    خدمات الكهرباء
+                </h3>
+
+                <p>
+                    تعرف على خدمات الكهرباء والفواتير
+                    والعدادات والشكاوى والخدمات الإلكترونية.
+                </p>
+
+                <a href="service3-ar.html">
+                    اعرف المزيد
+                </a>
+
+            </div>
+
+
+            <!-- Water -->
+
+            <div class="platform-card">
+
+                <img
+                    src="service4.png"
+                    alt="خدمات المياه"
+                >
+
+                <h3>
+                    خدمات المياه
+                </h3>
+
+                <p>
+                    تعرف على خدمات المياه والفواتير وقراءة
+                    العدادات والشكاوى وخدمات الصرف الصحي.
+                </p>
+
+                <a href="service4-ar.html">
+                    اعرف المزيد
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
 
     <!-- =========================
-         JavaScript
+         Benefits
     ========================= -->
+
+    <section id="benefits">
+
+        <h2>
+            فوائد الموقع للمواطنين
+        </h2>
+
+        <div class="benefits-container">
+
+            <div class="benefit">
+
+                <h3>
+                    الوصول إلى المعلومات بسهولة
+                </h3>
+
+                <p>
+                    يساعد الموقع المواطنين على الوصول
+                    إلى المعلومات الخاصة بالخدمات من مكان واحد.
+                </p>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <h3>
+                    دليل واضح للاستخدام
+                </h3>
+
+                <p>
+                    يوفر معلومات وإرشادات تساعد المواطن
+                    على فهم طريقة الوصول إلى الخدمات.
+                </p>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <h3>
+                    دعم التحول الرقمي
+                </h3>
+
+                <p>
+                    يساعد المواطنين على الاستفادة من
+                    الخدمات الحكومية الرقمية بسهولة أكبر.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         Footer
+    ========================= -->
+
+    <footer>
+
+        <p>
+            خدمات المواطنين الرقمية
+        </p>
+
+    </footer>
+
 
     <script src="script.js"></script>
 
