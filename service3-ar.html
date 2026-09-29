@@ -1,1 +1,294 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>خدمات الكهرباء | دليلك الكامل</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+
+        <nav>
+
+            <h2 class="site-name">
+                دليلك الكامل
+            </h2>
+
+            <div class="settings-container">
+
+                <button class="settings-button" onclick="toggleSettings()">
+                    ⚙️
+                </button>
+
+                <div class="settings-menu" id="settingsMenu">
+
+                    <button onclick="changeLanguage()">
+                        🌐 تغيير اللغة
+                    </button>
+
+                    <button onclick="toggleTheme()">
+                        🌙 الوضع الداكن / الفاتح
+                    </button>
+
+                    <button onclick="showAbout()">
+                        ℹ️ عن الموقع
+                    </button>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main class="platform-page">
+
+        <h1>
+            خدمات الكهرباء
+        </h1>
+
+        <p class="platform-intro">
+            تعرف على خدمات الكهرباء المتعلقة بالفواتير والعدادات
+            والشكاوى والخدمات الإلكترونية.
+        </p>
+
+
+        <div class="platform-tabs">
+
+            <button class="platform-tab active" data-target="about">
+                عن الخدمة
+            </button>
+
+            <button class="platform-tab" data-target="login">
+                الوصول إلى الخدمة
+            </button>
+
+            <button class="platform-tab" data-target="use">
+                كيفية الاستخدام
+            </button>
+
+            <button class="platform-tab" data-target="benefits">
+                المميزات
+            </button>
+
+        </div>
+
+
+        <div class="platform-sections">
+
+
+            <section class="platform-content active" data-section="about">
+
+                <div>
+
+                    <h2>
+                        عن خدمات الكهرباء
+                    </h2>
+
+                    <p>
+                        خدمات الكهرباء هي الخدمات التي تقدمها شركات توزيع
+                        الكهرباء للمواطنين، وتشمل توصيل الكهرباء إلى المنازل،
+                        وإصدار الفواتير وتحصيلها، واستقبال الشكاوى.
+                    </p>
+
+                    <h2>
+                        أنواع خدمات الكهرباء
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            خدمات الفواتير والدفع.
+                        </li>
+
+                        <li>
+                            خدمات العدادات.
+                        </li>
+
+                        <li>
+                            خدمات الشكاوى.
+                        </li>
+
+                    </ul>
+
+                    <h2>
+                        منصة خدمات الكهرباء الموحدة
+                    </h2>
+
+                    <p>
+                        منصة خدمات الكهرباء الموحدة هي منصة إلكترونية تابعة
+                        للشركة القابضة لكهرباء مصر، وتهدف إلى إتاحة تقديم
+                        طلبات الكهرباء ومتابعتها إلكترونيًا.
+                    </p>
+
+                </div>
+
+                <img src="service3.png" alt="خدمات الكهرباء">
+
+            </section>
+
+
+            <section class="platform-content" data-section="login">
+
+                <div>
+
+                    <h2>
+                        الوصول إلى خدمات الكهرباء
+                    </h2>
+
+                    <p>
+                        يمكنك الوصول إلى
+                        <a href="https://eservices.eehc.gov.eg/" target="_blank">
+                            منصة خدمات الكهرباء الموحدة
+                        </a>
+                        لتقديم طلبات الكهرباء ومتابعتها إلكترونيًا.
+                    </p>
+
+                    <p>
+                        كما يوفر الموقع الرسمي للشركة القابضة لكهرباء مصر
+                        معلومات عن قطاع الكهرباء والشركات التابعة له
+                        والأخبار والخدمات والمعلومات المتعلقة بالكهرباء.
+                    </p>
+
+                </div>
+
+                <img src="service3.png" alt="منصة خدمات الكهرباء">
+
+            </section>
+
+
+            <section class="platform-content" data-section="use">
+
+                <div>
+
+                    <h2>
+                        أهم الخدمات المتاحة على المنصة
+                    </h2>
+
+                    <ol>
+
+                        <li>
+                            تركيب عداد كهرباء: تقديم طلب لتركيب عداد كهرباء جديد.
+                        </li>
+
+                        <li>
+                            تسجيل قراءة العداد: تسجيل قراءة العداد إلكترونيًا.
+                        </li>
+
+                        <li>
+                            دفع الفواتير: سداد فواتير الكهرباء من خلال وسائل الدفع المتاحة.
+                        </li>
+
+                        <li>
+                            حساب الفاتورة: تقدير قيمة الفاتورة وفقًا للاستهلاك.
+                        </li>
+
+                        <li>
+                            فحص العداد: تقديم طلب لفحص العداد في حالة وجود مشكلة.
+                        </li>
+
+                        <li>
+                            استخراج بدل فاقد: تقديم طلب لتركيب عداد بديل في حالة فقدان العداد.
+                        </li>
+
+                        <li>
+                            الشكاوى والأعطال: تقديم الشكاوى والإبلاغ عن بعض المشكلات والأعطال.
+                        </li>
+
+                        <li>
+                            شهادة بيانات الاستهلاك: طلب شهادة توضح بيانات استهلاك الكهرباء.
+                        </li>
+
+                    </ol>
+
+                </div>
+
+                <img src="service3.png" alt="خدمات منصة الكهرباء">
+
+            </section>
+
+
+            <section class="platform-content" data-section="benefits">
+
+                <div>
+
+                    <h2>
+                        مميزات الخدمات الإلكترونية
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            تقديم طلبات الكهرباء إلكترونيًا.
+                        </li>
+
+                        <li>
+                            متابعة الطلبات إلكترونيًا.
+                        </li>
+
+                        <li>
+                            توفير الوقت والجهد.
+                        </li>
+
+                        <li>
+                            تسجيل قراءة العداد إلكترونيًا.
+                        </li>
+
+                        <li>
+                            دفع الفواتير باستخدام وسائل الدفع المتاحة.
+                        </li>
+
+                        <li>
+                            تقديم الشكاوى والإبلاغ عن بعض الأعطال.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <img src="service3.png" alt="مميزات خدمات الكهرباء">
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <div class="about-overlay" id="aboutOverlay">
+
+        <div class="about-box">
+
+            <button class="close-about" onclick="closeAbout()">
+                ×
+            </button>
+
+            <h2>
+                عن الموقع
+            </h2>
+
+            <p>
+                دليلك الكامل هو موقع يهدف إلى مساعدة
+                الطلاب والمواطنين على الوصول إلى
+                المنصات والخدمات الرقمية بطريقة سهلة
+                ومنظمة.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
