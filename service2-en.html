@@ -2,204 +2,207 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>Traffic Services | Your Complete Guide</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Traffic Services | Your Complete Guide</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+<header class="main-header">
 
-<nav>
+    <nav>
 
-<h2>Your Complete Guide</h2>
+        <h2 class="site-name">Your Complete Guide</h2>
 
-<div class="nav-links">
+        <div class="nav-links">
+            <a href="loginas-en.html">Home</a>
+            <a href="citizenservices-en.html">Services</a>
+            <a href="#about">About</a>
+            <a href="#benefits">Benefits</a>
+        </div>
 
-<a href="loginas-en.html">Home</a>
+        <div class="settings-container">
 
-<a href="citizenservices-en.html">Services</a>
+            <button class="settings-button" onclick="toggleSettings()">⚙️</button>
 
-<a href="#about">About</a>
+            <div class="settings-menu" id="settingsMenu">
 
-<a href="#benefits">Benefits</a>
+                <button onclick="changeLanguage()">🌐 Change Language</button>
 
-</div>
+                <button onclick="toggleTheme()">
+                    🌙 Dark / Light Mode
+                </button>
 
-<div class="language-switch en" onclick="changeLanguage()">
+                <button onclick="showAbout()">ℹ️ About</button>
 
-<span class="language-label">EN</span>
+            </div>
 
-<div class="switch">
+        </div>
 
-<div class="switch-knob"></div>
-
-</div>
-
-</div>
-
-</nav>
+    </nav>
 
 </header>
 
 
-<main class="platform-page">
-
-<h1>Traffic Services</h1>
-
-<p class="platform-intro">
-Learn about vehicle services, driving licenses,
-traffic violations, and related digital services.
-</p>
+<div id="particles"></div>
 
 
-<div class="platform-tabs">
+<main>
 
-<button class="platform-tab active" data-target="about">
-About
-</button>
+    <section class="hero-section">
 
-<button class="platform-tab" data-target="login">
-Access
-</button>
+        <div class="hero-content">
 
-<button class="platform-tab" data-target="use">
-How to Use
-</button>
+            <p class="hero-small-title">Government Services</p>
 
-<button class="platform-tab" data-target="benefits">
-Benefits
-</button>
+            <h1>Traffic Services</h1>
 
-</div>
+            <p>
+                Learn about vehicle services, driving licenses
+                and traffic violations.
+            </p>
 
+        </div>
 
-<div class="platform-sections">
-
-<section class="platform-content active" data-section="about">
-
-<img src="service2.png" alt="Traffic Services">
-
-<div>
-
-<h2>What Are Traffic Services?</h2>
-
-<p>
-Government traffic services include vehicle services,
-driving licenses, and traffic violation inquiries.
-</p>
-
-<p>
-These services help organize traffic procedures and
-make vehicle and driving services easier to access.
-</p>
-
-</div>
-
-</section>
+    </section>
 
 
-<section class="platform-content" data-section="login">
+    <section class="about-section" id="about">
 
-<h2>Accessing Traffic Services</h2>
+        <h2>What Are Traffic Services?</h2>
 
-<p>
-Several digital traffic services can be accessed
-through the Digital Egypt Portal.
-</p>
+        <p>
+            Traffic services include procedures related to vehicles,
+            driving licenses, traffic violations and other available
+            digital traffic services.
+        </p>
 
-<ul>
-
-<li>Vehicle license renewal</li>
-<li>Issuing a new vehicle license</li>
-<li>Lost or damaged license replacement</li>
-<li>Vehicle ownership transfer</li>
-<li>Vehicle data certificate</li>
-<li>Traffic violation inquiries</li>
-
-</ul>
-
-<p>
-Driving license services also include renewal,
-replacement, and some inquiry services.
-</p>
-
-<p>Digital Egypt Portal:</p>
-
-<a href="https://digital.gov.eg/" target="_blank">
-Digital Egypt Portal
-</a>
-
-<p>
-Vehicle violation inquiry:
-</p>
-
-<a href="https://digital.gov.eg/categories/terms/%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D9%85%D8%AE%D8%A7%D9%84%D9%81%D8%A7%D8%AA-%D8%B1%D8%AE%D8%B5%D8%A9-%D9%85%D8%B1%D9%83%D8%A8%D8%A9"
-target="_blank">
-Traffic Violation Inquiry
-</a>
-
-</section>
+    </section>
 
 
-<section class="platform-content" data-section="use">
+    <section class="goals-section">
 
-<h2>How to Use the Services</h2>
+        <h2>Main Services</h2>
 
-<ol>
+        <div class="info-cards">
 
-<li>Open the Digital Egypt Portal.</li>
+            <div class="info-card">
+                <h3>Vehicles</h3>
+                <p>
+                    Services may include vehicle license renewal,
+                    ownership procedures and vehicle data certificates.
+                </p>
+            </div>
 
-<li>Select the required service.</li>
+            <div class="info-card">
+                <h3>Driving Licenses</h3>
+                <p>
+                    Some services include issuing, renewing or replacing
+                    driving licenses according to the required procedures.
+                </p>
+            </div>
 
-<li>Enter the required information.</li>
+            <div class="info-card">
+                <h3>Violations</h3>
+                <p>
+                    Citizens can access available services for checking
+                    and handling traffic violations.
+                </p>
+            </div>
 
-<li>Follow the application steps.</li>
+        </div>
 
-<li>Track the service status when available.</li>
-
-</ol>
-
-<p>
-Some first-time driving license services may require
-specific procedures, examinations, or personal attendance.
-</p>
-
-</section>
+    </section>
 
 
-<section class="platform-content" data-section="benefits">
+    <section class="benefits-section" id="benefits">
 
-<h2>Benefits of Digital Traffic Services</h2>
+        <h2>How to Access</h2>
 
-<ul>
+        <div class="info-cards">
 
-<li>Easier access to vehicle services.</li>
+            <div class="info-card">
+                <h3>1</h3>
+                <p>
+                    Open the Digital Egypt Portal.
+                </p>
+            </div>
 
-<li>Availability of several services online.</li>
+            <div class="info-card">
+                <h3>2</h3>
+                <p>
+                    Choose the appropriate traffic service.
+                </p>
+            </div>
 
-<li>Easy traffic violation inquiries.</li>
+            <div class="info-card">
+                <h3>3</h3>
+                <p>
+                    Select the service and follow its official instructions.
+                </p>
+            </div>
 
-<li>Saving time and effort for some procedures.</li>
+        </div>
 
-</ul>
+    </section>
 
-</section>
 
-</div>
+    <section class="about-section">
+
+        <h2>Official Links</h2>
+
+        <p>Digital Egypt Portal:</p>
+
+        <p>
+            <a href="https://digital.gov.eg/" target="_blank">
+                digital.gov.eg
+            </a>
+        </p>
+
+        <p>Vehicle license violation inquiry:</p>
+
+        <p>
+            <a href="https://digital.gov.eg/categories/terms/%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D9%85%D8%AE%D8%A7%D9%84%D9%81%D8%A7%D8%AA-%D8%B1%D8%AE%D8%B5%D8%A9-%D9%85%D8%B1%D9%83%D8%A8%D8%A9"
+               target="_blank">
+                Violation Inquiry
+            </a>
+        </p>
+
+    </section>
 
 </main>
+
+
+<footer>
+
+    <p>© 2026 Your Complete Guide</p>
+
+</footer>
+
+
+<div class="about-overlay" id="aboutOverlay">
+
+    <div class="about-box">
+
+        <button class="close-about" onclick="closeAbout()">×</button>
+
+        <h2>About the Website</h2>
+
+        <p>
+            Your Complete Guide provides organized information about
+            educational platforms and digital government services.
+        </p>
+
+    </div>
+
+</div>
 
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
