@@ -12,191 +12,199 @@
 
 <body>
 
-<header>
+<header class="main-header">
 
-<nav>
+    <nav>
 
-<h2>دليلك الكامل</h2>
+        <h2 class="site-name">دليلك الكامل</h2>
 
-<div class="nav-links">
+        <div class="nav-links">
+            <a href="loginas-ar.html">الرئيسية</a>
+            <a href="citizenservices-ar.html">الخدمات</a>
+            <a href="#about">عن الخدمة</a>
+            <a href="#benefits">الفوائد</a>
+        </div>
 
-<a href="loginas-ar.html">الرئيسية</a>
+        <div class="settings-container">
 
-<a href="citizenservices-ar.html">الخدمات</a>
+            <button class="settings-button" onclick="toggleSettings()">⚙️</button>
 
-<a href="#about">عن الخدمة</a>
+            <div class="settings-menu" id="settingsMenu">
 
-<a href="#benefits">الفوائد</a>
+                <button onclick="changeLanguage()">🌐 تغيير اللغة</button>
 
-</div>
+                <button onclick="toggleTheme()">
+                    🌙 الوضع الداكن / الفاتح
+                </button>
 
-<div class="language-switch ar" onclick="changeLanguage()">
+                <button onclick="showAbout()">ℹ️ عن الموقع</button>
 
-<span class="language-label">AR</span>
+            </div>
 
-<div class="switch">
-<div class="switch-knob"></div>
-</div>
+        </div>
 
-</div>
-
-</nav>
+    </nav>
 
 </header>
 
 
-<main class="platform-page">
-
-<h1>خدمات المرور</h1>
-
-<p class="platform-intro">
-تعرف على خدمات المركبات ورخص القيادة والاستعلام
-عن المخالفات المرورية والخدمات الإلكترونية المرتبطة بها.
-</p>
+<div id="particles"></div>
 
 
-<div class="platform-tabs">
+<main>
 
-<button class="platform-tab active" data-target="about">
-عن الخدمة
-</button>
+    <section class="hero-section">
 
-<button class="platform-tab" data-target="login">
-الوصول إلى الخدمة
-</button>
+        <div class="hero-content">
 
-<button class="platform-tab" data-target="use">
-كيفية الاستخدام
-</button>
+            <p class="hero-small-title">الخدمات الحكومية</p>
 
-<button class="platform-tab" data-target="benefits">
-الفوائد
-</button>
+            <h1>خدمات المرور</h1>
 
-</div>
+            <p>
+                تعرف على خدمات المركبات ورخص القيادة والاستعلام عن المخالفات.
+            </p>
+
+        </div>
+
+    </section>
 
 
-<div class="platform-sections">
+    <section class="about-section" id="about">
 
-<section class="platform-content active" data-section="about">
+        <h2>ما هي خدمات المرور؟</h2>
 
-<img src="service2.png" alt="خدمات المرور">
+        <p>
+            تشمل الخدمات المرورية عددًا من الإجراءات المتعلقة بالمركبات
+            ورخص القيادة والاستعلام عن المخالفات والخدمات الرقمية المرتبطة بها.
+        </p>
 
-<div>
-
-<h2>ما هي خدمات المرور؟</h2>
-
-<p>
-تشمل خدمات المرور الحكومية خدمات المركبات ورخص
-القيادة والاستعلام عن المخالفات المرورية.
-</p>
-
-<p>
-تهدف هذه الخدمات إلى تنظيم إجراءات المرور وتسهيل
-الوصول إلى الخدمات المتعلقة بالمركبات والقيادة.
-</p>
-
-</div>
-
-</section>
+    </section>
 
 
-<section class="platform-content" data-section="login">
+    <section class="goals-section">
 
-<h2>الوصول إلى خدمات المرور</h2>
+        <h2>أهم الخدمات</h2>
 
-<p>
-يمكن الوصول إلى عدد من الخدمات الإلكترونية من خلال
-بوابة مصر الرقمية.
-</p>
+        <div class="info-cards">
 
-<ul>
+            <div class="info-card">
+                <h3>المركبات</h3>
+                <p>
+                    خدمات مثل تجديد رخصة المركبة وبعض إجراءات نقل الملكية
+                    واستخراج بيانات المركبة.
+                </p>
+            </div>
 
-<li>تجديد رخصة المركبة</li>
-<li>إصدار رخصة مركبة جديدة</li>
-<li>بدل فاقد أو تالف</li>
-<li>نقل ملكية المركبة</li>
-<li>شهادة بيانات المركبة</li>
-<li>الاستعلام عن المخالفات</li>
+            <div class="info-card">
+                <h3>رخص القيادة</h3>
+                <p>
+                    خدمات إصدار وتجديد واستبدال بعض أنواع رخص القيادة
+                    وفقًا للإجراءات المطلوبة.
+                </p>
+            </div>
 
-</ul>
+            <div class="info-card">
+                <h3>المخالفات</h3>
+                <p>
+                    الاستعلام عن المخالفات وبعض خدمات السداد أو التظلم
+                    المتاحة إلكترونيًا.
+                </p>
+            </div>
 
-<p>
-كما تشمل خدمات رخص القيادة التجديد وبدل الفاقد أو
-التالف وبعض خدمات الاستعلام.
-</p>
+        </div>
 
-<p>
-بوابة مصر الرقمية:
-</p>
-
-<a href="https://digital.gov.eg/" target="_blank">
-بوابة مصر الرقمية
-</a>
-
-<p>
-للاستعلام عن مخالفات رخصة المركبة:
-</p>
-
-<a href="https://digital.gov.eg/categories/terms/%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D9%85%D8%AE%D8%A7%D9%84%D9%81%D8%A7%D8%AA-%D8%B1%D8%AE%D8%B5%D8%A9-%D9%85%D8%B1%D9%83%D8%A8%D8%A9"
-target="_blank">
-الاستعلام عن المخالفات
-</a>
-
-</section>
+    </section>
 
 
-<section class="platform-content" data-section="use">
+    <section class="benefits-section" id="benefits">
 
-<h2>كيفية استخدام الخدمات</h2>
+        <h2>طريقة الوصول</h2>
 
-<ol>
+        <div class="info-cards">
 
-<li>الدخول إلى بوابة مصر الرقمية.</li>
+            <div class="info-card">
+                <h3>1</h3>
+                <p>
+                    ادخل إلى بوابة مصر الرقمية.
+                </p>
+            </div>
 
-<li>اختيار الخدمة المطلوبة.</li>
+            <div class="info-card">
+                <h3>2</h3>
+                <p>
+                    اختر الخدمات المرورية المناسبة.
+                </p>
+            </div>
 
-<li>إدخال البيانات المطلوبة.</li>
+            <div class="info-card">
+                <h3>3</h3>
+                <p>
+                    اختر الخدمة واتبع خطواتها الرسمية.
+                </p>
+            </div>
 
-<li>اتباع خطوات تقديم الطلب.</li>
+        </div>
 
-<li>متابعة حالة الخدمة عند توفر ذلك.</li>
-
-</ol>
-
-<p>
-بعض خدمات إصدار رخص القيادة لأول مرة قد تتطلب
-إجراءات واختبارات وحضورًا شخصيًا وفقًا للخدمة.
-</p>
-
-</section>
+    </section>
 
 
-<section class="platform-content" data-section="benefits">
+    <section class="about-section">
 
-<h2>فوائد خدمات المرور الرقمية</h2>
+        <h2>الروابط الرسمية</h2>
 
-<ul>
+        <p>
+            بوابة مصر الرقمية:
+        </p>
 
-<li>تسهيل الوصول إلى خدمات المركبات.</li>
+        <p>
+            <a href="https://digital.gov.eg/" target="_blank">
+                digital.gov.eg
+            </a>
+        </p>
 
-<li>توفير بعض الخدمات إلكترونيًا.</li>
+        <p>
+            الاستعلام عن مخالفات رخصة مركبة:
+        </p>
 
-<li>سهولة الاستعلام عن المخالفات.</li>
+        <p>
+            <a href="https://digital.gov.eg/categories/terms/%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D9%85%D8%AE%D8%A7%D9%84%D9%81%D8%A7%D8%AA-%D8%B1%D8%AE%D8%B5%D8%A9-%D9%85%D8%B1%D9%83%D8%A8%D8%A9"
+               target="_blank">
+                الاستعلام عن المخالفات
+            </a>
+        </p>
 
-<li>تقليل الوقت والجهد في بعض الإجراءات.</li>
-
-</ul>
-
-</section>
-
-</div>
+    </section>
 
 </main>
+
+
+<footer>
+
+    <p>© 2026 دليلك الكامل</p>
+
+</footer>
+
+
+<div class="about-overlay" id="aboutOverlay">
+
+    <div class="about-box">
+
+        <button class="close-about" onclick="closeAbout()">×</button>
+
+        <h2>عن الموقع</h2>
+
+        <p>
+            دليلك الكامل يساعدك على الوصول إلى معلومات منظمة
+            عن المنصات والخدمات الرقمية.
+        </p>
+
+    </div>
+
+</div>
 
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
