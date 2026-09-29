@@ -22,9 +22,8 @@
 رابط الموقع على الإنترنت:
 https://twalid016-debug.github.io/Your-Complete-Guide/index-en.html
 
-إعداد الطالبات: 
+إعداد الطالبات:
+
  ميرنا نجيب 
- 
  ياسمين هشام
- 
  تاليا وليد
