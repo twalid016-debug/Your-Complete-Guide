@@ -1,1 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Traffic Services | Your Complete Guide</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+
+        <nav>
+
+            <h2 class="site-name">
+                Your Complete Guide
+            </h2>
+
+            <div class="settings-container">
+
+                <button class="settings-button" onclick="toggleSettings()">
+                    ⚙️
+                </button>
+
+                <div class="settings-menu" id="settingsMenu">
+
+                    <button onclick="changeLanguage()">
+                        🌐 Change Language
+                    </button>
+
+                    <button onclick="toggleTheme()">
+                        🌙 Dark / Light Mode
+                    </button>
+
+                    <button onclick="showAbout()">
+                        ℹ️ About
+                    </button>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main class="platform-page">
+
+        <h1>
+            Traffic Services
+        </h1>
+
+        <p class="platform-intro">
+            Explore traffic services related to vehicles,
+            driving licenses, and traffic violations.
+        </p>
+
+
+        <div class="platform-tabs">
+
+            <button class="platform-tab active" data-target="about">
+                About the Service
+            </button>
+
+            <button class="platform-tab" data-target="login">
+                Access the Service
+            </button>
+
+            <button class="platform-tab" data-target="use">
+                How to Use
+            </button>
+
+            <button class="platform-tab" data-target="benefits">
+                Benefits
+            </button>
+
+        </div>
+
+
+        <div class="platform-sections">
+
+
+            <section class="platform-content active" data-section="about">
+
+                <div>
+
+                    <h2>
+                        About Traffic Services
+                    </h2>
+
+                    <p>
+                        Traffic services are government services provided
+                        by the Ministry of Interior. They include procedures
+                        related to vehicles, driving licenses, and traffic violations.
+                    </p>
+
+                    <p>
+                        These services aim to organize traffic, ensure vehicle
+                        validity, and make traffic procedures easier for citizens.
+                    </p>
+
+                    <h2>
+                        Vehicle License Services
+                    </h2>
+
+                    <ul>
+
+                        <li>Renewing a vehicle license.</li>
+
+                        <li>Issuing a new vehicle license.</li>
+
+                        <li>Issuing a replacement for a lost vehicle license.</li>
+
+                        <li>Issuing a replacement for a damaged vehicle license.</li>
+
+                        <li>Transferring vehicle ownership.</li>
+
+                        <li>Obtaining an official vehicle data certificate.</li>
+
+                    </ul>
+
+                </div>
+
+                <img src="service2.png" alt="Traffic Services">
+
+            </section>
+
+
+            <section class="platform-content" data-section="login">
+
+                <div>
+
+                    <h2>
+                        Access Traffic Services
+                    </h2>
+
+                    <h3>
+                        Digital Egypt Portal
+                    </h3>
+
+                    <p>
+                        The Digital Egypt Portal is a government platform
+                        that provides various electronic government services,
+                        including traffic services.
+                    </p>
+
+                    <p>
+                        To access traffic services, visit
+                        <a href="https://digital.gov.eg/" target="_blank">
+                            Digital Egypt Portal
+                        </a>.
+                    </p>
+
+                    <p>
+                        You can also directly access the vehicle license
+                        violation inquiry service through
+                        <a href="https://digital.gov.eg/categories/terms/%D8%A7%D8%B3%D8%AA%D8%B9%D9%84%D8%A7%D9%85-%D8%B9%D9%86-%D9%85%D8%AE%D8%A7%D9%84%D9%81%D8%A7%D8%AA-%D8%B1%D8%AE%D8%B5%D8%A9-%D9%85%D8%B1%D9%83%D8%A8%D8%A9"
+                            target="_blank">
+                            Vehicle License Violation Inquiry
+                        </a>.
+                    </p>
+
+                </div>
+
+                <img src="service2.png" alt="Traffic Services Portal">
+
+            </section>
+
+
+            <section class="platform-content" data-section="use">
+
+                <div>
+
+                    <h2>
+                        Driving License Services
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            Issuing a driving license for the first time.
+                        </li>
+
+                        <li>
+                            Renewing a driving license.
+                        </li>
+
+                        <li>
+                            Issuing a replacement for a lost or damaged driving license.
+                        </li>
+
+                        <li>
+                            Inquiring about certain driving license information.
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        Some services, such as obtaining a driving license
+                        for the first time, require specific procedures,
+                        examinations, and personal attendance.
+                    </p>
+
+                    <h2>
+                        Traffic Violation Services
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            Checking traffic violations registered on a vehicle.
+                        </li>
+
+                        <li>
+                            Paying violations electronically using available payment methods.
+                        </li>
+
+                        <li>
+                            Submitting an objection to a traffic violation.
+                        </li>
+
+                        <li>
+                            Following up on objections when the electronic service is available.
+                        </li>
+
+                    </ul>
+
+                    <h2>
+                        Main Services on Digital Egypt
+                    </h2>
+
+                    <ul>
+
+                        <li>Renewing a vehicle license.</li>
+
+                        <li>Issuing a replacement for a lost or damaged vehicle license.</li>
+
+                        <li>Creating a vehicle sale power of attorney.</li>
+
+                        <li>Creating a vehicle management power of attorney.</li>
+
+                        <li>Checking vehicle license violations.</li>
+
+                    </ul>
+
+                </div>
+
+                <img src="service2.png" alt="Vehicle and Driving License Services">
+
+            </section>
+
+
+            <section class="platform-content" data-section="benefits">
+
+                <div>
+
+                    <h2>
+                        Benefits of Digital Services
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            Easier access to traffic services.
+                        </li>
+
+                        <li>
+                            Saves time and effort.
+                        </li>
+
+                        <li>
+                            Reduces the need to visit government offices for available electronic services.
+                        </li>
+
+                        <li>
+                            Allows citizens to check traffic violations electronically.
+                        </li>
+
+                        <li>
+                            Allows some vehicle procedures to be completed electronically.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <img src="service2.png" alt="Traffic Services Benefits">
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <div class="about-overlay" id="aboutOverlay">
+
+        <div class="about-box">
+
+            <button class="close-about" onclick="closeAbout()">
+                ×
+            </button>
+
+            <h2>
+                About the Website
+            </h2>
+
+            <p>
+                Your Complete Guide is a website designed
+                to help students and citizens access
+                digital platforms and services
+                in an easy and organized way.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
