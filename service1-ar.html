@@ -12,222 +12,199 @@
 
 <body>
 
-    <header>
+<header class="main-header">
 
-        <nav>
+    <nav>
 
-            <h2>
-                دليلك الكامل
-            </h2>
+        <h2 class="site-name">دليلك الكامل</h2>
 
-            <div class="nav-links">
+        <div class="nav-links">
+            <a href="loginas-ar.html">الرئيسية</a>
+            <a href="citizenservices-ar.html">الخدمات</a>
+            <a href="#about">عن الخدمة</a>
+            <a href="#benefits">الفوائد</a>
+        </div>
 
-                <a href="loginas-ar.html">الرئيسية</a>
+        <div class="settings-container">
 
-                <a href="citizenservices-ar.html">الخدمات</a>
+            <button class="settings-button" onclick="toggleSettings()">⚙️</button>
 
-                <a href="#about">عن الخدمة</a>
+            <div class="settings-menu" id="settingsMenu">
 
-                <a href="#benefits">الفوائد</a>
+                <button onclick="changeLanguage()">🌐 تغيير اللغة</button>
+
+                <button onclick="toggleTheme()">
+                    🌙 الوضع الداكن / الفاتح
+                </button>
+
+                <button onclick="showAbout()">ℹ️ عن الموقع</button>
 
             </div>
 
-            <div class="language-switch ar" onclick="changeLanguage()">
+        </div>
 
-                <span class="language-label">AR</span>
+    </nav>
 
-                <div class="switch">
-                    <div class="switch-knob"></div>
-                </div>
-
-            </div>
-
-        </nav>
-
-    </header>
+</header>
 
 
-    <main class="platform-page">
+<div id="particles"></div>
 
-        <h1>
-            خدمات التموين
-        </h1>
 
-        <p class="platform-intro">
-            تعرف على خدمات التموين الإلكترونية وأهم الخدمات
-            المتعلقة ببطاقات التموين وكيفية الوصول إليها.
+<main>
+
+    <section class="hero-section">
+
+        <div class="hero-content">
+
+            <p class="hero-small-title">الخدمات الحكومية</p>
+
+            <h1>خدمات التموين</h1>
+
+            <p>
+                تعرف على أهم خدمات بطاقات التموين والسلع المدعمة
+                وطرق الوصول إلى الخدمات الرقمية.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="about-section" id="about">
+
+        <h2>ما هي خدمات التموين؟</h2>
+
+        <p>
+            تتيح خدمات التموين للمواطنين الاستفادة من منظومة الدعم
+            والسلع التموينية باستخدام بطاقة التموين المرتبطة ببيانات الأسرة،
+            وفقًا للقواعد المنظمة للدعم.
         </p>
 
+    </section>
 
-        <div class="platform-tabs">
 
-            <button class="platform-tab active" data-target="about">
-                عن الخدمة
-            </button>
+    <section class="goals-section">
 
-            <button class="platform-tab" data-target="login">
-                الوصول إلى الخدمة
-            </button>
+        <h2>أهم الخدمات</h2>
 
-            <button class="platform-tab" data-target="use">
-                كيفية الاستخدام
-            </button>
+        <div class="info-cards">
 
-            <button class="platform-tab" data-target="benefits">
-                الفوائد
-            </button>
+            <div class="info-card">
+                <h3>بطاقة التموين</h3>
+                <p>
+                    الاستفادة من الخدمات المرتبطة ببطاقة التموين.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>إضافة أفراد</h3>
+                <p>
+                    قد تتاح خدمات إضافة أفراد الأسرة وفقًا للقواعد والشروط
+                    المطبقة.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>بدل فاقد أو تالف</h3>
+                <p>
+                    إمكانية تقديم طلبات متعلقة بالبطاقة في الخدمات الرقمية
+                    المتاحة.
+                </p>
+            </div>
 
         </div>
 
-
-        <div class="platform-sections">
-
-            <section class="platform-content active" data-section="about">
-
-                <img src="service1.png" alt="خدمات التموين">
-
-                <div>
-
-                    <h2>
-                        ما هي خدمات التموين؟
-                    </h2>
-
-                    <p>
-                        تتيح خدمات التموين للمواطنين الحصول على
-                        السلع التموينية المدعمة مثل الزيت والسكر
-                        باستخدام بطاقة التموين.
-                    </p>
-
-                    <p>
-                        ترتبط بطاقة التموين ببيانات أفراد الأسرة،
-                        ويحصل أفراد الأسرة على قيمة دعم وفقًا
-                        للقواعد المطبقة.
-                    </p>
-
-                </div>
-
-            </section>
+    </section>
 
 
-            <section class="platform-content" data-section="login">
+    <section class="benefits-section" id="benefits">
 
-                <h2>
-                    الوصول إلى خدمات التموين
-                </h2>
+        <h2>كيف تصل إلى الخدمة؟</h2>
 
+        <div class="info-cards">
+
+            <div class="info-card">
+                <h3>1</h3>
                 <p>
-                    يمكن الوصول إلى الخدمات الرقمية من خلال
-                    بوابة مصر الرقمية.
+                    ادخل إلى بوابة مصر الرقمية.
                 </p>
+            </div>
 
+            <div class="info-card">
+                <h3>2</h3>
                 <p>
-                    أهم الخدمات المتاحة تشمل:
+                    اختر خدمات التموين المتاحة.
                 </p>
+            </div>
 
-                <ul>
-
-                    <li>تفعيل بطاقة التموين</li>
-                    <li>إصدار بدل فاقد أو تالف</li>
-                    <li>الاستعلام عن صرف التموين</li>
-                    <li>إضافة أفراد الأسرة</li>
-                    <li>نقل البطاقة من محافظة إلى أخرى</li>
-                    <li>الفصل الاجتماعي</li>
-
-                </ul>
-
+            <div class="info-card">
+                <h3>3</h3>
                 <p>
-                    بوابة مصر الرقمية:
+                    اختر الخدمة المطلوبة واتبع التعليمات الظاهرة.
                 </p>
-
-                <a href="https://digital.gov.eg/" target="_blank">
-                    بوابة مصر الرقمية
-                </a>
-
-                <p>
-                    ويمكن أيضًا معرفة المعلومات والخدمات من
-                    خلال وزارة التموين والتجارة الداخلية:
-                </p>
-
-                <a href="https://www.msit.gov.eg/" target="_blank">
-                    وزارة التموين والتجارة الداخلية
-                </a>
-
-            </section>
-
-
-            <section class="platform-content" data-section="use">
-
-                <h2>
-                    كيفية استخدام خدمات التموين
-                </h2>
-
-                <ol>
-
-                    <li>
-                        الدخول إلى بوابة مصر الرقمية.
-                    </li>
-
-                    <li>
-                        اختيار الخدمة المطلوبة.
-                    </li>
-
-                    <li>
-                        إدخال البيانات المطلوبة.
-                    </li>
-
-                    <li>
-                        متابعة خطوات تقديم الطلب.
-                    </li>
-
-                    <li>
-                        متابعة حالة الخدمة إلكترونيًا عند توفر ذلك.
-                    </li>
-
-                </ol>
-
-                <p>
-                    يتم تسجيل معاملات صرف السلع التموينية
-                    إلكترونيًا من خلال منافذ التموين المعتمدة.
-                </p>
-
-            </section>
-
-
-            <section class="platform-content" data-section="benefits">
-
-                <h2>
-                    فوائد خدمات التموين الرقمية
-                </h2>
-
-                <ul>
-
-                    <li>
-                        تسهيل الوصول إلى الخدمات.
-                    </li>
-
-                    <li>
-                        تقليل الحاجة إلى الإجراءات الورقية.
-                    </li>
-
-                    <li>
-                        إمكانية متابعة بعض الخدمات إلكترونيًا.
-                    </li>
-
-                    <li>
-                        توفير معلومات عن خدمات بطاقة التموين.
-                    </li>
-
-                </ul>
-
-            </section>
+            </div>
 
         </div>
 
-    </main>
+    </section>
 
 
-    <script src="script.js"></script>
+    <section class="about-section">
+
+        <h2>الروابط الرسمية</h2>
+
+        <p>
+            بوابة مصر الرقمية:
+        </p>
+
+        <p>
+            <a href="https://digital.gov.eg/" target="_blank">
+                digital.gov.eg
+            </a>
+        </p>
+
+        <p>
+            وزارة التموين والتجارة الداخلية:
+        </p>
+
+        <p>
+            <a href="https://www.msit.gov.eg/" target="_blank">
+                msit.gov.eg
+            </a>
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>© 2026 دليلك الكامل</p>
+
+</footer>
+
+
+<div class="about-overlay" id="aboutOverlay">
+
+    <div class="about-box">
+
+        <button class="close-about" onclick="closeAbout()">×</button>
+
+        <h2>عن الموقع</h2>
+
+        <p>
+            دليلك الكامل يساعدك على الوصول إلى معلومات منظمة
+            عن المنصات التعليمية والخدمات الرقمية.
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
