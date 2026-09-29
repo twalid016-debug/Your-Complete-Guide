@@ -4,145 +4,347 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madrasetna Platform</title>
+
+    <title>Madrasetna | Your Complete Guide</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <h2>Your Complete Guide</h2>
+    <header class="main-header">
 
-        <div class="nav-links">
-            <a href="index-en.html">Home</a>
-            <a href="index-en.html#about">About</a>
-            <a href="index-en.html#platforms">Platforms</a>
-            <a href="index-en.html#benefits">Benefits</a>
-        </div>
+        <nav>
 
-        <div class="language-switch" onclick="changeLanguage()">
-            <span class="language-label">EN</span>
+            <h2 class="site-name">
+                Your Complete Guide
+            </h2>
 
-            <div class="switch">
-                <div class="switch-knob"></div>
+            <div class="nav-links">
+
+                <a href="loginas-en.html">
+                    Home
+                </a>
+
+                <a href="studentplatforms-en.html">
+                    Platforms
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#benefits">
+                    Benefits
+                </a>
+
             </div>
-        </div>
-    </nav>
-</header>
 
-<main class="platform-page">
+            <div class="settings-container">
 
-    <h1>Madrasetna Platform</h1>
+                <button class="settings-button"
+                        onclick="toggleSettings()">
+                    ⚙️
+                </button>
 
-    <p class="platform-intro">
-        Learn about Madrasetna and how students can benefit from it.
-    </p>
+                <div class="settings-menu"
+                     id="settingsMenu">
 
-    <div class="platform-tabs">
+                    <button onclick="changeLanguage()">
+                        🌐 Change Language
+                    </button>
 
-        <button class="platform-tab active" data-target="about">
+                    <button onclick="toggleTheme()">
+                        🌙 Dark / Light Mode
+                    </button>
+
+                    <button onclick="showAbout()">
+                        ℹ️ About
+                    </button>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <div id="particles"></div>
+
+
+    <section class="hero">
+
+        <h1>
+            Madrasetna Platform
+        </h1>
+
+        <p>
+            A digital educational platform within
+            the Ministry of Education's educational system.
+        </p>
+
+        <a href="https://moe.gov.eg/ar/"
+           target="_blank">
+            Visit Ministry Website
+        </a>
+
+    </section>
+
+
+    <section id="about">
+
+        <h2>
             About the Platform
-        </button>
+        </h2>
 
-        <button class="platform-tab" data-target="login">
-            How to Log In
-        </button>
+        <p>
+            Madrasetna is an educational platform
+            within the digital educational system
+            of Egypt's Ministry of Education.
+        </p>
 
-        <button class="platform-tab" data-target="use">
-            How to Use
-        </button>
+        <p>
+            Students can use available digital content
+            and resources to support lessons, revision,
+            and learning.
+        </p>
 
-        <button class="platform-tab" data-target="benefits">
-            Benefits
-        </button>
+    </section>
+
+
+    <section>
+
+        <h2>
+            What Can You Find?
+        </h2>
+
+        <div class="benefits-container">
+
+            <div class="benefit">
+
+                <h3>
+                    Educational Lessons
+                </h3>
+
+                <p>
+                    Educational content that helps
+                    students follow their subjects.
+                </p>
+
+            </div>
+
+            <div class="benefit">
+
+                <h3>
+                    Revision
+                </h3>
+
+                <p>
+                    Digital resources can support
+                    studying and revision.
+                </p>
+
+            </div>
+
+            <div class="benefit">
+
+                <h3>
+                    Visual Content
+                </h3>
+
+                <p>
+                    Videos and visual content can
+                    support explanations of subjects.
+                </p>
+
+            </div>
+
+            <div class="benefit">
+
+                <h3>
+                    Supporting Resources
+                </h3>
+
+                <p>
+                    Digital resources provide
+                    additional support for learning.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="benefits">
+
+        <h2>
+            Benefits for Students
+        </h2>
+
+        <div class="benefits-container">
+
+            <div class="benefit">
+
+                <h3>
+                    Study Outside School
+                </h3>
+
+                <p>
+                    Students can use digital resources
+                    to continue studying outside school.
+                </p>
+
+            </div>
+
+            <div class="benefit">
+
+                <h3>
+                    Access to Resources
+                </h3>
+
+                <p>
+                    Access educational resources through
+                    internet-connected devices.
+                </p>
+
+            </div>
+
+            <div class="benefit">
+
+                <h3>
+                    Independent Learning
+                </h3>
+
+                <p>
+                    Digital resources allow students
+                    to review content according to their needs.
+                </p>
+
+            </div>
+
+            <div class="benefit">
+
+                <h3>
+                    Learning Support
+                </h3>
+
+                <p>
+                    Digital resources can provide
+                    additional support for studying.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            How to Access
+        </h2>
+
+        <div class="about-content">
+
+            <p>
+                1. Open the Ministry of Education website.
+            </p>
+
+            <p>
+                2. Go to the Educational Platforms section.
+            </p>
+
+            <p>
+                3. Choose Madrasetna.
+            </p>
+
+            <p>
+                4. Select the educational stage
+                or content you need.
+            </p>
+
+            <p>
+                5. Start using the available
+                educational resources.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            Official Link
+        </h2>
+
+        <div class="benefits-container">
+
+            <div class="benefit">
+
+                <h3>
+                    Ministry of Education
+                </h3>
+
+                <p>
+                    Official Ministry website.
+                </p>
+
+                <a href="https://moe.gov.eg/ar/"
+                   target="_blank">
+                    Open Website
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="about-overlay"
+         id="aboutOverlay">
+
+        <div class="about-box">
+
+            <button class="close-about"
+                    onclick="closeAbout()">
+                ×
+            </button>
+
+            <h2>
+                About the Website
+            </h2>
+
+            <p>
+                Your Complete Guide helps students
+                access educational platforms and
+                resources in an organized way.
+            </p>
+
+        </div>
 
     </div>
 
-    <div class="platform-sections">
 
-        <section class="platform-content active" data-section="about">
+    <footer>
 
-            <div class="platform-text">
-                <h2>About the Platform</h2>
+        <p>
+            Madrasetna | Your Complete Guide
+        </p>
 
-                <p>
-                    Madrasetna is an educational platform that provides
-                    digital educational content and resources for students.
-                </p>
-
-                <p>
-                    It supports students throughout their learning journey.
-                </p>
-            </div>
-
-            <img src="madrasa.png" alt="Madrasetna Platform">
-
-        </section>
+    </footer>
 
 
-        <section class="platform-content" data-section="login">
-
-            <div class="platform-text">
-                <h2>How to Log In</h2>
-
-                <ol>
-                    <li>Open the Madrasetna platform.</li>
-                    <li>Choose the required service or content.</li>
-                    <li>Enter the required information if needed.</li>
-                    <li>Continue to the selected content.</li>
-                </ol>
-            </div>
-
-            <img src="madrasa.png" alt="Madrasetna Login">
-
-        </section>
-
-
-        <section class="platform-content" data-section="use">
-
-            <div class="platform-text">
-                <h2>How to Use</h2>
-
-                <ol>
-                    <li>Open the platform.</li>
-                    <li>Choose the required educational content.</li>
-                    <li>Read or watch the available material.</li>
-                    <li>Use the resources to support your studies.</li>
-                </ol>
-            </div>
-
-            <img src="madrasa.png" alt="Using Madrasetna">
-
-        </section>
-
-
-        <section class="platform-content" data-section="benefits">
-
-            <div class="platform-text">
-                <h2>Benefits for Students</h2>
-
-                <ul>
-                    <li>Provides digital educational resources.</li>
-                    <li>Supports students' learning.</li>
-                    <li>Helps students access educational content.</li>
-                    <li>Encourages independent learning.</li>
-                </ul>
-            </div>
-
-            <img src="madrasa.png" alt="Madrasetna Benefits">
-
-        </section>
-
-    </div>
-
-</main>
-
-<footer>
-    <p>Ministry of Education and Technical Education</p>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
