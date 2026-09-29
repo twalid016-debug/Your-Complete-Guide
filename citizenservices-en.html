@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,34 +16,46 @@
          Header
     ========================= -->
 
-    <header class="main-header">
+    <header>
 
         <nav>
 
-            <h2 class="site-name">
+            <h2>
                 Your Complete Guide
             </h2>
 
-            <div class="settings-container">
+            <div class="nav-links">
 
-                <button class="settings-button" onclick="toggleSettings()">
-                    ⚙️
-                </button>
+                <a href="loginas-en.html">
+                    Home
+                </a>
 
-                <div class="settings-menu" id="settingsMenu">
+                <a href="#about">
+                    About
+                </a>
 
-                    <button onclick="changeLanguage()">
-                        🌐 Change Language
-                    </button>
+                <a href="#services">
+                    Services
+                </a>
 
-                    <button onclick="toggleTheme()">
-                        🌙 Dark / Light Mode
-                    </button>
+                <a href="#benefits">
+                    Benefits
+                </a>
 
-                    <button onclick="showAbout()">
-                        ℹ️ About
-                    </button>
+                <a href="#goals">
+                    Goals
+                </a>
 
+            </div>
+
+            <div class="language-switch en" onclick="changeLanguage()">
+
+                <span class="language-label">
+                    EN
+                </span>
+
+                <div class="switch">
+                    <div class="switch-knob"></div>
                 </div>
 
             </div>
@@ -55,159 +66,309 @@
 
 
     <!-- =========================
-         Citizen Services
+         Hero
     ========================= -->
 
-    <main class="platform-page">
+    <section class="hero">
 
         <h1>
-            Citizen Services
+            Welcome to Citizen Services
         </h1>
 
-        <p class="platform-intro">
-            Explore important digital services available
-            for citizens and learn how to access and use them easily.
+        <p>
+            Learn about important government and digital
+            services available to citizens and how to access them.
         </p>
 
+        <a href="#services">
+            Explore Services
+        </a>
 
-        <section id="platforms">
+    </section>
 
-            <h2>
-                Available Services
+
+    <!-- =========================
+         About
+    ========================= -->
+
+    <section id="about">
+
+        <h2>
+            About the Website
+        </h2>
+
+        <p>
+            Your Complete Guide is a website designed to help
+            citizens access digital and government services
+            in an easy and organized way.
+        </p>
+
+        <p>
+            The website collects important information and
+            guidance about different services in one place,
+            explaining how citizens can access and use them.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         Goals
+    ========================= -->
+
+    <section id="goals" class="goals-section">
+
+        <div class="goals-container">
+
+            <h2 class="goals-title">
+                Project Goals
             </h2>
 
+            <p class="goals-subtitle">
+                Our goal is to make digital services
+                easier for citizens to access and understand.
+            </p>
 
-            <div class="platforms-container">
+            <div class="goals-grid">
 
-                <!-- Service 1: Ration Services -->
+                <div class="goal-card">
 
-                <div class="platform-card">
-
-                    <img src="service1.png" alt="Ration Services">
-
-                    <h3>
-                        Ration Services
+                    <h3 class="goal-card-title">
+                        Easier Access
                     </h3>
 
-                    <p>
-                        Learn about ration services and important
-                        digital services related to ration cards.
+                    <p class="goal-card-text">
+                        Provide a unified guide that helps citizens
+                        access important government and digital services.
                     </p>
-
-                    <a href="service1-en.html">
-                        Learn More
-                    </a>
 
                 </div>
 
 
-                <!-- Service 2: Traffic Services -->
+                <div class="goal-card">
 
-                <div class="platform-card">
-
-                    <img src="service2.png" alt="Traffic Services">
-
-                    <h3>
-                        Traffic Services
+                    <h3 class="goal-card-title">
+                        Digital Awareness
                     </h3>
 
-                    <p>
-                        Learn about vehicle services, driving licenses,
-                        and traffic violation inquiries.
+                    <p class="goal-card-text">
+                        Help citizens understand available
+                        digital services and how to use them.
                     </p>
-
-                    <a href="service2-en.html">
-                        Learn More
-                    </a>
 
                 </div>
 
 
-                <!-- Service 3: Electricity Services -->
+                <div class="goal-card">
 
-                <div class="platform-card">
-
-                    <img src="service3.png" alt="Electricity Services">
-
-                    <h3>
-                        Electricity Services
+                    <h3 class="goal-card-title">
+                        Save Time and Effort
                     </h3>
 
-                    <p>
-                        Learn about electricity bills, meters,
-                        complaints, and digital services.
+                    <p class="goal-card-text">
+                        Provide clear information that helps citizens
+                        access services with less time and effort.
                     </p>
-
-                    <a href="service3-en.html">
-                        Learn More
-                    </a>
-
-                </div>
-
-
-                <!-- Service 4: Water Services -->
-
-                <div class="platform-card">
-
-                    <img src="service4.png" alt="Water Services">
-
-                    <h3>
-                        Water Services
-                    </h3>
-
-                    <p>
-                        Learn about water bills, meter readings,
-                        complaints, and wastewater services.
-                    </p>
-
-                    <a href="service4-en.html">
-                        Learn More
-                    </a>
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </section>
 
 
     <!-- =========================
-         About Popup
+         Services
     ========================= -->
 
-    <div class="about-overlay" id="aboutOverlay">
+    <section id="services">
 
-        <div class="about-box">
+        <h2>
+            Citizen Services
+        </h2>
 
-            <button class="close-about" onclick="closeAbout()">
-                ×
-            </button>
+        <div class="platforms-container">
 
-            <h2>
-                About the Website
-            </h2>
 
-            <p>
-                Your Complete Guide is a website designed
-                to help students and citizens access
-                digital platforms and services
-                in an easy and organized way.
-            </p>
+            <!-- Ration -->
+
+            <div class="platform-card">
+
+                <img
+                    src="service1.png"
+                    alt="Ration Services"
+                >
+
+                <h3>
+                    Ration Services
+                </h3>
+
+                <p>
+                    Learn about ration services and important
+                    digital services related to ration cards.
+                </p>
+
+                <a href="service1-en.html">
+                    Learn More
+                </a>
+
+            </div>
+
+
+            <!-- Traffic -->
+
+            <div class="platform-card">
+
+                <img
+                    src="service2.png"
+                    alt="Traffic Services"
+                >
+
+                <h3>
+                    Traffic Services
+                </h3>
+
+                <p>
+                    Learn about vehicle services, driving licenses,
+                    and traffic violation inquiries.
+                </p>
+
+                <a href="service2-en.html">
+                    Learn More
+                </a>
+
+            </div>
+
+
+            <!-- Electricity -->
+
+            <div class="platform-card">
+
+                <img
+                    src="service3.png"
+                    alt="Electricity Services"
+                >
+
+                <h3>
+                    Electricity Services
+                </h3>
+
+                <p>
+                    Learn about electricity bills, meters,
+                    complaints, and digital services.
+                </p>
+
+                <a href="service3-en.html">
+                    Learn More
+                </a>
+
+            </div>
+
+
+            <!-- Water -->
+
+            <div class="platform-card">
+
+                <img
+                    src="service4.png"
+                    alt="Water Services"
+                >
+
+                <h3>
+                    Water Services
+                </h3>
+
+                <p>
+                    Learn about water bills, meter readings,
+                    complaints, and wastewater services.
+                </p>
+
+                <a href="service4-en.html">
+                    Learn More
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
 
     <!-- =========================
-         JavaScript
+         Benefits
     ========================= -->
+
+    <section id="benefits">
+
+        <h2>
+            Benefits for Citizens
+        </h2>
+
+        <div class="benefits-container">
+
+            <div class="benefit">
+
+                <h3>
+                    Easy Access to Information
+                </h3>
+
+                <p>
+                    The website helps citizens find important
+                    service information in one place.
+                </p>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <h3>
+                    Clear Guidance
+                </h3>
+
+                <p>
+                    It provides clear information that helps
+                    citizens understand how to access services.
+                </p>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <h3>
+                    Supporting Digital Transformation
+                </h3>
+
+                <p>
+                    It helps citizens make better use of
+                    available digital government services.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         Footer
+    ========================= -->
+
+    <footer>
+
+        <p>
+            Digital Citizen Services
+        </p>
+
+    </footer>
+
 
     <script src="script.js"></script>
 
 </body>
 
 </html>
-```
