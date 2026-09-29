@@ -15,12 +15,21 @@ html {
 body {
     font-family: Arial, sans-serif;
     color: #1e293b;
-    background-color: #ffffff;
+    background-color: #f8fafc;
     line-height: 1.6;
-    transition: background-color 0.3s ease, color 0.3s ease;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+    /* Space for fixed header */
+    padding-top: 75px;
 }
 
-/* Arabic support */
+
+/* =========================
+   Arabic / English
+========================= */
 
 html[lang="ar"],
 body[lang="ar"] {
@@ -52,43 +61,60 @@ button {
 
 
 /* =========================
-   Header & Navigation
+   Header
 ========================= */
 
 header,
 .main-header {
     background-color: #1e3a8a;
+
     padding: 15px 40px;
-    position: sticky;
+
+    position: fixed;
+
     top: 0;
+    left: 0;
+
+    width: 100%;
+
     z-index: 1000;
+
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
 nav {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
+
     max-width: 1200px;
+
     margin: auto;
 }
 
 nav h2,
 .site-name {
     color: white;
+
     font-size: 24px;
 }
 
 .nav-links {
     display: flex;
+
     align-items: center;
+
     gap: 25px;
 }
 
 .nav-links a {
     color: white;
+
     text-decoration: none;
+
     font-size: 16px;
+
     transition: opacity 0.3s ease;
 }
 
@@ -108,12 +134,19 @@ nav h2,
 .settings-button {
     width: 44px;
     height: 44px;
+
     border: none;
+
     border-radius: 50%;
+
     background-color: rgba(255, 255, 255, 0.15);
+
     color: white;
+
     font-size: 22px;
+
     cursor: pointer;
+
     transition:
         transform 0.3s ease,
         background-color 0.3s ease;
@@ -121,20 +154,32 @@ nav h2,
 
 .settings-button:hover {
     transform: rotate(45deg);
+
     background-color: rgba(255, 255, 255, 0.25);
 }
 
 .settings-menu {
     position: absolute;
+
     top: 55px;
+
     right: 0;
+
     width: 220px;
+
     background-color: white;
+
     border-radius: 12px;
+
     padding: 10px;
+
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+
     display: none;
+
     animation: settingsAppear 0.2s ease;
+
+    z-index: 2000;
 }
 
 body[dir="rtl"] .settings-menu {
@@ -148,14 +193,23 @@ body[dir="rtl"] .settings-menu {
 
 .settings-menu button {
     width: 100%;
+
     border: none;
+
     background: transparent;
+
     color: #1e293b;
+
     text-align: start;
+
     padding: 12px;
+
     border-radius: 8px;
+
     font-size: 14px;
+
     cursor: pointer;
+
     transition: background-color 0.25s ease;
 }
 
@@ -167,36 +221,46 @@ body[dir="rtl"] .settings-menu {
 
     from {
         opacity: 0;
+
         transform: translateY(-8px);
     }
 
     to {
         opacity: 1;
+
         transform: translateY(0);
     }
-
 }
 
 
 /* =========================
-   Animated Background
+   Full Website Particles
 ========================= */
 
 #particles {
     position: fixed;
+
     inset: 0;
+
     width: 100%;
     height: 100%;
+
     pointer-events: none;
+
     overflow: hidden;
+
     z-index: 0;
 }
 
 .particle {
     position: absolute;
-    background-color: #93c5fd;
+
+    background-color: #60a5fa;
+
     border-radius: 50%;
-    opacity: 0.45;
+
+    opacity: 0.5;
+
     animation: floatParticle linear infinite;
 }
 
@@ -204,42 +268,44 @@ body[dir="rtl"] .settings-menu {
 
     0% {
         transform: translateY(0) translateX(0);
+
         opacity: 0.2;
     }
 
     50% {
         transform: translateY(-35px) translateX(20px);
-        opacity: 0.6;
+
+        opacity: 0.7;
     }
 
     100% {
         transform: translateY(-70px) translateX(-15px);
-        opacity: 0.1;
-    }
 
+        opacity: 0.2;
+    }
 }
 
 
 /* =========================
-   Content Above Particles
+   Sections Above Particles
 ========================= */
 
-header,
-.main-header,
+main,
+section,
 .login-container,
 .hero,
 .hero-section,
 .platform-page,
-#about,
 .about-section,
 .goals-section,
+.platforms-section,
+.benefits-section,
+#about,
 #platforms,
 #services,
-.platforms-section,
-#benefits,
-.benefits-section,
-footer {
+#benefits {
     position: relative;
+
     z-index: 1;
 }
 
@@ -254,50 +320,67 @@ footer {
 
 .login-container {
     min-height: calc(100vh - 75px);
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     padding: 60px 20px;
-    background: linear-gradient(
-        135deg,
-        #eff6ff,
-        #f8fafc
-    );
+
+    background: rgba(239, 246, 255, 0.72);
 }
 
 .login-box {
     width: 100%;
+
     max-width: 950px;
+
     text-align: center;
+
     position: relative;
+
     z-index: 2;
 }
 
 .login-box h1 {
     color: #1e3a8a;
+
     font-size: 42px;
+
     margin-bottom: 12px;
 }
 
 .login-intro {
     color: #64748b;
+
     font-size: 17px;
+
     margin-bottom: 40px;
 }
 
 .login-options {
     display: flex;
+
     justify-content: center;
+
     gap: 30px;
+
     flex-wrap: wrap;
 }
 
 .login-card {
     width: 340px;
-    background-color: white;
+
+    background: rgba(255, 255, 255, 0.94);
+
     border-radius: 18px;
+
     padding: 35px 25px;
+
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -305,91 +388,115 @@ footer {
 
 .login-card:hover {
     transform: translateY(-8px);
+
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
 
 .login-icon {
     font-size: 50px;
+
     margin-bottom: 15px;
 }
 
 .login-card h2 {
     color: #1e3a8a;
+
     font-size: 25px;
+
     margin-bottom: 12px;
 }
 
 .login-card p {
     color: #64748b;
+
     line-height: 1.7;
+
     margin-bottom: 25px;
 }
 
 .login-button {
     display: inline-block;
-    background-color: #1e3a8a;
+
+    background: #1e3a8a;
+
     color: white;
+
     text-decoration: none;
+
     padding: 11px 25px;
+
     border-radius: 8px;
+
     transition:
         transform 0.3s ease,
         background-color 0.3s ease;
 }
 
 .login-button:hover {
-    background-color: #162d6b;
+    background: #162d6b;
+
     transform: translateY(-2px);
 }
 
 
 /* =========================
-   Hero Section
+   Hero
 ========================= */
 
 .hero,
 .hero-section {
     text-align: center;
+
     padding: 110px 20px;
-    background: linear-gradient(
-        135deg,
-        #eff6ff,
-        #f8fafc
-    );
-    position: relative;
-    z-index: 1;
+
+    background: rgba(239, 246, 255, 0.72);
 }
 
 .hero h1,
 .hero-section h1 {
     font-size: 46px;
+
     margin-bottom: 20px;
+
     color: #1e3a8a;
 }
 
 .hero p,
 .hero-section p {
     font-size: 18px;
+
     max-width: 700px;
+
     margin: 0 auto 25px;
+
     line-height: 1.8;
+
     color: #475569;
 }
 
 .hero-small-title {
     color: #2563eb !important;
+
     font-size: 16px !important;
+
     font-weight: bold;
+
     margin-bottom: 10px !important;
 }
 
 .hero a {
     display: inline-block;
-    background-color: #1e3a8a;
+
+    background: #1e3a8a;
+
     color: white;
+
     padding: 13px 28px;
+
     text-decoration: none;
+
     border-radius: 8px;
+
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -397,104 +504,140 @@ footer {
 
 .hero a:hover {
     transform: translateY(-3px);
+
     box-shadow: 0 6px 15px rgba(30, 58, 138, 0.25);
 }
 
 
 /* =========================
-   About Section
+   About
 ========================= */
 
 #about,
 .about-section {
     padding: 75px 40px;
+
     max-width: 1000px;
+
     margin: auto;
+
+    background: rgba(255, 255, 255, 0.65);
 }
 
 #about h2,
 .about-section h2 {
     text-align: center;
+
     font-size: 34px;
+
     margin-bottom: 30px;
+
     color: #1e3a8a;
 }
 
 #about p,
 .about-section p {
     max-width: 800px;
+
     margin: 0 auto 18px;
+
     line-height: 1.8;
+
     color: #475569;
 }
 
 .about-section a {
     color: #1e3a8a;
+
     font-weight: bold;
 }
 
 
 /* =========================
-   Goals Section
+   Goals
 ========================= */
 
 .goals-section {
     padding: 70px 20px;
-    background-color: #f8fafc;
+
+    background: rgba(248, 250, 252, 0.72);
+
     text-align: center;
 }
 
 .goals-section > h2 {
     color: #1e3a8a;
+
     font-size: 34px;
+
     margin-bottom: 35px;
 }
 
 .goals-container {
     max-width: 1100px;
+
     margin: 0 auto;
 }
 
 .goals-title {
     color: #0046be;
+
     font-size: 28px;
+
     margin-bottom: 10px;
+
     font-weight: bold;
 }
 
 .goals-subtitle {
     color: #666;
+
     font-size: 16px;
+
     margin-bottom: 35px;
 }
 
 .goals-grid {
     display: flex;
+
     justify-content: center;
+
     gap: 20px;
+
     flex-wrap: wrap;
 }
 
 .goal-card {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.94);
+
     border-radius: 12px;
+
     padding: 25px;
+
     width: 300px;
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+
     border-top: 4px solid #0046be;
+
     text-align: start;
 }
 
 .goal-card-title {
     color: #0046be;
+
     font-size: 20px;
+
     margin-bottom: 12px;
+
     font-weight: bold;
 }
 
 .goal-card-text {
     color: #555;
+
     font-size: 14px;
+
     line-height: 1.6;
 }
 
@@ -505,21 +648,33 @@ footer {
 
 .info-cards {
     display: flex;
+
     justify-content: center;
+
     gap: 25px;
+
     flex-wrap: wrap;
+
     max-width: 1100px;
+
     margin: auto;
 }
 
 .info-card {
     flex: 1;
+
     min-width: 250px;
+
     max-width: 330px;
-    background-color: white;
+
+    background: rgba(255, 255, 255, 0.94);
+
     border-radius: 14px;
+
     padding: 28px;
+
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -527,17 +682,21 @@ footer {
 
 .info-card:hover {
     transform: translateY(-6px);
+
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
 }
 
 .info-card h3 {
     color: #1e3a8a;
+
     font-size: 21px;
+
     margin-bottom: 12px;
 }
 
 .info-card p {
     color: #475569;
+
     line-height: 1.7;
 }
 
@@ -550,32 +709,45 @@ footer {
 #services,
 .platforms-section {
     padding: 75px 40px;
+
     text-align: center;
-    background-color: #f8fafc;
+
+    background: rgba(248, 250, 252, 0.72);
 }
 
 #platforms > h2,
 .platforms-section > h2 {
     font-size: 34px;
+
     color: #1e3a8a;
+
     margin-bottom: 10px;
 }
 
 .platforms-container,
 .platform-cards {
     display: flex;
+
     justify-content: center;
+
     gap: 30px;
+
     flex-wrap: wrap;
+
     margin-top: 40px;
 }
 
 .platform-card {
     width: 340px;
-    background-color: white;
+
+    background: rgba(255, 255, 255, 0.94);
+
     border-radius: 14px;
+
     overflow: hidden;
+
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -583,39 +755,56 @@ footer {
 
 .platform-card:hover {
     transform: translateY(-8px) scale(1.02);
+
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.13);
 }
 
 .platform-card img {
     width: 100%;
+
     height: 200px;
+
     object-fit: contain;
+
     display: block;
+
     padding: 15px;
 }
 
 .platform-card h3 {
     font-size: 22px;
+
     margin: 20px;
+
     color: #1e3a8a;
 }
 
 .platform-card p {
     padding: 0 20px;
+
     line-height: 1.7;
+
     margin-bottom: 22px;
+
     color: #475569;
 }
 
 .platform-card a,
 .platform-button {
     display: inline-block;
-    background-color: #1e3a8a;
+
+    background: #1e3a8a;
+
     color: white;
+
     padding: 10px 22px;
+
     margin: 0 20px 25px;
+
     text-decoration: none;
+
     border-radius: 6px;
+
     transition:
         transform 0.3s ease,
         background-color 0.3s ease;
@@ -624,7 +813,8 @@ footer {
 .platform-card a:hover,
 .platform-button:hover {
     transform: translateY(-2px);
-    background-color: #162d6b;
+
+    background: #162d6b;
 }
 
 
@@ -635,29 +825,42 @@ footer {
 #benefits,
 .benefits-section {
     padding: 75px 40px;
+
+    background: rgba(255, 255, 255, 0.65);
 }
 
 #benefits > h2,
 .benefits-section > h2 {
     text-align: center;
+
     font-size: 34px;
+
     margin-bottom: 35px;
+
     color: #1e3a8a;
 }
 
 .benefits-container {
     display: flex;
+
     gap: 25px;
+
     flex-wrap: wrap;
+
     margin-top: 30px;
 }
 
 .benefit {
     flex: 1;
+
     padding: 28px;
-    background-color: #f1f5f9;
+
+    background: rgba(241, 245, 249, 0.94);
+
     border-radius: 12px;
+
     border-inline-start: 4px solid #1e3a8a;
+
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -665,17 +868,21 @@ footer {
 
 .benefit:hover {
     transform: translateY(-5px);
+
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
 
 .benefit h3 {
     font-size: 20px;
+
     margin-bottom: 10px;
+
     color: #1e3a8a;
 }
 
 .benefit p {
     line-height: 1.7;
+
     color: #475569;
 }
 
@@ -686,59 +893,88 @@ footer {
 
 .platform-page {
     padding: 70px 40px;
+
     max-width: 1000px;
+
     margin: auto;
+
+    background: rgba(255, 255, 255, 0.65);
 }
 
 .platform-page h1 {
     text-align: center;
+
     font-size: 42px;
+
     margin-bottom: 15px;
+
     color: #1e3a8a;
 }
 
 .platform-intro {
     text-align: center;
+
     max-width: 650px;
+
     margin: 0 auto 35px;
+
     color: #64748b;
+
     font-size: 17px;
 }
 
 
 /* =========================
-   Platform Tabs
+   Tabs
 ========================= */
 
 .platform-tabs {
     display: flex;
+
     justify-content: center;
+
     gap: 10px;
+
     flex-wrap: wrap;
+
     margin: 0 auto 30px;
+
     padding-bottom: 10px;
+
     border-bottom: 1px solid #e2e8f0;
 }
 
 .platform-tab {
     border: none;
-    background-color: #f1f5f9;
+
+    background: #f1f5f9;
+
     color: #1e3a8a;
+
     padding: 12px 20px;
+
     border-radius: 8px;
+
     font-size: 15px;
+
     font-weight: bold;
+
     cursor: pointer;
-    transition: 0.3s ease;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
 }
 
 .platform-tab:hover {
-    background-color: #dbeafe;
+    background: #dbeafe;
+
     transform: translateY(-2px);
 }
 
 .platform-tab.active {
-    background-color: #1e3a8a;
+    background: #1e3a8a;
+
     color: white;
 }
 
@@ -749,14 +985,23 @@ footer {
 
 .platform-content {
     display: none;
+
     max-width: 900px;
+
     margin: auto;
+
     padding: 30px;
-    background-color: #f8fafc;
+
+    background: rgba(248, 250, 252, 0.94);
+
     border-radius: 14px;
+
     grid-template-columns: 1.5fr 0.8fr;
+
     gap: 35px;
+
     align-items: center;
+
     animation: platformFade 0.3s ease;
 }
 
@@ -768,47 +1013,61 @@ footer {
 
     from {
         opacity: 0;
+
         transform: translateY(8px);
     }
 
     to {
         opacity: 1;
+
         transform: translateY(0);
     }
-
 }
 
 .platform-content h2 {
     color: #1e3a8a;
+
     font-size: 26px;
+
     margin-bottom: 18px;
 }
 
 .platform-content p {
     color: #475569;
+
     font-size: 17px;
+
     line-height: 1.8;
+
     margin-bottom: 15px;
 }
 
 .platform-content ol,
 .platform-content ul {
     padding-inline-start: 22px;
+
     line-height: 1.9;
 }
 
 .platform-content li {
     color: #334155;
+
     font-size: 17px;
+
     margin-bottom: 7px;
 }
 
 .platform-content > img {
     width: 100%;
+
     max-width: 220px;
+
     height: 180px;
+
     object-fit: contain;
+
     display: block;
+
     margin: auto;
 }
 
@@ -818,11 +1077,19 @@ footer {
 ========================= */
 
 footer {
-    background-color: #1e3a8a;
+    background: #1e3a8a;
+
     color: white;
+
     text-align: center;
+
     padding: 25px;
+
     margin-top: 40px;
+
+    position: relative;
+
+    z-index: 1;
 }
 
 footer p {
@@ -836,12 +1103,19 @@ footer p {
 
 .about-overlay {
     position: fixed;
+
     inset: 0;
-    background-color: rgba(15, 23, 42, 0.65);
+
+    background: rgba(15, 23, 42, 0.65);
+
     display: none;
+
     justify-content: center;
+
     align-items: center;
+
     padding: 20px;
+
     z-index: 2000;
 }
 
@@ -851,33 +1125,49 @@ footer p {
 
 .about-box {
     width: 100%;
+
     max-width: 500px;
-    background-color: white;
+
+    background: white;
+
     border-radius: 16px;
+
     padding: 35px;
+
     position: relative;
+
     text-align: center;
+
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .about-box h2 {
     color: #1e3a8a;
+
     margin-bottom: 15px;
 }
 
 .about-box p {
     color: #475569;
+
     line-height: 1.8;
 }
 
 .close-about {
     position: absolute;
+
     top: 10px;
+
     inset-inline-end: 15px;
+
     border: none;
+
     background: transparent;
+
     font-size: 28px;
+
     cursor: pointer;
+
     color: #64748b;
 }
 
@@ -887,18 +1177,30 @@ footer p {
 ========================= */
 
 body.dark-mode {
-    background-color: #0f172a;
+    background: #0f172a;
+
     color: #e2e8f0;
 }
 
+body.dark-mode .login-container,
 body.dark-mode .hero,
-body.dark-mode .hero-section,
-body.dark-mode .login-container {
-    background: linear-gradient(
-        135deg,
-        #0f172a,
-        #172554
-    );
+body.dark-mode .hero-section {
+    background: rgba(15, 23, 42, 0.82);
+}
+
+body.dark-mode #about,
+body.dark-mode .about-section,
+body.dark-mode #benefits,
+body.dark-mode .benefits-section,
+body.dark-mode .platform-page {
+    background: rgba(15, 23, 42, 0.78);
+}
+
+body.dark-mode .goals-section,
+body.dark-mode #platforms,
+body.dark-mode #services,
+body.dark-mode .platforms-section {
+    background: rgba(17, 24, 39, 0.78);
 }
 
 body.dark-mode .hero h1,
@@ -928,23 +1230,17 @@ body.dark-mode .benefit p {
     color: #cbd5e1;
 }
 
-body.dark-mode .goals-section,
-body.dark-mode #platforms,
-body.dark-mode #services,
-body.dark-mode .platforms-section {
-    background-color: #111827;
-}
-
 body.dark-mode .login-card,
 body.dark-mode .platform-card,
 body.dark-mode .info-card,
 body.dark-mode .goal-card {
-    background-color: #1e293b;
+    background: rgba(30, 41, 59, 0.96);
+
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 body.dark-mode .platform-content {
-    background-color: #1e293b;
+    background: rgba(30, 41, 59, 0.96);
 }
 
 body.dark-mode .platform-content p,
@@ -953,11 +1249,11 @@ body.dark-mode .platform-content li {
 }
 
 body.dark-mode .benefit {
-    background-color: #1e293b;
+    background: rgba(30, 41, 59, 0.94);
 }
 
 body.dark-mode .settings-menu {
-    background-color: #1e293b;
+    background: #1e293b;
 }
 
 body.dark-mode .settings-menu button {
@@ -965,11 +1261,11 @@ body.dark-mode .settings-menu button {
 }
 
 body.dark-mode .settings-menu button:hover {
-    background-color: #334155;
+    background: #334155;
 }
 
 body.dark-mode .about-box {
-    background-color: #1e293b;
+    background: #1e293b;
 }
 
 body.dark-mode .about-box p {
@@ -986,15 +1282,20 @@ body.dark-mode .close-about {
 
 body.dark-mode .particle {
     background-color: #60a5fa;
+
     opacity: 0.35;
 }
 
 
 /* =========================
-   Responsive Design
+   Responsive
 ========================= */
 
 @media (max-width: 768px) {
+
+    body {
+        padding-top: 70px;
+    }
 
     header,
     .main-header {
@@ -1003,6 +1304,7 @@ body.dark-mode .particle {
 
     nav {
         flex-wrap: wrap;
+
         gap: 12px;
     }
 
@@ -1013,9 +1315,13 @@ body.dark-mode .particle {
 
     .nav-links {
         order: 3;
+
         width: 100%;
+
         justify-content: center;
+
         flex-wrap: wrap;
+
         gap: 12px;
     }
 
@@ -1029,17 +1335,21 @@ body.dark-mode .particle {
 
     .settings-menu {
         position: fixed;
+
         top: 70px;
+
         width: 210px;
     }
 
     body[dir="ltr"] .settings-menu {
         right: 15px;
+
         left: auto;
     }
 
     body[dir="rtl"] .settings-menu {
         left: 15px;
+
         right: auto;
     }
 
@@ -1060,11 +1370,13 @@ body.dark-mode .particle {
 
     .login-options {
         flex-direction: column;
+
         align-items: center;
     }
 
     .login-card {
         width: 100%;
+
         max-width: 360px;
     }
 
@@ -1108,39 +1420,37 @@ body.dark-mode .particle {
         font-size: 28px;
     }
 
-
-    /* Goals */
-
     .goals-section {
         padding: 55px 20px;
     }
 
+
+    /* Cards */
+
     .info-cards {
         flex-direction: column;
+
         align-items: center;
     }
 
     .info-card {
         width: 100%;
+
         max-width: 380px;
     }
-
-
-    /* Platform Cards */
 
     .platforms-container,
     .platform-cards {
         flex-direction: column;
+
         align-items: center;
     }
 
     .platform-card {
         width: 90%;
+
         max-width: 380px;
     }
-
-
-    /* Benefits */
 
     .benefits-container {
         flex-direction: column;
@@ -1165,11 +1475,9 @@ body.dark-mode .particle {
         font-size: 16px;
     }
 
-
-    /* Tabs */
-
     .platform-tabs {
         flex-direction: column;
+
         gap: 8px;
     }
 
@@ -1177,12 +1485,11 @@ body.dark-mode .particle {
         width: 100%;
     }
 
-
-    /* Content */
-
     .platform-content {
         grid-template-columns: 1fr;
+
         padding: 25px;
+
         gap: 20px;
     }
 
@@ -1195,21 +1502,18 @@ body.dark-mode .particle {
         font-size: 16px;
     }
 
-
-    /* Images */
-
     .platform-content > img {
         max-width: 180px;
+
         height: 150px;
     }
 
 
-    /* About Popup */
+    /* About */
 
     .about-box {
         padding: 30px 22px;
     }
-
 }
 
 
@@ -1219,6 +1523,10 @@ body.dark-mode .particle {
 
 @media (max-width: 480px) {
 
+    body {
+        padding-top: 65px;
+    }
+
     nav h2,
     .site-name {
         font-size: 18px;
@@ -1226,7 +1534,9 @@ body.dark-mode .particle {
 
     .settings-button {
         width: 40px;
+
         height: 40px;
+
         font-size: 19px;
     }
 
@@ -1254,5 +1564,4 @@ body.dark-mode .particle {
     .platform-card {
         width: 100%;
     }
-
 }
