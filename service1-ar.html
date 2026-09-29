@@ -1,1 +1,319 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>خدمات التموين | دليلك الكامل</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+
+        <nav>
+
+            <h2 class="site-name">
+                دليلك الكامل
+            </h2>
+
+            <div class="settings-container">
+
+                <button class="settings-button" onclick="toggleSettings()">
+                    ⚙️
+                </button>
+
+                <div class="settings-menu" id="settingsMenu">
+
+                    <button onclick="changeLanguage()">
+                        🌐 تغيير اللغة
+                    </button>
+
+                    <button onclick="toggleTheme()">
+                        🌙 الوضع الداكن / الفاتح
+                    </button>
+
+                    <button onclick="showAbout()">
+                        ℹ️ عن الموقع
+                    </button>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main class="platform-page">
+
+        <h1>
+            خدمات التموين
+        </h1>
+
+        <p class="platform-intro">
+            تعرف على منظومة التموين وأهم الخدمات الإلكترونية
+            المتعلقة ببطاقات التموين والسلع التموينية.
+        </p>
+
+
+        <div class="platform-tabs">
+
+            <button class="platform-tab active" data-target="about">
+                عن الخدمة
+            </button>
+
+            <button class="platform-tab" data-target="login">
+                الوصول إلى الخدمة
+            </button>
+
+            <button class="platform-tab" data-target="use">
+                كيفية الاستخدام
+            </button>
+
+            <button class="platform-tab" data-target="benefits">
+                المميزات
+            </button>
+
+        </div>
+
+
+        <div class="platform-sections">
+
+
+            <!-- About -->
+
+            <section class="platform-content active" data-section="about">
+
+                <div>
+
+                    <h2>
+                        عن خدمة التموين
+                    </h2>
+
+                    <p>
+                        خدمة التموين هي إحدى الخدمات الحكومية التي تتيح
+                        للمواطنين الحصول على السلع التموينية المدعمة،
+                        مثل الزيت والسكر، باستخدام بطاقة التموين.
+                    </p>
+
+                    <h2>
+                        آلية عمل منظومة التموين
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            تمتلك الأسرة بطاقة تموين مرتبطة ببيانات أفرادها.
+                        </li>
+
+                        <li>
+                            تُخصص للأسرة قيمة دعم وفقًا للقواعد المعمول بها.
+                        </li>
+
+                        <li>
+                            يمكن للمواطن استخدام البطاقة لدى منافذ التموين المعتمدة.
+                        </li>
+
+                        <li>
+                            يختار المواطن السلع المتاحة في حدود قيمة الدعم المخصصة له.
+                        </li>
+
+                        <li>
+                            تُسجل عمليات الصرف إلكترونيًا، مما يتيح متابعة عمليات الصرف.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <img src="service1.png" alt="خدمات التموين">
+
+            </section>
+
+
+            <!-- Access -->
+
+            <section class="platform-content" data-section="login">
+
+                <div>
+
+                    <h2>
+                        الوصول إلى خدمات التموين
+                    </h2>
+
+                    <h3>
+                        بوابة مصر الرقمية
+                    </h3>
+
+                    <p>
+                        بوابة مصر الرقمية هي منصة حكومية تجمع عددًا كبيرًا
+                        من الخدمات الإلكترونية، بما في ذلك خدمات التموين.
+                    </p>
+
+                    <ol>
+
+                        <li>
+                            انتقل إلى
+                            <a href="https://digital.gov.eg/" target="_blank">
+                                بوابة مصر الرقمية
+                            </a>.
+                        </li>
+
+                        <li>
+                            اختر قسم خدمات التموين.
+                        </li>
+
+                        <li>
+                            اختر الخدمة التي تحتاج إليها.
+                        </li>
+
+                    </ol>
+
+                    <h3>
+                        وزارة التموين والتجارة الداخلية
+                    </h3>
+
+                    <p>
+                        يُعد موقع وزارة التموين والتجارة الداخلية البوابة
+                        الرسمية للوزارة والمسؤولة عن منظومة التموين في مصر.
+                    </p>
+
+                    <p>
+                        يمكنك زيارة
+                        <a href="https://www.msit.gov.eg/" target="_blank">
+                            موقع وزارة التموين والتجارة الداخلية
+                        </a>
+                        للاطلاع على معلومات الوزارة وخدماتها وأخبارها وقراراتها.
+                    </p>
+
+                </div>
+
+                <img src="service1.png" alt="بوابة خدمات التموين">
+
+            </section>
+
+
+            <!-- How to Use -->
+
+            <section class="platform-content" data-section="use">
+
+                <div>
+
+                    <h2>
+                        أهم الخدمات المتاحة
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            تفعيل بطاقة التموين.
+                        </li>
+
+                        <li>
+                            إصدار بدل فاقد أو تالف للبطاقة.
+                        </li>
+
+                        <li>
+                            الاستعلام عن صرف التموين.
+                        </li>
+
+                        <li>
+                            ضم أفراد الأسرة.
+                        </li>
+
+                        <li>
+                            نقل البطاقة من محافظة إلى أخرى.
+                        </li>
+
+                        <li>
+                            الفصل الاجتماعي.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <img src="service1.png" alt="خدمات بطاقة التموين">
+
+            </section>
+
+
+            <!-- Benefits -->
+
+            <section class="platform-content" data-section="benefits">
+
+                <div>
+
+                    <h2>
+                        مميزات الخدمات الإلكترونية
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            الوصول إلى خدمات التموين إلكترونيًا.
+                        </li>
+
+                        <li>
+                            سهولة متابعة عمليات الصرف.
+                        </li>
+
+                        <li>
+                            توفير الوقت والجهد.
+                        </li>
+
+                        <li>
+                            الوصول إلى عدد من خدمات بطاقة التموين من خلال بوابة مصر الرقمية.
+                        </li>
+
+                        <li>
+                            الاطلاع على الأخبار والقرارات والمعلومات الرسمية الخاصة بالتموين.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <img src="service1.png" alt="مميزات خدمات التموين">
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <div class="about-overlay" id="aboutOverlay">
+
+        <div class="about-box">
+
+            <button class="close-about" onclick="closeAbout()">
+                ×
+            </button>
+
+            <h2>
+                عن الموقع
+            </h2>
+
+            <p>
+                دليلك الكامل هو موقع يهدف إلى مساعدة
+                الطلاب والمواطنين على الوصول إلى
+                المنصات والخدمات الرقمية بطريقة سهلة
+                ومنظمة.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
