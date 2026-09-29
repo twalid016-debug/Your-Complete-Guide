@@ -2,191 +2,198 @@
 <html lang="ar" dir="rtl">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>خدمات الكهرباء | دليلك الكامل</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>خدمات الكهرباء | دليلك الكامل</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+<header class="main-header">
 
-<nav>
+    <nav>
 
-<h2>دليلك الكامل</h2>
+        <h2 class="site-name">دليلك الكامل</h2>
 
-<div class="nav-links">
+        <div class="nav-links">
+            <a href="loginas-ar.html">الرئيسية</a>
+            <a href="citizenservices-ar.html">الخدمات</a>
+            <a href="#about">عن الخدمة</a>
+            <a href="#benefits">الفوائد</a>
+        </div>
 
-<a href="loginas-ar.html">الرئيسية</a>
+        <div class="settings-container">
 
-<a href="citizenservices-ar.html">الخدمات</a>
+            <button class="settings-button" onclick="toggleSettings()">⚙️</button>
 
-<a href="#about">عن الخدمة</a>
+            <div class="settings-menu" id="settingsMenu">
 
-<a href="#benefits">الفوائد</a>
+                <button onclick="changeLanguage()">🌐 تغيير اللغة</button>
 
-</div>
+                <button onclick="toggleTheme()">
+                    🌙 الوضع الداكن / الفاتح
+                </button>
 
-<div class="language-switch ar" onclick="changeLanguage()">
+                <button onclick="showAbout()">ℹ️ عن الموقع</button>
 
-<span class="language-label">AR</span>
+            </div>
 
-<div class="switch">
+        </div>
 
-<div class="switch-knob"></div>
-
-</div>
-
-</div>
-
-</nav>
+    </nav>
 
 </header>
 
 
-<main class="platform-page">
-
-<h1>خدمات الكهرباء</h1>
-
-<p class="platform-intro">
-تعرف على خدمات الكهرباء والفواتير والعدادات
-والشكاوى والخدمات الإلكترونية.
-</p>
+<div id="particles"></div>
 
 
-<div class="platform-tabs">
+<main>
 
-<button class="platform-tab active" data-target="about">
-عن الخدمة
-</button>
+    <section class="hero-section">
 
-<button class="platform-tab" data-target="login">
-الوصول إلى الخدمة
-</button>
+        <div class="hero-content">
 
-<button class="platform-tab" data-target="use">
-كيفية الاستخدام
-</button>
+            <p class="hero-small-title">الخدمات الحكومية</p>
 
-<button class="platform-tab" data-target="benefits">
-الفوائد
-</button>
+            <h1>خدمات الكهرباء</h1>
 
-</div>
+            <p>
+                تعرف على خدمات الكهرباء والفواتير وقراءات العدادات
+                والشكاوى.
+            </p>
 
+        </div>
 
-<div class="platform-sections">
-
-<section class="platform-content active" data-section="about">
-
-<img src="service3.png" alt="خدمات الكهرباء">
-
-<div>
-
-<h2>ما هي خدمات الكهرباء؟</h2>
-
-<p>
-تشمل خدمات الكهرباء توصيل الكهرباء للمنازل
-وإصدار وتحصيل الفواتير وتقديم الشكاوى.
-</p>
-
-<p>
-وتتضمن الخدمات الإلكترونية مجموعة من الخدمات
-المتعلقة بالعدادات والفواتير والاستهلاك.
-</p>
-
-</div>
-
-</section>
+    </section>
 
 
-<section class="platform-content" data-section="login">
+    <section class="about-section" id="about">
 
-<h2>الوصول إلى خدمات الكهرباء</h2>
+        <h2>ما هي خدمات الكهرباء؟</h2>
 
-<p>
-يمكن الوصول إلى خدمات الكهرباء الإلكترونية من خلال
-منصة خدمات الكهرباء الموحدة.
-</p>
+        <p>
+            توفر منصات خدمات الكهرباء عددًا من الخدمات المتعلقة
+            بالعدادات والفواتير وقراءات الاستهلاك والشكاوى.
+        </p>
 
-<p>
-منصة خدمات الكهرباء الموحدة:
-</p>
-
-<a href="https://eservices.eehc.gov.eg/" target="_blank">
-منصة خدمات الكهرباء الموحدة
-</a>
-
-<ul>
-
-<li>تركيب عداد جديد</li>
-<li>تسجيل قراءة العداد</li>
-<li>دفع الفواتير</li>
-<li>حساب قيمة الفاتورة</li>
-<li>فحص العداد</li>
-<li>استبدال العداد في بعض الحالات</li>
-<li>تقديم الشكاوى والبلاغات</li>
-<li>الحصول على شهادة بيانات الاستهلاك</li>
-
-</ul>
-
-</section>
+    </section>
 
 
-<section class="platform-content" data-section="use">
+    <section class="goals-section">
 
-<h2>كيفية استخدام خدمات الكهرباء</h2>
+        <h2>أهم الخدمات</h2>
 
-<ol>
+        <div class="info-cards">
 
-<li>الدخول إلى منصة خدمات الكهرباء.</li>
+            <div class="info-card">
+                <h3>العدادات</h3>
+                <p>
+                    خدمات متعلقة بتركيب أو استبدال بعض أنواع العدادات
+                    والإجراءات المرتبطة بها.
+                </p>
+            </div>
 
-<li>اختيار الخدمة المطلوبة.</li>
+            <div class="info-card">
+                <h3>الفواتير</h3>
+                <p>
+                    الاستعلام عن الفاتورة ودفعها إلكترونيًا
+                    عند توفر الخدمة.
+                </p>
+            </div>
 
-<li>إدخال البيانات المطلوبة.</li>
+            <div class="info-card">
+                <h3>الشكاوى</h3>
+                <p>
+                    تقديم ومتابعة الشكاوى المتعلقة بخدمات الكهرباء.
+                </p>
+            </div>
 
-<li>اتباع خطوات الخدمة.</li>
+        </div>
 
-<li>متابعة الطلب عند توفر إمكانية المتابعة.</li>
-
-</ol>
-
-</section>
+    </section>
 
 
-<section class="platform-content" data-section="benefits">
+    <section class="benefits-section" id="benefits">
 
-<h2>فوائد خدمات الكهرباء الرقمية</h2>
+        <h2>طريقة الوصول</h2>
 
-<ul>
+        <div class="info-cards">
 
-<li>تسهيل الوصول إلى الخدمات.</li>
+            <div class="info-card">
+                <h3>1</h3>
+                <p>
+                    افتح منصة خدمات الكهرباء الموحدة.
+                </p>
+            </div>
 
-<li>إمكانية تسجيل قراءة العداد إلكترونيًا.</li>
+            <div class="info-card">
+                <h3>2</h3>
+                <p>
+                    اختر نوع الخدمة التي تحتاج إليها.
+                </p>
+            </div>
 
-<li>إمكانية دفع الفواتير إلكترونيًا.</li>
+            <div class="info-card">
+                <h3>3</h3>
+                <p>
+                    أدخل البيانات المطلوبة واتبع التعليمات.
+                </p>
+            </div>
 
-<li>تقديم الشكاوى والبلاغات.</li>
+        </div>
 
-<li>الوصول إلى بعض بيانات الاستهلاك.</li>
+    </section>
 
-</ul>
 
-</section>
+    <section class="about-section">
 
-</div>
+        <h2>الرابط الرسمي</h2>
+
+        <p>
+            منصة خدمات الكهرباء الموحدة:
+        </p>
+
+        <p>
+            <a href="https://eservices.eehc.gov.eg/" target="_blank">
+                eservices.eehc.gov.eg
+            </a>
+        </p>
+
+    </section>
 
 </main>
+
+
+<footer>
+
+    <p>© 2026 دليلك الكامل</p>
+
+</footer>
+
+
+<div class="about-overlay" id="aboutOverlay">
+
+    <div class="about-box">
+
+        <button class="close-about" onclick="closeAbout()">×</button>
+
+        <h2>عن الموقع</h2>
+
+        <p>
+            دليلك الكامل يساعدك على التعرف على الخدمات الرقمية
+            بطريقة سهلة ومنظمة.
+        </p>
+
+    </div>
+
+</div>
 
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
