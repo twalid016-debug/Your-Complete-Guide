@@ -4,146 +4,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japanese SPRIX Platform</title>
+
+    <title>E-Learning Portal | Your Complete Guide</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <h2>Your Complete Guide</h2>
+    <header class="main-header">
 
-        <div class="nav-links">
-            <a href="index-en.html">Home</a>
-            <a href="index-en.html#about">About</a>
-            <a href="index-en.html#platforms">Platforms</a>
-            <a href="index-en.html#benefits">Benefits</a>
-        </div>
+        <nav>
 
-        <div class="language-switch" onclick="changeLanguage()">
-            <span class="language-label">EN</span>
+            <h2 class="site-name">
+                Your Complete Guide
+            </h2>
 
-            <div class="switch">
-                <div class="switch-knob"></div>
+            <div class="nav-links">
+
+                <a href="loginas-en.html">
+                    Home
+                </a>
+
+                <a href="studentplatforms-en.html">
+                    Platforms
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#benefits">
+                    Benefits
+                </a>
+
             </div>
-        </div>
-    </nav>
-</header>
 
-<main class="platform-page">
+            <div class="settings-container">
 
-    <h1>Japanese SPRIX Platform</h1>
+                <button class="settings-button"
+                        onclick="toggleSettings()">
+                    ⚙️
+                </button>
 
-    <p class="platform-intro">
-        Learn about SPRIX and how students can use it for programming education.
-    </p>
+                <div class="settings-menu"
+                     id="settingsMenu">
 
-    <div class="platform-tabs">
+                    <button onclick="changeLanguage()">
+                        🌐 Change Language
+                    </button>
 
-        <button class="platform-tab active" data-target="about">
+                    <button onclick="toggleTheme()">
+                        🌙 Dark / Light Mode
+                    </button>
+
+                    <button onclick="showAbout()">
+                        ℹ️ About
+                    </button>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <div id="particles"></div>
+
+
+    <section class="hero">
+
+        <h1>
+            E-Learning Portal
+        </h1>
+
+        <p>
+            A digital educational portal provided by
+            the Ministry of Education with educational
+            content and digital resources.
+        </p>
+
+        <a href="https://moe.gov.eg/ar/elearningenterypage/e-learning/"
+           target="_blank">
+            Visit the Portal
+        </a>
+
+    </section>
+
+
+    <section id="about">
+
+        <h2>
             About the Platform
-        </button>
+        </h2>
 
-        <button class="platform-tab" data-target="login">
-            How to Log In
-        </button>
+        <p>
+            The E-Learning Portal is a digital educational
+            service provided by Egypt's Ministry of Education
+            and Technical Education.
+        </p>
 
-        <button class="platform-tab" data-target="use">
-            How to Use
-        </button>
+        <p>
+            It provides digital educational content and
+            resources that students can use for studying
+            and revision.
+        </p>
 
-        <button class="platform-tab" data-target="benefits">
-            Benefits
-        </button>
+    </section>
+
+
+    <section>
+
+        <h2>
+            What Can You Find?
+        </h2>
+
+        <div class="benefits-container">
+
+            <div class="benefit">
+
+                <h3>
+                    Educational Content
+                </h3>
+
+                <p>
+                    Access digital educational content
+                    that supports different subjects.
+                </p>
+
+            </div>
+
+            <div class="benefit">
+
+                <h3>
+                    Digital Books
+                </h3>
+
+                <p>
+                    Access available digital books
+                    and educational resources.
+                </p>
+
+            </div>
+
+            <div class="benefit">
+
+                <h3>
+                    Revision
+                </h3>
+
+                <p>
+                    Use digital resources to support
+                    studying and revision.
+                </p>
+
+            </div>
+
+            <div class="benefit">
+
+                <h3>
+                    Educational Resources
+                </h3>
+
+                <p>
+                    The portal provides resources related
+                    to different educational stages and needs.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="benefits">
+
+        <h2>
+            Benefits for Students
+        </h2>
+
+        <div class="benefits-container">
+
+            <div class="benefit">
+
+                <h3>
+                    Easy Access
+                </h3>
+
+                <p>
+                    Access educational resources
+                    online.
+                </p>
+
+            </div>
+
+            <div class="benefit">
+
+                <h3>
+                    Support Outside School
+                </h3>
+
+                <p>
+                    Use digital resources to support
+                    studying and revision outside school.
+                </p>
+
+            </div>
+
+            <div class="benefit">
+
+                <h3>
+                    Official Educational Source
+                </h3>
+
+                <p>
+                    The portal is part of the official
+                    educational system of the Ministry of Education.
+                </p>
+
+            </div>
+
+            <div class="benefit">
+
+                <h3>
+                    Independent Learning
+                </h3>
+
+                <p>
+                    Digital resources can help students
+                    organize their learning and revision.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            How to Access
+        </h2>
+
+        <div class="about-content">
+
+            <p>
+                1. Open the Ministry of Education website.
+            </p>
+
+            <p>
+                2. Go to the Educational Platforms section.
+            </p>
+
+            <p>
+                3. Choose the E-Learning Portal.
+            </p>
+
+            <p>
+                4. Select the educational stage
+                or resources you need.
+            </p>
+
+            <p>
+                5. Start using the available
+                educational content.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            Official Link
+        </h2>
+
+        <div class="benefits-container">
+
+            <div class="benefit">
+
+                <h3>
+                    E-Learning Portal
+                </h3>
+
+                <p>
+                    Official portal website.
+                </p>
+
+                <a href="https://moe.gov.eg/ar/elearningenterypage/e-learning/"
+                   target="_blank">
+                    Open Portal
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="about-overlay"
+         id="aboutOverlay">
+
+        <div class="about-box">
+
+            <button class="close-about"
+                    onclick="closeAbout()">
+                ×
+            </button>
+
+            <h2>
+                About the Website
+            </h2>
+
+            <p>
+                Your Complete Guide helps students
+                access educational resources and
+                platforms in an easy and organized way.
+            </p>
+
+        </div>
 
     </div>
 
-    <div class="platform-sections">
 
-        <section class="platform-content active" data-section="about">
+    <footer>
 
-            <div class="platform-text">
-                <h2>About the Platform</h2>
+        <p>
+            E-Learning Portal | Your Complete Guide
+        </p>
 
-                <p>
-                    SPRIX is an educational technology platform that supports
-                    programming education and digital learning.
-                </p>
-
-                <p>
-                    It helps students develop programming skills through
-                    educational activities and learning resources.
-                </p>
-            </div>
-
-            <img src="sprix.png" alt="SPRIX Platform">
-
-        </section>
+    </footer>
 
 
-        <section class="platform-content" data-section="login">
-
-            <div class="platform-text">
-                <h2>How to Log In</h2>
-
-                <ol>
-                    <li>Open the SPRIX platform.</li>
-                    <li>Enter your student code.</li>
-                    <li>Enter your password.</li>
-                    <li>Continue to your learning page.</li>
-                </ol>
-            </div>
-
-            <img src="sprix.png" alt="SPRIX Login">
-
-        </section>
-
-
-        <section class="platform-content" data-section="use">
-
-            <div class="platform-text">
-                <h2>How to Use</h2>
-
-                <ol>
-                    <li>Open the available learning activity.</li>
-                    <li>Read the instructions carefully.</li>
-                    <li>Complete the required activities.</li>
-                    <li>Review your work.</li>
-                </ol>
-            </div>
-
-            <img src="sprix.png" alt="Using SPRIX">
-
-        </section>
-
-
-        <section class="platform-content" data-section="benefits">
-
-            <div class="platform-text">
-                <h2>Benefits for Students</h2>
-
-                <ul>
-                    <li>Develops programming skills.</li>
-                    <li>Supports digital learning.</li>
-                    <li>Improves problem-solving skills.</li>
-                    <li>Encourages independent learning.</li>
-                </ul>
-            </div>
-
-            <img src="sprix.png" alt="SPRIX Benefits">
-
-        </section>
-
-    </div>
-
-</main>
-
-<footer>
-    <p>Ministry of Education and Technical Education</p>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
