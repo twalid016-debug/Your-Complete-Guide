@@ -23,6 +23,6 @@
 https://twalid016-debug.github.io/Your-Complete-Guide/index-en.html
 
 إعداد الطالبات:
-ميرنا نجيب 
+ميرنا نجيب
 ياسمين هشام 
 تاليا وليد
