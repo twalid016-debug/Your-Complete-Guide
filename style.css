@@ -169,6 +169,61 @@ nav h2 {
     color: #475569;
 }
 
+/* ================= تنسيقات قسم الأهداف التعليمية ================= */
+.goals-section {
+    padding: 50px 20px;
+    background-color: #f8fafc;
+    text-align: center;
+}
+
+.goals-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.goals-title {
+    color: #0046be;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.goals-subtitle {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.goals-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.goal-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border-top: 4px solid #0046be;
+    text-align: right;
+}
+
+.goal-card-title {
+    color: #0046be;
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.goal-card-text {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
 
 /* =========================
    Platforms Section
