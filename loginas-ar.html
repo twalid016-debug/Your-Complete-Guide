@@ -1,0 +1,174 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>دليلك الكامل</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+    <!-- =========================
+         Header
+    ========================= -->
+
+    <header class="main-header">
+
+        <nav>
+
+            <h2 class="site-name">
+                دليلك الكامل
+            </h2>
+
+            <div class="settings-container">
+
+                <button class="settings-button" onclick="toggleSettings()">
+                    ⚙️
+                </button>
+
+                <div class="settings-menu" id="settingsMenu">
+
+                    <button onclick="changeLanguage()">
+                        🌐 تغيير اللغة
+                    </button>
+
+                    <button onclick="toggleTheme()">
+                        🌙 الوضع الداكن / الفاتح
+                    </button>
+
+                    <button onclick="showAbout()">
+                        ℹ️ عن الموقع
+                    </button>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         Animated Background
+    ========================= -->
+
+    <div id="particles"></div>
+
+
+    <!-- =========================
+         Main Content
+    ========================= -->
+
+    <main class="login-container">
+
+        <div class="login-box">
+
+            <h1>
+                تسجيل الدخول
+            </h1>
+
+            <p class="login-intro">
+                اختر نوع المستخدم للانتقال إلى الخدمات المناسبة لك
+            </p>
+
+
+            <div class="login-options">
+
+                <!-- Student -->
+
+                <div class="login-card student-card">
+
+                    <div class="login-icon">
+                        🎓
+                    </div>
+
+                    <h2>
+                        طالب
+                    </h2>
+
+                    <p>
+                        الوصول إلى المنصات التعليمية
+                        والخدمات الخاصة بالطلاب.
+                    </p>
+
+                    <a href="student-ar.html" class="login-button">
+                        الدخول كطالب
+                    </a>
+
+                </div>
+
+
+                <!-- Citizen -->
+
+                <div class="login-card citizen-card">
+
+                    <div class="login-icon">
+                        👤
+                    </div>
+
+                    <h2>
+                        مواطن
+                    </h2>
+
+                    <p>
+                        الوصول إلى الخدمات الحكومية
+                        والمعلومات المتاحة للمواطنين.
+                    </p>
+
+                    <a href="citizen-ar.html" class="login-button">
+                        الدخول كمواطن
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         About Popup
+    ========================= -->
+
+    <div class="about-overlay" id="aboutOverlay">
+
+        <div class="about-box">
+
+            <button class="close-about" onclick="closeAbout()">
+                ×
+            </button>
+
+            <h2>
+                عن الموقع
+            </h2>
+
+            <p>
+                دليلك الكامل هو موقع يهدف إلى مساعدة
+                الطلاب والمواطنين على الوصول إلى
+                المنصات والخدمات الرقمية بطريقة سهلة
+                ومنظمة.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JavaScript
+    ========================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
