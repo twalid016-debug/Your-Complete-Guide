@@ -2,289 +2,185 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>خدمات المياه | دليلك الكامل</title>
+<meta charset="UTF-8">
 
-    <link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>خدمات المياه | دليلك الكامل</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <header class="main-header">
+<header>
 
-        <nav>
+<nav>
 
-            <h2 class="site-name">
-                دليلك الكامل
-            </h2>
+<h2>دليلك الكامل</h2>
 
-            <div class="settings-container">
+<div class="nav-links">
 
-                <button class="settings-button" onclick="toggleSettings()">
-                    ⚙️
-                </button>
+<a href="loginas-ar.html">الرئيسية</a>
 
-                <div class="settings-menu" id="settingsMenu">
+<a href="citizenservices-ar.html">الخدمات</a>
 
-                    <button onclick="changeLanguage()">
-                        🌐 تغيير اللغة
-                    </button>
+<a href="#about">عن الخدمة</a>
 
-                    <button onclick="toggleTheme()">
-                        🌙 الوضع الداكن / الفاتح
-                    </button>
+<a href="#benefits">الفوائد</a>
 
-                    <button onclick="showAbout()">
-                        ℹ️ عن الموقع
-                    </button>
+</div>
 
-                </div>
+<div class="language-switch ar" onclick="changeLanguage()">
 
-            </div>
+<span class="language-label">AR</span>
 
-        </nav>
+<div class="switch">
 
-    </header>
+<div class="switch-knob"></div>
 
+</div>
 
-    <main class="platform-page">
+</div>
 
-        <h1>
-            خدمات المياه
-        </h1>
+</nav>
 
-        <p class="platform-intro">
-            تعرف على خدمات مياه الشرب والصرف الصحي والفواتير
-            وقراءة العدادات والشكاوى.
-        </p>
+</header>
 
 
-        <div class="platform-tabs">
+<main class="platform-page">
 
-            <button class="platform-tab active" data-target="about">
-                عن الخدمة
-            </button>
+<h1>خدمات المياه</h1>
 
-            <button class="platform-tab" data-target="login">
-                الوصول إلى الخدمة
-            </button>
+<p class="platform-intro">
+تعرف على خدمات المياه والفواتير وقراءة العدادات
+والشكاوى وخدمات الصرف الصحي.
+</p>
 
-            <button class="platform-tab" data-target="use">
-                كيفية الاستخدام
-            </button>
 
-            <button class="platform-tab" data-target="benefits">
-                المميزات
-            </button>
+<div class="platform-tabs">
 
-        </div>
+<button class="platform-tab active" data-target="about">
+عن الخدمة
+</button>
 
+<button class="platform-tab" data-target="login">
+الوصول إلى الخدمة
+</button>
 
-        <div class="platform-sections">
+<button class="platform-tab" data-target="use">
+كيفية الاستخدام
+</button>
 
+<button class="platform-tab" data-target="benefits">
+الفوائد
+</button>
 
-            <section class="platform-content active" data-section="about">
+</div>
 
-                <div>
 
-                    <h2>
-                        عن خدمات المياه
-                    </h2>
+<div class="platform-sections">
 
-                    <p>
-                        خدمات المياه هي الخدمات التي تقدمها شركات مياه الشرب
-                        والصرف الصحي للمواطنين، وتشمل توصيل المياه إلى المنازل،
-                        وإصدار الفواتير، والصيانة، واستقبال الشكاوى.
-                    </p>
+<section class="platform-content active" data-section="about">
 
-                    <h2>
-                        أهم خدمات المياه
-                    </h2>
+<img src="service4.png" alt="خدمات المياه">
 
-                    <ul>
+<div>
 
-                        <li>
-                            خدمات توصيل المياه.
-                        </li>
+<h2>ما هي خدمات المياه؟</h2>
 
-                        <li>
-                            خدمات الصرف الصحي.
-                        </li>
+<p>
+تشمل خدمات المياه توصيل المياه للمنازل
+والفواتير والصيانة وتقديم الشكاوى.
+</p>
 
-                        <li>
-                            خدمات الشكاوى.
-                        </li>
+<p>
+كما تشمل الخدمات المرتبطة بالصرف الصحي وخدمة
+العملاء ومتابعة استهلاك المياه.
+</p>
 
-                    </ul>
+</div>
 
-                    <h2>
-                        الشركة القابضة لمياه الشرب والصرف الصحي
-                    </h2>
+</section>
 
-                    <p>
-                        الشركة القابضة لمياه الشرب والصرف الصحي هي الجهة
-                        المسؤولة عن إدارة شركات مياه الشرب والصرف الصحي
-                        التابعة لها في مصر، بما في ذلك الشركات الموجودة
-                        في المحافظات.
-                    </p>
 
-                </div>
+<section class="platform-content" data-section="login">
 
-                <img src="service4.png" alt="خدمات المياه">
+<h2>الوصول إلى خدمات المياه</h2>
 
-            </section>
+<p>
+يمكن التعرف على خدمات شركات مياه الشرب والصرف الصحي
+من خلال الشركة القابضة لمياه الشرب والصرف الصحي.
+</p>
 
+<a href="https://www.hcww.com.eg/" target="_blank">
+الشركة القابضة لمياه الشرب والصرف الصحي
+</a>
 
-            <section class="platform-content" data-section="login">
+<ul>
 
-                <div>
+<li>الاستعلام عن الفاتورة</li>
+<li>دفع الفواتير</li>
+<li>تسجيل قراءة العداد</li>
+<li>تقديم الشكاوى</li>
+<li>حساب الاستهلاك</li>
+<li>خدمة العملاء</li>
+<li>معلومات عن ترشيد استهلاك المياه</li>
 
-                    <h2>
-                        الوصول إلى خدمات المياه
-                    </h2>
+</ul>
 
-                    <p>
-                        يمكنك زيارة
-                        <a href="https://www.hcww.com.eg/" target="_blank">
-                            الموقع الرسمي للشركة القابضة لمياه الشرب والصرف الصحي
-                        </a>
-                        للتعرف على الخدمات والمعلومات المتعلقة بالمياه والصرف الصحي.
-                    </p>
+</section>
 
-                    <p>
-                        لا يقتصر الموقع على عرض خدمات الفواتير فقط،
-                        بل يوفر أيضًا معلومات عن الشركة ومشروعاتها
-                        والخدمات المقدمة للمواطنين.
-                    </p>
 
-                </div>
+<section class="platform-content" data-section="use">
 
-                <img src="service4.png" alt="موقع خدمات المياه">
+<h2>كيفية استخدام خدمات المياه</h2>
 
-            </section>
+<ol>
 
+<li>الدخول إلى الموقع أو الخدمة المناسبة.</li>
 
-            <section class="platform-content" data-section="use">
+<li>اختيار الخدمة المطلوبة.</li>
 
-                <div>
+<li>إدخال البيانات المطلوبة.</li>
 
-                    <h2>
-                        أهم الخدمات والمعلومات
-                    </h2>
+<li>اتباع خطوات تقديم الطلب.</li>
 
-                    <ol>
+<li>متابعة الطلب أو الشكوى عند توفر ذلك.</li>
 
-                        <li>
-                            الاستعلام عن الفواتير: معرفة قيمة فاتورة المياه من خلال المنصة الإلكترونية المخصصة.
-                        </li>
+</ol>
 
-                        <li>
-                            دفع الفواتير: إمكانية سداد فواتير المياه إلكترونيًا.
-                        </li>
+</section>
 
-                        <li>
-                            تسجيل قراءة العداد: تسجيل القراءة الفعلية لعداد المياه.
-                        </li>
 
-                        <li>
-                            تقديم الشكاوى: الإبلاغ عن انقطاع المياه أو مشكلات الصرف الصحي.
-                        </li>
+<section class="platform-content" data-section="benefits">
 
-                        <li>
-                            حساب الاستهلاك: حساب قيمة استهلاك المياه.
-                        </li>
+<h2>فوائد خدمات المياه الرقمية</h2>
 
-                        <li>
-                            خدمة العملاء: التواصل مع الشركة للاستفسار عن الخدمات.
-                        </li>
+<ul>
 
-                        <li>
-                            معلومات عن ترشيد المياه: التعرف على طرق تقليل استهلاك المياه والحفاظ عليها.
-                        </li>
+<li>سهولة الاستعلام عن الفواتير.</li>
 
-                    </ol>
+<li>إمكانية دفع الفواتير إلكترونيًا.</li>
 
-                </div>
+<li>تسجيل قراءة العداد.</li>
 
-                <img src="service4.png" alt="خدمات المياه والصرف الصحي">
+<li>تقديم الشكاوى إلكترونيًا.</li>
 
-            </section>
+<li>الوصول إلى معلومات عن الاستهلاك وترشيد المياه.</li>
 
+</ul>
 
-            <section class="platform-content" data-section="benefits">
+</section>
 
-                <div>
+</div>
 
-                    <h2>
-                        مميزات الخدمات الإلكترونية
-                    </h2>
+</main>
 
-                    <ul>
 
-                        <li>
-                            الاستعلام عن فواتير المياه إلكترونيًا.
-                        </li>
-
-                        <li>
-                            إمكانية دفع الفواتير إلكترونيًا.
-                        </li>
-
-                        <li>
-                            تسجيل قراءة العداد إلكترونيًا.
-                        </li>
-
-                        <li>
-                            تقديم الشكاوى ومتابعة المشكلات.
-                        </li>
-
-                        <li>
-                            التواصل مع خدمة العملاء.
-                        </li>
-
-                        <li>
-                            الوصول إلى معلومات تساعد على ترشيد استهلاك المياه.
-                        </li>
-
-                    </ul>
-
-                </div>
-
-                <img src="service4.png" alt="مميزات خدمات المياه">
-
-            </section>
-
-        </div>
-
-    </main>
-
-
-    <div class="about-overlay" id="aboutOverlay">
-
-        <div class="about-box">
-
-            <button class="close-about" onclick="closeAbout()">
-                ×
-            </button>
-
-            <h2>
-                عن الموقع
-            </h2>
-
-            <p>
-                دليلك الكامل هو موقع يهدف إلى مساعدة
-                الطلاب والمواطنين على الوصول إلى
-                المنصات والخدمات الرقمية بطريقة سهلة
-                ومنظمة.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 
