@@ -2,191 +2,199 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>Electricity Services | Your Complete Guide</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Electricity Services | Your Complete Guide</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+<header class="main-header">
 
-<nav>
+    <nav>
 
-<h2>Your Complete Guide</h2>
+        <h2 class="site-name">Your Complete Guide</h2>
 
-<div class="nav-links">
+        <div class="nav-links">
+            <a href="loginas-en.html">Home</a>
+            <a href="citizenservices-en.html">Services</a>
+            <a href="#about">About</a>
+            <a href="#benefits">Benefits</a>
+        </div>
 
-<a href="loginas-en.html">Home</a>
+        <div class="settings-container">
 
-<a href="citizenservices-en.html">Services</a>
+            <button class="settings-button" onclick="toggleSettings()">⚙️</button>
 
-<a href="#about">About</a>
+            <div class="settings-menu" id="settingsMenu">
 
-<a href="#benefits">Benefits</a>
+                <button onclick="changeLanguage()">🌐 Change Language</button>
 
-</div>
+                <button onclick="toggleTheme()">
+                    🌙 Dark / Light Mode
+                </button>
 
-<div class="language-switch en" onclick="changeLanguage()">
+                <button onclick="showAbout()">ℹ️ About</button>
 
-<span class="language-label">EN</span>
+            </div>
 
-<div class="switch">
+        </div>
 
-<div class="switch-knob"></div>
-
-</div>
-
-</div>
-
-</nav>
+    </nav>
 
 </header>
 
 
-<main class="platform-page">
-
-<h1>Electricity Services</h1>
-
-<p class="platform-intro">
-Learn about electricity bills, meters, complaints,
-and digital electricity services.
-</p>
+<div id="particles"></div>
 
 
-<div class="platform-tabs">
+<main>
 
-<button class="platform-tab active" data-target="about">
-About
-</button>
+    <section class="hero-section">
 
-<button class="platform-tab" data-target="login">
-Access
-</button>
+        <div class="hero-content">
 
-<button class="platform-tab" data-target="use">
-How to Use
-</button>
+            <p class="hero-small-title">Government Services</p>
 
-<button class="platform-tab" data-target="benefits">
-Benefits
-</button>
+            <h1>Electricity Services</h1>
 
-</div>
+            <p>
+                Learn about electricity bills, meters, readings
+                and complaints.
+            </p>
 
+        </div>
 
-<div class="platform-sections">
-
-<section class="platform-content active" data-section="about">
-
-<img src="service3.png" alt="Electricity Services">
-
-<div>
-
-<h2>What Are Electricity Services?</h2>
-
-<p>
-Electricity services include connecting homes to electricity,
-issuing and collecting bills, and handling complaints.
-</p>
-
-<p>
-Digital services also include several services related
-to meters, bills, and electricity consumption.
-</p>
-
-</div>
-
-</section>
+    </section>
 
 
-<section class="platform-content" data-section="login">
+    <section class="about-section" id="about">
 
-<h2>Accessing Electricity Services</h2>
+        <h2>What Are Electricity Services?</h2>
 
-<p>
-Digital electricity services are available through
-the Unified Electricity Services Platform.
-</p>
+        <p>
+            Electricity digital services provide citizens with access
+            to services related to meters, bills, consumption readings
+            and complaints.
+        </p>
 
-<p>
-Unified Electricity Services Platform:
-</p>
-
-<a href="https://eservices.eehc.gov.eg/" target="_blank">
-Unified Electricity Services Platform
-</a>
-
-<ul>
-
-<li>Installing a new meter</li>
-<li>Registering meter readings</li>
-<li>Paying bills</li>
-<li>Calculating bills</li>
-<li>Meter inspection</li>
-<li>Meter replacement in applicable cases</li>
-<li>Complaints and fault reports</li>
-<li>Consumption data certificates</li>
-
-</ul>
-
-</section>
+    </section>
 
 
-<section class="platform-content" data-section="use">
+    <section class="goals-section">
 
-<h2>How to Use Electricity Services</h2>
+        <h2>Main Services</h2>
 
-<ol>
+        <div class="info-cards">
 
-<li>Open the Electricity Services Platform.</li>
+            <div class="info-card">
+                <h3>Meters</h3>
+                <p>
+                    Services related to installing or replacing
+                    certain types of meters.
+                </p>
+            </div>
 
-<li>Select the required service.</li>
+            <div class="info-card">
+                <h3>Bills</h3>
+                <p>
+                    Check and pay electricity bills electronically
+                    when available.
+                </p>
+            </div>
 
-<li>Enter the required information.</li>
+            <div class="info-card">
+                <h3>Complaints</h3>
+                <p>
+                    Submit and follow up on electricity service complaints.
+                </p>
+            </div>
 
-<li>Follow the service instructions.</li>
+        </div>
 
-<li>Track the request when available.</li>
-
-</ol>
-
-</section>
+    </section>
 
 
-<section class="platform-content" data-section="benefits">
+    <section class="benefits-section" id="benefits">
 
-<h2>Benefits of Digital Electricity Services</h2>
+        <h2>How to Access</h2>
 
-<ul>
+        <div class="info-cards">
 
-<li>Easier access to services.</li>
+            <div class="info-card">
+                <h3>1</h3>
+                <p>
+                    Open the Unified Electricity Services Platform.
+                </p>
+            </div>
 
-<li>Online meter reading registration.</li>
+            <div class="info-card">
+                <h3>2</h3>
+                <p>
+                    Choose the service you need.
+                </p>
+            </div>
 
-<li>Online bill payment.</li>
+            <div class="info-card">
+                <h3>3</h3>
+                <p>
+                    Enter the required information and follow the instructions.
+                </p>
+            </div>
 
-<li>Submitting complaints and fault reports.</li>
+        </div>
 
-<li>Access to some consumption information.</li>
+    </section>
 
-</ul>
 
-</section>
+    <section class="about-section">
 
-</div>
+        <h2>Official Link</h2>
+
+        <p>
+            Unified Electricity Services Platform:
+        </p>
+
+        <p>
+            <a href="https://eservices.eehc.gov.eg/" target="_blank">
+                eservices.eehc.gov.eg
+            </a>
+        </p>
+
+    </section>
 
 </main>
+
+
+<footer>
+
+    <p>© 2026 Your Complete Guide</p>
+
+</footer>
+
+
+<div class="about-overlay" id="aboutOverlay">
+
+    <div class="about-box">
+
+        <button class="close-about" onclick="closeAbout()">×</button>
+
+        <h2>About the Website</h2>
+
+        <p>
+            Your Complete Guide helps users discover digital services
+            through simple and organized information.
+        </p>
+
+    </div>
+
+</div>
 
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
