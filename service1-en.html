@@ -12,222 +12,195 @@
 
 <body>
 
-    <header>
+<header class="main-header">
 
-        <nav>
+    <nav>
 
-            <h2>
-                Your Complete Guide
-            </h2>
+        <h2 class="site-name">Your Complete Guide</h2>
 
-            <div class="nav-links">
+        <div class="nav-links">
+            <a href="loginas-en.html">Home</a>
+            <a href="citizenservices-en.html">Services</a>
+            <a href="#about">About</a>
+            <a href="#benefits">Benefits</a>
+        </div>
 
-                <a href="loginas-en.html">Home</a>
+        <div class="settings-container">
 
-                <a href="citizenservices-en.html">Services</a>
+            <button class="settings-button" onclick="toggleSettings()">⚙️</button>
 
-                <a href="#about">About</a>
+            <div class="settings-menu" id="settingsMenu">
 
-                <a href="#benefits">Benefits</a>
+                <button onclick="changeLanguage()">🌐 Change Language</button>
+
+                <button onclick="toggleTheme()">
+                    🌙 Dark / Light Mode
+                </button>
+
+                <button onclick="showAbout()">ℹ️ About</button>
 
             </div>
 
-            <div class="language-switch en" onclick="changeLanguage()">
+        </div>
 
-                <span class="language-label">EN</span>
+    </nav>
 
-                <div class="switch">
-                    <div class="switch-knob"></div>
-                </div>
-
-            </div>
-
-        </nav>
-
-    </header>
+</header>
 
 
-    <main class="platform-page">
+<div id="particles"></div>
 
-        <h1>
-            Ration Services
-        </h1>
 
-        <p class="platform-intro">
-            Learn about digital ration services and important
-            services related to ration cards.
+<main>
+
+    <section class="hero-section">
+
+        <div class="hero-content">
+
+            <p class="hero-small-title">Government Services</p>
+
+            <h1>Ration Services</h1>
+
+            <p>
+                Learn about ration cards, subsidized goods and
+                available digital services.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="about-section" id="about">
+
+        <h2>What Are Ration Services?</h2>
+
+        <p>
+            Ration services allow citizens to benefit from the subsidized
+            goods system using a ration card linked to family data,
+            according to the applicable rules.
         </p>
 
+    </section>
 
-        <div class="platform-tabs">
 
-            <button class="platform-tab active" data-target="about">
-                About
-            </button>
+    <section class="goals-section">
 
-            <button class="platform-tab" data-target="login">
-                Access
-            </button>
+        <h2>Main Services</h2>
 
-            <button class="platform-tab" data-target="use">
-                How to Use
-            </button>
+        <div class="info-cards">
 
-            <button class="platform-tab" data-target="benefits">
-                Benefits
-            </button>
+            <div class="info-card">
+                <h3>Ration Card</h3>
+                <p>
+                    Access services related to the ration card.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Adding Family Members</h3>
+                <p>
+                    Some digital services may allow adding family members
+                    according to applicable rules.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Lost or Damaged Card</h3>
+                <p>
+                    Digital services may provide procedures related to
+                    lost or damaged ration cards.
+                </p>
+            </div>
 
         </div>
 
-
-        <div class="platform-sections">
-
-            <section class="platform-content active" data-section="about">
-
-                <img src="service1.png" alt="Ration Services">
-
-                <div>
-
-                    <h2>
-                        What Are Ration Services?
-                    </h2>
-
-                    <p>
-                        Ration services allow citizens to obtain
-                        subsidized goods such as oil and sugar
-                        using a ration card.
-                    </p>
-
-                    <p>
-                        The ration card is linked to family member
-                        data, and the family receives a subsidy value
-                        according to the applicable rules.
-                    </p>
-
-                </div>
-
-            </section>
+    </section>
 
 
-            <section class="platform-content" data-section="login">
+    <section class="benefits-section" id="benefits">
 
-                <h2>
-                    Accessing Ration Services
-                </h2>
+        <h2>How to Access the Service</h2>
 
+        <div class="info-cards">
+
+            <div class="info-card">
+                <h3>1</h3>
                 <p>
-                    Digital ration services can be accessed
-                    through the Digital Egypt Portal.
+                    Open the Digital Egypt Portal.
                 </p>
+            </div>
 
+            <div class="info-card">
+                <h3>2</h3>
                 <p>
-                    Important services include:
+                    Choose the available ration services.
                 </p>
+            </div>
 
-                <ul>
-
-                    <li>Ration card activation</li>
-                    <li>Replacement of lost or damaged cards</li>
-                    <li>Checking ration distribution</li>
-                    <li>Adding family members</li>
-                    <li>Transferring the card between governorates</li>
-                    <li>Social separation</li>
-
-                </ul>
-
+            <div class="info-card">
+                <h3>3</h3>
                 <p>
-                    Digital Egypt Portal:
+                    Select the required service and follow the instructions.
                 </p>
-
-                <a href="https://digital.gov.eg/" target="_blank">
-                    Digital Egypt Portal
-                </a>
-
-                <p>
-                    Information and services are also available
-                    through the Ministry of Supply and Internal Trade:
-                </p>
-
-                <a href="https://www.msit.gov.eg/" target="_blank">
-                    Ministry of Supply and Internal Trade
-                </a>
-
-            </section>
-
-
-            <section class="platform-content" data-section="use">
-
-                <h2>
-                    How to Use Ration Services
-                </h2>
-
-                <ol>
-
-                    <li>
-                        Open the Digital Egypt Portal.
-                    </li>
-
-                    <li>
-                        Choose the required service.
-                    </li>
-
-                    <li>
-                        Enter the required information.
-                    </li>
-
-                    <li>
-                        Follow the application steps.
-                    </li>
-
-                    <li>
-                        Track the service status when available.
-                    </li>
-
-                </ol>
-
-                <p>
-                    Ration transactions are recorded electronically
-                    through approved ration outlets.
-                </p>
-
-            </section>
-
-
-            <section class="platform-content" data-section="benefits">
-
-                <h2>
-                    Benefits of Digital Ration Services
-                </h2>
-
-                <ul>
-
-                    <li>
-                        Easier access to services.
-                    </li>
-
-                    <li>
-                        Less reliance on paper procedures.
-                    </li>
-
-                    <li>
-                        Ability to track some services online.
-                    </li>
-
-                    <li>
-                        Easy access to ration card information.
-                    </li>
-
-                </ul>
-
-            </section>
+            </div>
 
         </div>
 
-    </main>
+    </section>
 
 
-    <script src="script.js"></script>
+    <section class="about-section">
+
+        <h2>Official Links</h2>
+
+        <p>Digital Egypt Portal:</p>
+
+        <p>
+            <a href="https://digital.gov.eg/" target="_blank">
+                digital.gov.eg
+            </a>
+        </p>
+
+        <p>Ministry of Supply and Internal Trade:</p>
+
+        <p>
+            <a href="https://www.msit.gov.eg/" target="_blank">
+                msit.gov.eg
+            </a>
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>© 2026 Your Complete Guide</p>
+
+</footer>
+
+
+<div class="about-overlay" id="aboutOverlay">
+
+    <div class="about-box">
+
+        <button class="close-about" onclick="closeAbout()">×</button>
+
+        <h2>About the Website</h2>
+
+        <p>
+            Your Complete Guide provides organized information about
+            educational platforms and digital services.
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
