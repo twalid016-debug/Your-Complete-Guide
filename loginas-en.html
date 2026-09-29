@@ -1,0 +1,175 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Complete Guide</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page">
+
+    <!-- =========================
+         Header
+    ========================= -->
+
+    <header class="main-header">
+
+        <nav>
+
+            <h2 class="site-name">
+                Your Complete Guide
+            </h2>
+
+            <div class="settings-container">
+
+                <button class="settings-button" onclick="toggleSettings()">
+                    ⚙️
+                </button>
+
+                <div class="settings-menu" id="settingsMenu">
+
+                    <button onclick="changeLanguage()">
+                        🌐 Change Language
+                    </button>
+
+                    <button onclick="toggleTheme()">
+                        🌙 Dark / Light Mode
+                    </button>
+
+                    <button onclick="showAbout()">
+                        ℹ️ About
+                    </button>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         Animated Background
+    ========================= -->
+
+    <div id="particles"></div>
+
+
+    <!-- =========================
+         Main Content
+    ========================= -->
+
+    <main class="login-container">
+
+        <div class="login-box">
+
+            <h1>
+                Login As
+            </h1>
+
+            <p class="login-intro">
+                Choose your user type to access the services
+                available for you.
+            </p>
+
+
+            <div class="login-options">
+
+                <!-- Student -->
+
+                <div class="login-card student-card">
+
+                    <div class="login-icon">
+                        🎓
+                    </div>
+
+                    <h2>
+                        Student
+                    </h2>
+
+                    <p>
+                        Access educational platforms
+                        and services designed for students.
+                    </p>
+
+                    <a href="student-en.html" class="login-button">
+                        Login as Student
+                    </a>
+
+                </div>
+
+
+                <!-- Citizen -->
+
+                <div class="login-card citizen-card">
+
+                    <div class="login-icon">
+                        👤
+                    </div>
+
+                    <h2>
+                        Citizen
+                    </h2>
+
+                    <p>
+                        Access government services
+                        and information available for citizens.
+                    </p>
+
+                    <a href="citizen-en.html" class="login-button">
+                        Login as Citizen
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         About Popup
+    ========================= -->
+
+    <div class="about-overlay" id="aboutOverlay">
+
+        <div class="about-box">
+
+            <button class="close-about" onclick="closeAbout()">
+                ×
+            </button>
+
+            <h2>
+                About the Website
+            </h2>
+
+            <p>
+                Your Complete Guide is a website designed
+                to help students and citizens access
+                digital platforms and services
+                in an easy and organized way.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JavaScript
+    ========================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
