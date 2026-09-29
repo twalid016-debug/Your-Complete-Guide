@@ -4,146 +4,344 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة مدرستنا</title>
+
+    <title>منصة مدرستنا | دليلك الكامل</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <h2>دليلك الكامل</h2>
+    <header class="main-header">
 
-        <div class="nav-links">
-            <a href="index-ar.html">الرئيسية</a>
-            <a href="index-ar.html#about">عن الموقع</a>
-            <a href="index-ar.html#platforms">المنصات</a>
-            <a href="index-ar.html#benefits">الفوائد</a>
-        </div>
+        <nav>
 
-        <div class="language-switch ar" onclick="changeLanguage()">
-            <span class="language-label">AR</span>
+            <h2 class="site-name">
+                دليلك الكامل
+            </h2>
 
-            <div class="switch">
-                <div class="switch-knob"></div>
+            <div class="nav-links">
+
+                <a href="loginas-ar.html">
+                    الرئيسية
+                </a>
+
+                <a href="studentplatforms-ar.html">
+                    المنصات
+                </a>
+
+                <a href="#about">
+                    عن المنصة
+                </a>
+
+                <a href="#benefits">
+                    الفوائد
+                </a>
+
             </div>
-        </div>
-    </nav>
-</header>
 
-<main class="platform-page">
+            <div class="settings-container">
 
-    <h1>منصة مدرستنا</h1>
+                <button class="settings-button"
+                        onclick="toggleSettings()">
+                    ⚙️
+                </button>
 
-    <p class="platform-intro">
-        تعرف على منصة مدرستنا وكيف يمكن للطلاب الاستفادة منها.
-    </p>
+                <div class="settings-menu"
+                     id="settingsMenu">
 
-    <div class="platform-tabs">
+                    <button onclick="changeLanguage()">
+                        🌐 تغيير اللغة
+                    </button>
 
-        <button class="platform-tab active" data-target="about">
+                    <button onclick="toggleTheme()">
+                        🌙 الوضع الداكن / الفاتح
+                    </button>
+
+                    <button onclick="showAbout()">
+                        ℹ️ عن الموقع
+                    </button>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <div id="particles"></div>
+
+
+    <section class="hero">
+
+        <h1>
+            منصة مدرستنا
+        </h1>
+
+        <p>
+            منصة تعليمية رقمية ضمن منظومة
+            وزارة التربية والتعليم تساعد الطلاب
+            على الوصول إلى المحتوى التعليمي.
+        </p>
+
+        <a href="https://moe.gov.eg/ar/"
+           target="_blank">
+            زيارة موقع الوزارة
+        </a>
+
+    </section>
+
+
+    <section id="about">
+
+        <h2>
             عن المنصة
-        </button>
+        </h2>
 
-        <button class="platform-tab" data-target="login">
-            تسجيل الدخول
-        </button>
+        <p>
+            منصة مدرستنا من المنصات التعليمية
+            الموجودة ضمن منظومة وزارة التربية والتعليم.
+        </p>
 
-        <button class="platform-tab" data-target="use">
-            كيفية الاستخدام
-        </button>
+        <p>
+            يمكن للطلاب الاستفادة من المحتوى والموارد
+            الرقمية التي تدعم الدروس والمراجعة والتعلم.
+        </p>
 
-        <button class="platform-tab" data-target="benefits">
-            الفوائد
-        </button>
+    </section>
+
+
+    <section>
+
+        <h2>
+            ماذا يمكنك أن تجد؟
+        </h2>
+
+        <div class="benefits-container">
+
+            <div class="benefit">
+
+                <h3>
+                    الدروس التعليمية
+                </h3>
+
+                <p>
+                    محتوى تعليمي يساعد الطلاب
+                    على متابعة الموضوعات الدراسية.
+                </p>
+
+            </div>
+
+            <div class="benefit">
+
+                <h3>
+                    المراجعة
+                </h3>
+
+                <p>
+                    يمكن استخدام الموارد الرقمية
+                    لدعم المراجعة والدراسة.
+                </p>
+
+            </div>
+
+            <div class="benefit">
+
+                <h3>
+                    المحتوى المرئي
+                </h3>
+
+                <p>
+                    يمكن أن تساعد الفيديوهات والمحتويات
+                    المرئية في شرح بعض الموضوعات.
+                </p>
+
+            </div>
+
+            <div class="benefit">
+
+                <h3>
+                    الموارد المساعدة
+                </h3>
+
+                <p>
+                    توفر المنظومة موارد رقمية
+                    مساعدة للعملية التعليمية.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="benefits">
+
+        <h2>
+            الفوائد للطلاب
+        </h2>
+
+        <div class="benefits-container">
+
+            <div class="benefit">
+
+                <h3>
+                    المذاكرة خارج المدرسة
+                </h3>
+
+                <p>
+                    يمكن استخدام الموارد الرقمية
+                    لمتابعة الدراسة خارج المدرسة.
+                </p>
+
+            </div>
+
+            <div class="benefit">
+
+                <h3>
+                    الوصول للمصادر
+                </h3>
+
+                <p>
+                    الوصول إلى الموارد التعليمية
+                    من الأجهزة المتصلة بالإنترنت.
+                </p>
+
+            </div>
+
+            <div class="benefit">
+
+                <h3>
+                    التعلم الذاتي
+                </h3>
+
+                <p>
+                    تساعد الموارد الرقمية الطالب
+                    على مراجعة المحتوى وفقًا لاحتياجاته.
+                </p>
+
+            </div>
+
+            <div class="benefit">
+
+                <h3>
+                    دعم التعلم
+                </h3>
+
+                <p>
+                    توفر الموارد الرقمية دعمًا إضافيًا
+                    للدراسة والمراجعة.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            كيفية الوصول
+        </h2>
+
+        <div class="about-content">
+
+            <p>
+                1. افتح موقع وزارة التربية والتعليم.
+            </p>
+
+            <p>
+                2. انتقل إلى قسم المنصات التعليمية.
+            </p>
+
+            <p>
+                3. اختر منصة مدرستنا.
+            </p>
+
+            <p>
+                4. اختر المرحلة أو المحتوى المطلوب.
+            </p>
+
+            <p>
+                5. ابدأ باستخدام الموارد التعليمية المتاحة.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <h2>
+            الرابط الرسمي
+        </h2>
+
+        <div class="benefits-container">
+
+            <div class="benefit">
+
+                <h3>
+                    وزارة التربية والتعليم
+                </h3>
+
+                <p>
+                    الموقع الرسمي للوزارة.
+                </p>
+
+                <a href="https://moe.gov.eg/ar/"
+                   target="_blank">
+                    فتح الموقع
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="about-overlay"
+         id="aboutOverlay">
+
+        <div class="about-box">
+
+            <button class="close-about"
+                    onclick="closeAbout()">
+                ×
+            </button>
+
+            <h2>
+                عن الموقع
+            </h2>
+
+            <p>
+                دليلك الكامل يساعد الطلاب
+                على الوصول إلى المنصات والموارد
+                التعليمية بطريقة منظمة.
+            </p>
+
+        </div>
 
     </div>
 
-    <div class="platform-sections">
 
-        <section class="platform-content active" data-section="about">
+    <footer>
 
-            <div class="platform-text">
-                <h2>عن المنصة</h2>
+        <p>
+            منصة مدرستنا | دليلك الكامل
+        </p>
 
-                <p>
-                    منصة مدرستنا هي منصة تعليمية توفر محتوى وموارد
-                    تعليمية رقمية للطلاب.
-                </p>
-
-                <p>
-                    تساعد الطلاب خلال رحلتهم التعليمية وتوفر لهم
-                    مواد تعليمية مفيدة.
-                </p>
-            </div>
-
-            <img src="madrasa.png" alt="منصة مدرستنا">
-
-        </section>
+    </footer>
 
 
-        <section class="platform-content" data-section="login">
-
-            <div class="platform-text">
-                <h2>تسجيل الدخول</h2>
-
-                <ol>
-                    <li>افتح منصة مدرستنا.</li>
-                    <li>اختر الخدمة أو المحتوى المطلوب.</li>
-                    <li>أدخل البيانات المطلوبة إذا لزم الأمر.</li>
-                    <li>انتقل إلى المحتوى الذي اخترته.</li>
-                </ol>
-            </div>
-
-            <img src="madrasa.png" alt="تسجيل الدخول">
-
-        </section>
-
-
-        <section class="platform-content" data-section="use">
-
-            <div class="platform-text">
-                <h2>كيفية الاستخدام</h2>
-
-                <ol>
-                    <li>افتح المنصة.</li>
-                    <li>اختر المحتوى التعليمي المطلوب.</li>
-                    <li>اقرأ أو شاهد المادة المتاحة.</li>
-                    <li>استخدم الموارد لدعم دراستك.</li>
-                </ol>
-            </div>
-
-            <img src="madrasa.png" alt="استخدام مدرستنا">
-
-        </section>
-
-
-        <section class="platform-content" data-section="benefits">
-
-            <div class="platform-text">
-                <h2>الفوائد للطلاب</h2>
-
-                <ul>
-                    <li>توفر موارد تعليمية رقمية.</li>
-                    <li>تدعم تعلم الطلاب.</li>
-                    <li>تساعد الطلاب على الوصول إلى المحتوى التعليمي.</li>
-                    <li>تشجع على التعلم المستقل.</li>
-                </ul>
-            </div>
-
-            <img src="madrasa.png" alt="فوائد مدرستنا">
-
-        </section>
-
-    </div>
-
-</main>
-
-<footer>
-    <p>وزارة التربية والتعليم والتعليم الفني</p>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
