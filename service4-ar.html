@@ -2,186 +2,197 @@
 <html lang="ar" dir="rtl">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>خدمات المياه | دليلك الكامل</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>خدمات المياه | دليلك الكامل</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+<header class="main-header">
 
-<nav>
+    <nav>
 
-<h2>دليلك الكامل</h2>
+        <h2 class="site-name">دليلك الكامل</h2>
 
-<div class="nav-links">
+        <div class="nav-links">
+            <a href="loginas-ar.html">الرئيسية</a>
+            <a href="citizenservices-ar.html">الخدمات</a>
+            <a href="#about">عن الخدمة</a>
+            <a href="#benefits">الفوائد</a>
+        </div>
 
-<a href="loginas-ar.html">الرئيسية</a>
+        <div class="settings-container">
 
-<a href="citizenservices-ar.html">الخدمات</a>
+            <button class="settings-button" onclick="toggleSettings()">⚙️</button>
 
-<a href="#about">عن الخدمة</a>
+            <div class="settings-menu" id="settingsMenu">
 
-<a href="#benefits">الفوائد</a>
+                <button onclick="changeLanguage()">🌐 تغيير اللغة</button>
 
-</div>
+                <button onclick="toggleTheme()">
+                    🌙 الوضع الداكن / الفاتح
+                </button>
 
-<div class="language-switch ar" onclick="changeLanguage()">
+                <button onclick="showAbout()">ℹ️ عن الموقع</button>
 
-<span class="language-label">AR</span>
+            </div>
 
-<div class="switch">
+        </div>
 
-<div class="switch-knob"></div>
-
-</div>
-
-</div>
-
-</nav>
+    </nav>
 
 </header>
 
 
-<main class="platform-page">
-
-<h1>خدمات المياه</h1>
-
-<p class="platform-intro">
-تعرف على خدمات المياه والفواتير وقراءة العدادات
-والشكاوى وخدمات الصرف الصحي.
-</p>
+<div id="particles"></div>
 
 
-<div class="platform-tabs">
+<main>
 
-<button class="platform-tab active" data-target="about">
-عن الخدمة
-</button>
+    <section class="hero-section">
 
-<button class="platform-tab" data-target="login">
-الوصول إلى الخدمة
-</button>
+        <div class="hero-content">
 
-<button class="platform-tab" data-target="use">
-كيفية الاستخدام
-</button>
+            <p class="hero-small-title">الخدمات الحكومية</p>
 
-<button class="platform-tab" data-target="benefits">
-الفوائد
-</button>
+            <h1>خدمات المياه</h1>
 
-</div>
+            <p>
+                تعرف على خدمات المياه والفواتير وقراءات العدادات
+                والشكاوى.
+            </p>
 
+        </div>
 
-<div class="platform-sections">
-
-<section class="platform-content active" data-section="about">
-
-<img src="service4.png" alt="خدمات المياه">
-
-<div>
-
-<h2>ما هي خدمات المياه؟</h2>
-
-<p>
-تشمل خدمات المياه توصيل المياه للمنازل
-والفواتير والصيانة وتقديم الشكاوى.
-</p>
-
-<p>
-كما تشمل الخدمات المرتبطة بالصرف الصحي وخدمة
-العملاء ومتابعة استهلاك المياه.
-</p>
-
-</div>
-
-</section>
+    </section>
 
 
-<section class="platform-content" data-section="login">
+    <section class="about-section" id="about">
 
-<h2>الوصول إلى خدمات المياه</h2>
+        <h2>ما هي خدمات المياه؟</h2>
 
-<p>
-يمكن التعرف على خدمات شركات مياه الشرب والصرف الصحي
-من خلال الشركة القابضة لمياه الشرب والصرف الصحي.
-</p>
+        <p>
+            تشمل خدمات المياه عددًا من الخدمات الرقمية المتعلقة
+            بمياه الشرب والصرف الصحي والفواتير والعدادات والشكاوى.
+        </p>
 
-<a href="https://www.hcww.com.eg/" target="_blank">
-الشركة القابضة لمياه الشرب والصرف الصحي
-</a>
-
-<ul>
-
-<li>الاستعلام عن الفاتورة</li>
-<li>دفع الفواتير</li>
-<li>تسجيل قراءة العداد</li>
-<li>تقديم الشكاوى</li>
-<li>حساب الاستهلاك</li>
-<li>خدمة العملاء</li>
-<li>معلومات عن ترشيد استهلاك المياه</li>
-
-</ul>
-
-</section>
+    </section>
 
 
-<section class="platform-content" data-section="use">
+    <section class="goals-section">
 
-<h2>كيفية استخدام خدمات المياه</h2>
+        <h2>أهم الخدمات</h2>
 
-<ol>
+        <div class="info-cards">
 
-<li>الدخول إلى الموقع أو الخدمة المناسبة.</li>
+            <div class="info-card">
+                <h3>الفواتير</h3>
+                <p>
+                    الاستعلام عن فواتير المياه ودفعها عند توفر الخدمة.
+                </p>
+            </div>
 
-<li>اختيار الخدمة المطلوبة.</li>
+            <div class="info-card">
+                <h3>قراءة العداد</h3>
+                <p>
+                    تسجيل قراءة العداد من خلال الخدمات الرقمية المتاحة.
+                </p>
+            </div>
 
-<li>إدخال البيانات المطلوبة.</li>
+            <div class="info-card">
+                <h3>الشكاوى</h3>
+                <p>
+                    تقديم الشكاوى المتعلقة بالمياه أو الصرف الصحي
+                    ومتابعتها.
+                </p>
+            </div>
 
-<li>اتباع خطوات تقديم الطلب.</li>
+        </div>
 
-<li>متابعة الطلب أو الشكوى عند توفر ذلك.</li>
-
-</ol>
-
-</section>
+    </section>
 
 
-<section class="platform-content" data-section="benefits">
+    <section class="benefits-section" id="benefits">
 
-<h2>فوائد خدمات المياه الرقمية</h2>
+        <h2>طريقة الوصول</h2>
 
-<ul>
+        <div class="info-cards">
 
-<li>سهولة الاستعلام عن الفواتير.</li>
+            <div class="info-card">
+                <h3>1</h3>
+                <p>
+                    افتح الموقع الرسمي للشركة القابضة لمياه الشرب والصرف الصحي.
+                </p>
+            </div>
 
-<li>إمكانية دفع الفواتير إلكترونيًا.</li>
+            <div class="info-card">
+                <h3>2</h3>
+                <p>
+                    اختر الخدمة المطلوبة.
+                </p>
+            </div>
 
-<li>تسجيل قراءة العداد.</li>
+            <div class="info-card">
+                <h3>3</h3>
+                <p>
+                    اتبع خطوات الخدمة وأدخل البيانات المطلوبة.
+                </p>
+            </div>
 
-<li>تقديم الشكاوى إلكترونيًا.</li>
+        </div>
 
-<li>الوصول إلى معلومات عن الاستهلاك وترشيد المياه.</li>
+    </section>
 
-</ul>
 
-</section>
+    <section class="about-section">
 
-</div>
+        <h2>الرابط الرسمي</h2>
+
+        <p>
+            الشركة القابضة لمياه الشرب والصرف الصحي:
+        </p>
+
+        <p>
+            <a href="https://www.hcww.com.eg/" target="_blank">
+                hcww.com.eg
+            </a>
+        </p>
+
+    </section>
 
 </main>
+
+
+<footer>
+
+    <p>© 2026 دليلك الكامل</p>
+
+</footer>
+
+
+<div class="about-overlay" id="aboutOverlay">
+
+    <div class="about-box">
+
+        <button class="close-about" onclick="closeAbout()">×</button>
+
+        <h2>عن الموقع</h2>
+
+        <p>
+            دليلك الكامل يساعد المواطنين والطلاب على الوصول
+            إلى المعلومات الرقمية بطريقة منظمة.
+        </p>
+
+    </div>
+
+</div>
 
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
