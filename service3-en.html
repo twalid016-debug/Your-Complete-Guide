@@ -1,1 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Electricity Services | Your Complete Guide</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+
+        <nav>
+
+            <h2 class="site-name">
+                Your Complete Guide
+            </h2>
+
+            <div class="settings-container">
+
+                <button class="settings-button" onclick="toggleSettings()">
+                    ⚙️
+                </button>
+
+                <div class="settings-menu" id="settingsMenu">
+
+                    <button onclick="changeLanguage()">
+                        🌐 Change Language
+                    </button>
+
+                    <button onclick="toggleTheme()">
+                        🌙 Dark / Light Mode
+                    </button>
+
+                    <button onclick="showAbout()">
+                        ℹ️ About
+                    </button>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main class="platform-page">
+
+        <h1>
+            Electricity Services
+        </h1>
+
+        <p class="platform-intro">
+            Explore electricity services related to bills,
+            meters, complaints, and digital services.
+        </p>
+
+
+        <div class="platform-tabs">
+
+            <button class="platform-tab active" data-target="about">
+                About the Service
+            </button>
+
+            <button class="platform-tab" data-target="login">
+                Access the Service
+            </button>
+
+            <button class="platform-tab" data-target="use">
+                How to Use
+            </button>
+
+            <button class="platform-tab" data-target="benefits">
+                Benefits
+            </button>
+
+        </div>
+
+
+        <div class="platform-sections">
+
+
+            <section class="platform-content active" data-section="about">
+
+                <div>
+
+                    <h2>
+                        About Electricity Services
+                    </h2>
+
+                    <p>
+                        Electricity services are provided by electricity
+                        distribution companies to citizens. They include
+                        connecting electricity to homes, issuing and collecting
+                        bills, and receiving complaints.
+                    </p>
+
+                    <h2>
+                        Types of Electricity Services
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            Bills and payment services.
+                        </li>
+
+                        <li>
+                            Meter services.
+                        </li>
+
+                        <li>
+                            Complaints services.
+                        </li>
+
+                    </ul>
+
+                    <h2>
+                        Unified Electricity Services Platform
+                    </h2>
+
+                    <p>
+                        The Unified Electricity Services Platform is an
+                        electronic platform affiliated with the Egyptian
+                        Electricity Holding Company. It allows citizens to
+                        submit and follow up on electricity requests online.
+                    </p>
+
+                </div>
+
+                <img src="service3.png" alt="Electricity Services">
+
+            </section>
+
+
+            <section class="platform-content" data-section="login">
+
+                <div>
+
+                    <h2>
+                        Access Electricity Services
+                    </h2>
+
+                    <p>
+                        You can access the
+                        <a href="https://eservices.eehc.gov.eg/" target="_blank">
+                            Unified Electricity Services Platform
+                        </a>
+                        to submit and follow up on electricity requests online.
+                    </p>
+
+                    <p>
+                        The official website of the Egyptian Electricity Holding
+                        Company also provides information about the electricity
+                        sector, affiliated companies, news, services, and
+                        electricity-related information.
+                    </p>
+
+                </div>
+
+                <img src="service3.png" alt="Electricity Services Platform">
+
+            </section>
+
+
+            <section class="platform-content" data-section="use">
+
+                <div>
+
+                    <h2>
+                        Main Services Available
+                    </h2>
+
+                    <ol>
+
+                        <li>
+                            Installing an electricity meter: Requesting a new electricity meter.
+                        </li>
+
+                        <li>
+                            Meter reading registration: Submitting the meter reading electronically.
+                        </li>
+
+                        <li>
+                            Bill payment: Paying electricity bills using available payment methods.
+                        </li>
+
+                        <li>
+                            Bill calculation: Estimating the bill according to consumption.
+                        </li>
+
+                        <li>
+                            Meter inspection: Requesting a meter inspection when there is a problem.
+                        </li>
+
+                        <li>
+                            Replacement meter: Requesting a replacement meter if the original meter is lost.
+                        </li>
+
+                        <li>
+                            Complaints and faults: Submitting complaints and reporting certain problems.
+                        </li>
+
+                        <li>
+                            Consumption data certificate: Requesting a certificate showing electricity consumption data.
+                        </li>
+
+                    </ol>
+
+                </div>
+
+                <img src="service3.png" alt="Electricity Services">
+
+            </section>
+
+
+            <section class="platform-content" data-section="benefits">
+
+                <div>
+
+                    <h2>
+                        Benefits of Digital Services
+                    </h2>
+
+                    <ul>
+
+                        <li>
+                            Submit electricity requests electronically.
+                        </li>
+
+                        <li>
+                            Follow up on requests online.
+                        </li>
+
+                        <li>
+                            Save time and effort.
+                        </li>
+
+                        <li>
+                            Submit meter readings electronically.
+                        </li>
+
+                        <li>
+                            Pay bills using available payment methods.
+                        </li>
+
+                        <li>
+                            Submit complaints and report certain faults.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <img src="service3.png" alt="Electricity Services Benefits">
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <div class="about-overlay" id="aboutOverlay">
+
+        <div class="about-box">
+
+            <button class="close-about" onclick="closeAbout()">
+                ×
+            </button>
+
+            <h2>
+                About the Website
+            </h2>
+
+            <p>
+                Your Complete Guide is a website designed
+                to help students and citizens access
+                digital platforms and services
+                in an easy and organized way.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
