@@ -11,28 +11,62 @@
 
 <body>
 
+    <!-- Animated Background -->
+    <div id="particles"></div>
+
+
+    <!-- Header -->
     <header>
+
         <nav>
+
             <h2>Your Complete Guide</h2>
 
             <div class="nav-links">
+
                 <a href="index-en.html">Home</a>
                 <a href="#about">About</a>
                 <a href="#platforms">Platforms</a>
                 <a href="#benefits">Benefits</a>
+
             </div>
 
-            <div class="language-switch" onclick="changeLanguage()">
-                <span class="language-label">EN</span>
 
-                <div class="switch">
-                    <div class="switch-knob"></div>
+            <!-- Settings -->
+            <div class="settings-container">
+
+                <button
+                    class="settings-button"
+                    onclick="toggleSettings()">
+                    ⚙️
+                </button>
+
+                <div
+                    class="settings-menu"
+                    id="settingsMenu">
+
+                    <button onclick="changeLanguage()">
+                        🌐 Change Language
+                    </button>
+
+                    <button onclick="toggleTheme()">
+                        🌙 Dark / Light Mode
+                    </button>
+
+                    <button onclick="showAbout()">
+                        ℹ️ About
+                    </button>
+
                 </div>
+
             </div>
+
         </nav>
+
     </header>
 
 
+    <!-- Hero -->
     <section class="hero">
 
         <h1>Welcome to Your Complete Guide</h1>
@@ -47,6 +81,7 @@
     </section>
 
 
+    <!-- About -->
     <section id="about">
 
         <h2>About the Website</h2>
@@ -66,15 +101,19 @@
     </section>
 
 
+    <!-- Platforms -->
     <section id="platforms">
 
         <h2>Educational Platforms</h2>
 
         <div class="platforms-container">
 
+
             <div class="platform-card">
 
-                <img src="moe.png" alt="Ministry of Education Portal">
+                <img
+                    src="moe.png"
+                    alt="Ministry of Education Portal">
 
                 <h3>Ministry of Education Portal</h3>
 
@@ -83,14 +122,18 @@
                     educational information, digital services, and access to educational platforms.
                 </p>
 
-                <a href="platform1-en.html">Learn More</a>
+                <a href="platform1-en.html">
+                    Learn More
+                </a>
 
             </div>
 
 
             <div class="platform-card">
 
-                <img src="sprix.png" alt="Japanese SPRIX Platform">
+                <img
+                    src="sprix.png"
+                    alt="Japanese SPRIX Platform">
 
                 <h3>Japanese SPRIX Platform</h3>
 
@@ -99,14 +142,18 @@
                     education, digital learning, and students' academic skills.
                 </p>
 
-                <a href="platform2-en.html">Learn More</a>
+                <a href="platform2-en.html">
+                    Learn More
+                </a>
 
             </div>
 
 
             <div class="platform-card">
 
-                <img src="madrasa.png" alt="Madrasetna Platform">
+                <img
+                    src="madrasa.png"
+                    alt="Madrasetna Platform">
 
                 <h3>Madrasetna Platform</h3>
 
@@ -115,7 +162,9 @@
                     resources to support students throughout their learning journey.
                 </p>
 
-                <a href="platform3-en.html">Learn More</a>
+                <a href="platform3-en.html">
+                    Learn More
+                </a>
 
             </div>
 
@@ -124,11 +173,13 @@
     </section>
 
 
+    <!-- Benefits -->
     <section id="benefits">
 
         <h2>Benefits for Students</h2>
 
         <div class="benefits-container">
+
 
             <div class="benefit">
 
@@ -170,6 +221,7 @@
     </section>
 
 
+    <!-- Footer -->
     <footer>
 
         <p>
@@ -177,6 +229,32 @@
         </p>
 
     </footer>
+
+
+    <!-- About Popup -->
+    <div
+        class="about-overlay"
+        id="aboutOverlay">
+
+        <div class="about-box">
+
+            <button
+                class="close-about"
+                onclick="closeAbout()">
+                ×
+            </button>
+
+            <h2>About the Website</h2>
+
+            <p>
+                Your Complete Guide is an educational website designed
+                to help students access educational platforms and digital
+                services in an easy and organized way.
+            </p>
+
+        </div>
+
+    </div>
 
 
     <script src="script.js"></script>
