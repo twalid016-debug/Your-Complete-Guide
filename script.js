@@ -1,4 +1,4 @@
-```javascript
+
 /* =========================
    Settings Menu
 ========================= */
@@ -262,4 +262,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
-```
