@@ -13,6 +13,8 @@ function changeLanguage() {
     }
 
 }
+
+
 function showPlatformSection(sectionId, button) {
 
     // Hide all platform sections
