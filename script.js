@@ -262,33 +262,101 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+
 function calculateSavings() {
-    const inputVal = document.getElementById('lessonsInput').value;
+    const count = parseFloat(document.getElementById('lessonsInput').value);
+    const period = document.getElementById('periodSelect').value;
     const resultDiv = document.getElementById('calcResult');
     
-    if (inputVal && inputVal > 0) {
+    if (count && count > 0) {
+        let totalHours = 0;
+        let periodText = "";
+        let breakdownText = "";
+
+        // المعيار المفترض: توفير 2 ساعة لكل معاملة/درس مقارنة بالذهاب والانتظار الميداني
+        if (period === "week") {
+            totalHours = count * 2;
+            periodText = "أسبوعياً";
+            breakdownText = `• التوفير الأسبوعي: ${count} معاملة × 2 ساعة = <strong>${totalHours} ساعات أسبوعياً</strong>.`;
+        } else if (period === "month") {
+            totalHours = count * 2 * 4;
+            periodText = "شهرياً";
+            breakdownText = `• التوفير الشهري: ${count} معاملة أسبوعياً × 2 ساعة × 4 أسابيع = <strong>${totalHours} ساعة شهرياً</strong>.`;
+        } else if (period === "year") {
+            totalHours = count * 2 * 52;
+            periodText = "سنوياً";
+            breakdownText = `• التوفير السنوي: ${count} معاملة أسبوعياً × 2 ساعة × 52 أسبوعاً = <strong>${totalHours} ساعة سنوياً</strong>.`;
+        }
+
+        resultDiv.style.display = "block";
+        resultDiv.style.backgroundColor = "#f0fdf4";
+        resultDiv.style.border = "1px solid #bbf7d0";
+        resultDiv.style.color = "#166534";
         
-        const hoursSaved = inputVal * 2 * 4; 
-        resultDiv.style.color = "#2e7d32";
-        resultDiv.innerHTML = `بفضل استخدامك للخدمات الرقمية، توفر حوالي <strong>${hoursSaved} ساعة</strong> شهرياً!`;
+        resultDiv.innerHTML = `
+            <div style="font-size: 18px; margin-bottom: 10px;">
+                🎉 إجمالي الوقت الموفر: <strong>${totalHours} ساعة ${periodText}!</strong>
+            </div>
+            <div style="font-size: 13px; color: #4b5563; border-top: 1px dashed #cbd5e1; padding-top: 10px; line-height: 1.6; text-align: right;">
+                <strong>طريقة الحساب:</strong><br>
+                • الوقت التقديري للخدمة الميدانية (تنقل + انتظار): <strong>2 ساعة</strong> لكل معاملة.<br>
+                ${breakdownText}
+            </div>
+        `;
     } else {
-        resultDiv.style.color = "#d32f2f";
+        resultDiv.style.display = "block";
+        resultDiv.style.backgroundColor = "#fef2f2";
+        resultDiv.style.border = "1px solid #fecaca";
+        resultDiv.style.color = "#991b1b";
         resultDiv.innerHTML = "يرجى إدخال عدد صحيح أكبر من صفر.";
     }
 }
 
+
 function calculateSavingsEn() {
-    const inputVal = document.getElementById('lessonsInputEn').value;
+    const count = parseFloat(document.getElementById('lessonsInputEn').value);
+    const period = document.getElementById('periodSelectEn').value;
     const resultDiv = document.getElementById('calcResultEn');
     
-    if (inputVal && inputVal > 0) {
-        const hoursSaved = inputVal * 2 * 4; 
-        resultDiv.style.color = "#2e7d32";
-        resultDiv.innerHTML = `Thanks to digital services, you save approximately <strong>${hoursSaved} hours</strong> monthly!`;
+    if (count && count > 0) {
+        let totalHours = 0;
+        let periodText = "";
+        let breakdownText = "";
+
+        if (period === "week") {
+            totalHours = count * 2;
+            periodText = "weekly";
+            breakdownText = `• Weekly Savings: ${count} transactions × 2 hours = <strong>${totalHours} hours/week</strong>.`;
+        } else if (period === "month") {
+            totalHours = count * 2 * 4;
+            periodText = "monthly";
+            breakdownText = `• Monthly Savings: ${count} transactions/week × 2 hours × 4 weeks = <strong>${totalHours} hours/month</strong>.`;
+        } else if (period === "year") {
+            totalHours = count * 2 * 52;
+            periodText = "yearly";
+            breakdownText = `• Yearly Savings: ${count} transactions/week × 2 hours × 52 weeks = <strong>${totalHours} hours/year</strong>.`;
+        }
+
+        resultDiv.style.display = "block";
+        resultDiv.style.backgroundColor = "#f0fdf4";
+        resultDiv.style.border = "1px solid #bbf7d0";
+        resultDiv.style.color = "#166534";
+        
+        resultDiv.innerHTML = `
+            <div style="font-size: 18px; margin-bottom: 10px;">
+                🎉 Total Saved Time: <strong>${totalHours} hours ${periodText}!</strong>
+            </div>
+            <div style="font-size: 13px; color: #4b5563; border-top: 1px dashed #cbd5e1; padding-top: 10px; line-height: 1.6; text-align: left;">
+                <strong>Calculation Method:</strong><br>
+                • Estimated time per physical visit (travel + waiting): <strong>2 hours</strong>.<br>
+                ${breakdownText}
+            </div>
+        `;
     } else {
-        resultDiv.style.color = "#d32f2f";
+        resultDiv.style.display = "block";
+        resultDiv.style.backgroundColor = "#fef2f2";
+        resultDiv.style.border = "1px solid #fecaca";
+        resultDiv.style.color = "#991b1b";
         resultDiv.innerHTML = "Please enter a valid number greater than zero.";
     }
 }
-
-
