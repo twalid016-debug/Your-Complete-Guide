@@ -641,6 +641,93 @@ section,
     line-height: 1.6;
 }
 
+.calc-section {
+    padding: 50px 20px;
+    background-color: #f8fafc;
+    text-align: center;
+}
+
+.calc-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calc-title {
+    color: #0046be;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.calc-subtitle {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.calc-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    max-width: 480px;
+    margin: 0 auto;
+    border-top: 4px solid #0046be;
+}
+
+.calc-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.calc-input-group label {
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+.calc-input-group input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.calc-input-group input:focus {
+    border-color: #0046be;
+}
+
+.calc-btn {
+    background-color: #0046be;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.calc-btn:hover {
+    background-color: #00328a;
+}
+
+.calc-result {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 17px;
+    color: #2e7d32;
+    min-height: 24px;
+}
+
 
 /* =========================
    Info Cards
