@@ -11,28 +11,62 @@
 
 <body>
 
+    <!-- Animated Background -->
+    <div id="particles"></div>
+
+
+    <!-- Header -->
     <header>
+
         <nav>
+
             <h2>دليلك الكامل</h2>
 
             <div class="nav-links">
+
                 <a href="index-ar.html">الرئيسية</a>
                 <a href="#about">عن الموقع</a>
                 <a href="#platforms">المنصات</a>
                 <a href="#benefits">الفوائد</a>
+
             </div>
 
-            <div class="language-switch ar" onclick="changeLanguage()">
-                <span class="language-label">AR</span>
 
-                <div class="switch">
-                    <div class="switch-knob"></div>
+            <!-- Settings -->
+            <div class="settings-container">
+
+                <button
+                    class="settings-button"
+                    onclick="toggleSettings()">
+                    ⚙️
+                </button>
+
+                <div
+                    class="settings-menu"
+                    id="settingsMenu">
+
+                    <button onclick="changeLanguage()">
+                        🌐 تغيير اللغة
+                    </button>
+
+                    <button onclick="toggleTheme()">
+                        🌙 الوضع الداكن / الفاتح
+                    </button>
+
+                    <button onclick="showAbout()">
+                        ℹ️ عن الموقع
+                    </button>
+
                 </div>
+
             </div>
+
         </nav>
+
     </header>
 
 
+    <!-- Hero -->
     <section class="hero">
 
         <h1>مرحبًا بك في دليلك الكامل</h1>
@@ -47,6 +81,7 @@
     </section>
 
 
+    <!-- About -->
     <section id="about">
 
         <h2>عن الموقع</h2>
@@ -66,15 +101,19 @@
     </section>
 
 
+    <!-- Platforms -->
     <section id="platforms">
 
         <h2>المنصات التعليمية</h2>
 
         <div class="platforms-container">
 
+
             <div class="platform-card">
 
-                <img src="moe.png" alt="منصة البوابة التعليمية">
+                <img
+                    src="moe.png"
+                    alt="منصة البوابة التعليمية">
 
                 <h3>منصة البوابة التعليمية</h3>
 
@@ -83,14 +122,18 @@
                     التعليمية والخدمات الرقمية والوصول إلى المنصات التعليمية.
                 </p>
 
-                <a href="platform1-ar.html">اعرف المزيد</a>
+                <a href="platform1-ar.html">
+                    اعرف المزيد
+                </a>
 
             </div>
 
 
             <div class="platform-card">
 
-                <img src="sprix.png" alt="منصة سبريكس اليابانية">
+                <img
+                    src="sprix.png"
+                    alt="منصة سبريكس اليابانية">
 
                 <h3>منصة سبريكس اليابانية</h3>
 
@@ -99,14 +142,18 @@
                     وتنمية المهارات الأكاديمية لدى الطلاب.
                 </p>
 
-                <a href="platform2-ar.html">اعرف المزيد</a>
+                <a href="platform2-ar.html">
+                    اعرف المزيد
+                </a>
 
             </div>
 
 
             <div class="platform-card">
 
-                <img src="madrasa.png" alt="منصة مدرستنا">
+                <img
+                    src="madrasa.png"
+                    alt="منصة مدرستنا">
 
                 <h3>منصة مدرستنا</h3>
 
@@ -115,7 +162,9 @@
                     تعليمية رقمية لدعم الطلاب خلال رحلتهم التعليمية.
                 </p>
 
-                <a href="platform3-ar.html">اعرف المزيد</a>
+                <a href="platform3-ar.html">
+                    اعرف المزيد
+                </a>
 
             </div>
 
@@ -124,11 +173,13 @@
     </section>
 
 
+    <!-- Benefits -->
     <section id="benefits">
 
         <h2>الفوائد للطلاب</h2>
 
         <div class="benefits-container">
+
 
             <div class="benefit">
 
@@ -170,6 +221,7 @@
     </section>
 
 
+    <!-- Footer -->
     <footer>
 
         <p>
@@ -177,6 +229,32 @@
         </p>
 
     </footer>
+
+
+    <!-- About Popup -->
+    <div
+        class="about-overlay"
+        id="aboutOverlay">
+
+        <div class="about-box">
+
+            <button
+                class="close-about"
+                onclick="closeAbout()">
+                ×
+            </button>
+
+            <h2>عن الموقع</h2>
+
+            <p>
+                دليلك الكامل هو موقع تعليمي يهدف إلى مساعدة الطلاب
+                على الوصول إلى المنصات التعليمية والخدمات الرقمية
+                بطريقة سهلة ومنظمة.
+            </p>
+
+        </div>
+
+    </div>
 
 
     <script src="script.js"></script>
