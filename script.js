@@ -261,3 +261,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+function calculateSavings() {
+    const inputVal = document.getElementById('lessonsInput').value;
+    const resultDiv = document.getElementById('calcResult');
+    
+    if (inputVal && inputVal > 0) {
+        
+        const hoursSaved = inputVal * 2 * 4; 
+        resultDiv.style.color = "#2e7d32";
+        resultDiv.innerHTML = `بفضل استخدامك للخدمات الرقمية، توفر حوالي <strong>${hoursSaved} ساعة</strong> شهرياً!`;
+    } else {
+        resultDiv.style.color = "#d32f2f";
+        resultDiv.innerHTML = "يرجى إدخال عدد صحيح أكبر من صفر.";
+    }
+}
+
