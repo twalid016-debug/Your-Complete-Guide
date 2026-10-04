@@ -377,17 +377,27 @@
 <section id="calculator" class="calc-section">
     <div class="calc-container">
         <h2 class="calc-title">حاسبة توفير الوقت بالتحول الرقمي</h2>
-        <p class="calc-subtitle">أدخل عدد المعاملات أو الدروس التي تنجزها رقمياً أسبوعياً لمعرفة كمية الوقت الموفر شهرياً:</p>
+        <p class="calc-subtitle">أدخل عدد المعاملات أو الدروس واختر الفترة الزمنية لمعرفة إجمالي الوقت الموفر:</p>
         
         <div class="calc-card">
+            
             <div class="calc-input-group">
-                <label for="lessonsInput">عدد المعاملات الأسبوعية:</label>
+                <label for="lessonsInput">عدد المعاملات / الدروس أسبوعياً:</label>
                 <input type="number" id="lessonsInput" min="1" placeholder="مثال: 4" />
+            </div>
+
+            <div class="calc-input-group">
+                <label for="periodSelect">حساب التوفير عن فترة:</label>
+                <select id="periodSelect" class="calc-select">
+                    <option value="week">أسبوعياً</option>
+                    <option value="month" selected>شهرياً</option>
+                    <option value="year">سنوياً</option>
+                </select>
             </div>
             
             <button type="button" class="calc-btn" onclick="calculateSavings()">احسب الوقت الموفر</button>
             
-            <div id="calcResult" class="calc-result"></div>
+            <div id="calcResult" class="calc-result-box"></div>
         </div>
     </div>
 </section>
