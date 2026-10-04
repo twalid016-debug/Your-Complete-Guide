@@ -277,3 +277,18 @@ function calculateSavings() {
     }
 }
 
+function calculateSavingsEn() {
+    const inputVal = document.getElementById('lessonsInputEn').value;
+    const resultDiv = document.getElementById('calcResultEn');
+    
+    if (inputVal && inputVal > 0) {
+        const hoursSaved = inputVal * 2 * 4; 
+        resultDiv.style.color = "#2e7d32";
+        resultDiv.innerHTML = `Thanks to digital services, you save approximately <strong>${hoursSaved} hours</strong> monthly!`;
+    } else {
+        resultDiv.style.color = "#d32f2f";
+        resultDiv.innerHTML = "Please enter a valid number greater than zero.";
+    }
+}
+
+
