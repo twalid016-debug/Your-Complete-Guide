@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Introduction | Your Complete Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.jpg">
+</head>
+ 
+<body dir="ltr">
+ 
+    <header class="main-header">
+        <nav>
+            <h2 class="site-name">Your Complete Guide</h2>
+ 
+            <div class="settings-container">
+                <button class="settings-button" onclick="toggleSettings()">⚙️</button>
+ 
+                <div class="settings-menu" id="settingsMenu">
+                    <button onclick="changeLanguage()"> Change language</button>
+                    <button onclick="toggleTheme()"> Dark / Light mode</button>
+                    <button onclick="showAbout()"> About the site</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+ 
+    <main>
+ 
+        <section class="hero">
+            <p class="hero-small-title">Welcome to</p>
+            <h1>Your government services in one place, in simple steps</h1>
+            <p>Learn how to complete supply, documentation and traffic services online, and practice the steps before doing them for real.</p>
+ 
+            
+ 
+            <a href="loginas-en.html">Get Started</a>
+        </section>
+ 
+        <section id="about" class="reveal">
+            <h2>What is this software?</h2>
+            <p>An interactive website that shows students and citizens how to obtain digital government services (such as supply, documentation and traffic) in a simple and engaging way.</p>
+        </section>
+ 
+        <section class="goals-section reveal">
+            <h2>What will you learn?</h2>
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="login-icon">🏛️</div>
+                    <h3>Government Services Guide</h3>
+                    <p>A step-by-step interactive simulation of getting a service.</p>
+                </div>
+                <div class="info-card">
+                    <div class="login-icon">⏱️</div>
+                    <h3>Time & Cost Calculator</h3>
+                    <p>Compare time and effort between digital and traditional methods.</p>
+                </div>
+                <div class="info-card">
+                    <div class="login-icon">🔒</div>
+                    <h3>Digital Security</h3>
+                    <p>Tips and standards to protect your personal data.</p>
+                </div>
+            </div>
+        </section>
+ 
+        <section id="security" class="security-section reveal">
+            <h2>Digital Security</h2>
+            <p class="security-intro">During online transactions, your data is precious. These key rules are based on NIST guidance and Egypt's Personal Data Protection Law.</p>
+ 
+            <div class="security-cards">
+                <article class="security-card">
+                    <span class="security-number">01</span>
+                    <h3>Use a long password</h3>
+                    <p>Length matters more than complexity. Use at least 8 characters, ideally 12 to 16. A passphrase made of unrelated words is easy to remember, and never reuse a password across sites.</p>
+                </article>
+                <article class="security-card">
+                    <span class="security-number">02</span>
+                    <h3>Turn on two-step verification</h3>
+                    <p>Two-step verification means a stolen password alone is not enough to enter your account. Text message codes are weaker; authenticator apps and passkeys are better.</p>
+                </article>
+                <article class="security-card">
+                    <span class="security-number">03</span>
+                    <h3>Beware of phishing</h3>
+                    <p>A phishing site is a fake copy controlled by an attacker to steal your data. Do not click unknown links, watch for spelling mistakes in messages, type the official website address yourself, and treat any suspicious message as phishing.</p>
+                </article>
+                <article class="security-card">
+                    <span class="security-number">04</span>
+                    <h3>Your rights under the data protection law</h3>
+                    <p>Law No. 151 of 2020 protects personal data processed electronically. It may not be collected or processed without the explicit consent of its owner, and children's data counts as sensitive. The Personal Data Protection Center oversees its enforcement.</p>
+                </article>
+            </div>
+ 
+            <div class="pw-box">
+                <h3>Test password strength</h3>
+                <input type="text" id="pwInput" placeholder="Type a sample password (not your real one)">
+                <div class="pw-bar"><div id="pwFill"></div></div>
+                <p id="pwText">Type something to start</p>
+            </div>
+        </section>
+ 
+        <section class="hero reveal">
+            <h1>Ready to start?</h1>
+            <a href="loginas-en.html">Log in</a>
+        </section>
+ 
+    </main>
+ 
+    <footer>
+        <p>© Your Complete Guide</p>
+    </footer>
+ 
+ 
+    <script src="script.js"></script> 
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>مقدمة | دليلك الكامل</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.jpg">
+ 
+<body dir="rtl">
+ 
+    <header class="main-header">
+        <nav>
+            <h2 class="site-name">دليلك الكامل</h2>
+ 
+            <div class="settings-container">
+                <button class="settings-button" onclick="toggleSettings()">⚙️</button>
+ 
+                <div class="settings-menu" id="settingsMenu">
+                    <button onclick="changeLanguage()"> تغيير اللغة</button>
+                    <button onclick="toggleTheme()"> الوضع الداكن / الفاتح</button>
+                    <button onclick="showAbout()"> عن الموقع</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+ 
+    <main>
+ 
+        
+        <section class="hero">
+            <p class="hero-small-title">مرحباً بك في</p>
+            <h1>خدماتك الحكومية في مكان واحد.. بخطوات بسيطة</h1>
+            <p>تعلّم كيف تنجز خدمات التموين والتوثيق والمرور رقمياً، وجرّب الخطوات بنفسك قبل تنفيذها في الواقع.</p>
+ 
+ 
+            <a href="loginas-ar.html">ابدأ الآن</a>
+        </section>
+ 
+
+        <section id="about" class="reveal">
+            <h2>ما هي هذه البرمجية؟</h2>
+            <p>موقع تفاعلي يشرح للطلاب والمواطنين كيفية الحصول على الخدمات الحكومية الرقمية (مثل التموين والتوثيق والمرور) بأسلوب مبسط وشيق.</p>
+        </section>
+ 
+        <section class="goals-section reveal">
+            <h2>ماذا ستتعلم؟</h2>
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="login-icon">🏛️</div>
+                    <h3>دليل الخدمات الحكومية</h3>
+                    <p>محاكاة تفاعلية خطوة بخطوة للحصول على الخدمة.</p>
+                </div>
+                <div class="info-card">
+                    <div class="login-icon">⏱️</div>
+                    <h3>حاسبة الوقت والتكلفة</h3>
+                    <p>قارن الوقت والجهد بين الخدمة الرقمية والطريقة التقليدية.</p>
+                </div>
+                <div class="info-card">
+                    <div class="login-icon">🔒</div>
+                    <h3>الأمان الرقمي</h3>
+                    <p>نصائح ومعايير لحماية بياناتك الشخصية.</p>
+                </div>
+            </div>
+        </section>
+ 
+       
+        <section id="security" class="security-section reveal">
+            <h2>الأمان الرقمي</h2>
+            <p class="security-intro">أثناء المعاملات الإلكترونية، بياناتك أمانة. هذه أهم القواعد المبنية على إرشادات المعهد الوطني الأمريكي للمعايير والتقنية (NIST) وقانون حماية البيانات الشخصية المصري.</p>
+ 
+            <div class="security-cards">
+                <article class="security-card">
+                    <span class="security-number">01</span>
+                    <h3>كلمة مرور طويلة</h3>
+                    <p>الطول أهم من التعقيد. الحد الأدنى 8 أحرف، ويُفضّل من 12 إلى 16 حرفاً. استخدم جملة من كلمات غير مترابطة يسهل تذكرها، ولا تكرر كلمة المرور في أكثر من موقع.</p>
+                </article>
+                <article class="security-card">
+                    <span class="security-number">02</span>
+                    <h3>التحقق بخطوتين</h3>
+                    <p>فعّل التحقق بخطوتين لتحتاج إلى أكثر من كلمة المرور لدخول حسابك. الرموز المرسلة برسالة نصية أقل أماناً، وتطبيقات المصادقة ومفاتيح المرور (Passkeys) أفضل منها.</p>
+                </article>
+                <article class="security-card">
+                    <span class="security-number">03</span>
+                    <h3>احذر التصيّد الإلكتروني</h3>
+                    <p>موقع التصيّد نسخة مزيفة يتحكم فيها المهاجم لسرقة بياناتك. لا تضغط على الروابط المجهولة، وانتبه للأخطاء الإملائية في الرسائل، واكتب عنوان الموقع الرسمي بنفسك، وإذا شككت في رسالة فاعتبرها تصيّداً.</p>
+                </article>
+                <article class="security-card">
+                    <span class="security-number">04</span>
+                    <h3>حقوقك في قانون حماية البيانات</h3>
+                    <p>ينص القانون رقم 151 لسنة 2020 على حماية البيانات الشخصية المعالجة إلكترونياً، ولا يجوز جمعها أو معالجتها إلا بموافقة صريحة من صاحبها، وتُعد بيانات الأطفال بيانات حساسة. ويتولى مركز حماية البيانات الشخصية الرقابة على تطبيقه.</p>
+                </article>
+            </div>
+ 
+            <div class="pw-box">
+                <h3>جرّب قياس قوة كلمة المرور</h3>
+                <input type="text" id="pwInput" placeholder="اكتب كلمة مرور للتجربة (ليست كلمة مرورك الحقيقية)">
+                <div class="pw-bar"><div id="pwFill"></div></div>
+                <p id="pwText">اكتب شيئاً لتبدأ</p>
+            </div>
+        </section>
+ 
+        <section class="hero reveal">
+            <h1>جاهز تبدأ؟</h1>
+            <a href="loginas-ar.html">سجّل الدخول</a>
+        </section>
+ 
+    </main>
+ 
+    <footer>
+        <p>© دليلك الكامل</p>
+    </footer>
+ 
+ 
+    <script src="script.js"></script>  
+</html>
