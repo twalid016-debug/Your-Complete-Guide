@@ -387,12 +387,13 @@ section,
 .js .reveal {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
+/* الـ transition هنا فقط، حتى لا يحدث "وميض" عند إضافة كلاس js */
 .js .reveal.show {
     opacity: 1;
     transform: translateY(0);
+    transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 #about,
@@ -1242,24 +1243,6 @@ body.dark-mode .hero a {
 
 body.dark-mode .back-arrow {
     background: #2563eb;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    .js .reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .hero h1,
-    .hero > p,
-    .settings-menu {
-        animation: none;
-    }
 }
 
 /* ===== الآلة الحاسبة: إضافات ===== */
