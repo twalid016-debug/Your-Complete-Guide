@@ -1252,6 +1252,22 @@ body.dark-mode .back-arrow {
     background: #f1f5f9;
 }
 
+.calc-method {
+    display: block;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px dashed #cbd5e1;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.8;
+    color: #475569;
+}
+
+body.dark-mode .calc-method {
+    border-top-color: #475569;
+    color: #cbd5e1;
+}
+
 body.dark-mode .calc-section {
     background: linear-gradient(135deg, #0f172a 0%, #111827 100%);
 }
