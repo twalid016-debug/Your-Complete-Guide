@@ -383,15 +383,17 @@ section,
     color: #64748b;
 }
 
-.reveal {
+/* الإخفاء يحدث فقط لو الـ JS شغال (الكلاس js يضيفه سطر صغير في head) */
+.js .reveal {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.reveal.show {
+/* الـ transition هنا فقط، حتى لا يحدث "وميض" عند إضافة كلاس js */
+.js .reveal.show {
     opacity: 1;
     transform: translateY(0);
+    transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 #about,
@@ -524,7 +526,7 @@ section,
     display: flex;
     flex-direction: column;
     gap: 8px;
-    text-align: right;
+    text-align: start;
     margin-bottom: 20px;
 }
 
@@ -1243,22 +1245,50 @@ body.dark-mode .back-arrow {
     background: #2563eb;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
+/* ===== الآلة الحاسبة: إضافات ===== */
 
-    .reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
+/* الصندوق مخفي حتى تضغطي الزرار، والـ JS هو اللي بيظهره */
+.calc-result-box {
+    background: #f1f5f9;
+}
 
-    .hero h1,
-    .hero > p,
-    .settings-menu {
-        animation: none;
-    }
+body.dark-mode .calc-section {
+    background: linear-gradient(135deg, #0f172a 0%, #111827 100%);
+}
+
+body.dark-mode .calc-title {
+    color: #93c5fd;
+}
+
+body.dark-mode .calc-subtitle {
+    color: #cbd5e1;
+}
+
+body.dark-mode .calc-card {
+    background: rgba(30, 41, 59, 0.96);
+    border-color: #334155;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .calc-input-group label {
+    color: #e2e8f0;
+}
+
+body.dark-mode .calc-input-group input,
+body.dark-mode .calc-select {
+    background-color: #0f172a;
+    color: #e2e8f0;
+    border-color: #475569;
+}
+
+body.dark-mode .calc-input-group input:focus,
+body.dark-mode .calc-select:focus {
+    border-color: #60a5fa;
+    background-color: #0f172a;
+}
+
+body.dark-mode .calc-result-box {
+    background: #0f172a;
 }
 
 @media (max-width: 768px) {
