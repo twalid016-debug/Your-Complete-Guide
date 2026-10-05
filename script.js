@@ -343,73 +343,110 @@ document.addEventListener("DOMContentLoaded", function () {
 });
  
  
-function calculateSavings() {
-    const input = document.getElementById('lessonsInput');
-    const resultDiv = document.getElementById('calcResult');
+// يقرأ الفترة المختارة (أسبوع / شهر / سنة) من القائمة المنسدلة داخل نفس كارت الحاسبة
+function detectPeriod(input) {
+
+    const card = input.closest(".calc-card") || document;
+
+    const select = card.querySelector("select");
+
+    if (!select || select.selectedIndex < 0) {
+        return null;
+    }
+
+    const text = (
+        select.value + " " + select.options[select.selectedIndex].text
+    ).toLowerCase();
+
+    if (/week|أسبوع|اسبوع/.test(text)) return "week";
+    if (/month|شهر/.test(text)) return "month";
+    if (/year|سنة|سنه|عام/.test(text)) return "year";
+
+    return null;
+}
+
+const CALC_TEXT = {
+    ar: {
+        intro: "بفضل استخدامك للخدمات الرقمية، توفر حوالي",
+        hours: "ساعة",
+        label: { week: "في الأسبوع", month: "في الشهر", year: "في السنة" },
+        methodTitle: "طريقة الحساب:",
+        method: {
+            week: "ساعات الأسبوع = عدد الخدمات × 2",
+            month: "ساعات الشهر = عدد الخدمات × 2 × 4",
+            year: "ساعات السنة = عدد الخدمات × 2 × 52"
+        },
+        note: "(عدد الخدمات في الأسبوع)",
+        error: "يرجى إدخال عدد صحيح أكبر من صفر."
+    },
+    en: {
+        intro: "Thanks to digital services, you save approximately",
+        hours: "hours",
+        label: { week: "per week", month: "per month", year: "per year" },
+        methodTitle: "How it is calculated:",
+        method: {
+            week: "Weekly hours = number of services × 2",
+            month: "Monthly hours = number of services × 2 × 4",
+            year: "Yearly hours = number of services × 2 × 52"
+        },
+        note: "(number of services per week)",
+        error: "Please enter a valid number greater than zero."
+    }
+};
+
+function runCalculator(inputId, resultId, lang) {
+
+    const input = document.getElementById(inputId);
+    const resultDiv = document.getElementById(resultId);
 
     if (!input || !resultDiv) {
         return;
     }
 
-    const inputVal = Number(input.value);
+    const t = CALC_TEXT[lang];
+    const value = Number(input.value);
 
     resultDiv.style.display = "block";
 
-    if (inputVal > 0) {
-
-        const perWeek = inputVal * 2;
-        const perMonth = perWeek * 4;
-        const perYear = perWeek * 52;
-        resultDiv.style.color = "#2e7d32";
-        resultDiv.innerHTML = `بفضل استخدامك للخدمات الرقمية، توفر حوالي:<br>` +
-            `<strong>${perWeek} ساعة</strong> في الأسبوع<br>` +
-            `<strong>${perMonth} ساعة</strong> في الشهر<br>` +
-            `<strong>${perYear} ساعة</strong> في السنة` +
-            `<br><div class="calc-method" style="display:block;margin-top:20px;padding-top:14px;border-top:1px dashed #cbd5e1;font-size:14px;font-weight:normal;line-height:1.8;">` +
-            `<b>طريقة الحساب:</b><br>` +
-            `ساعات الأسبوع = عدد الخدمات × 2<br>` +
-            `ساعات الشهر = ساعات الأسبوع × 4<br>` +
-            `ساعات السنة = ساعات الأسبوع × 52<br>` +
-            `<small>(عدد الخدمات في الأسبوع)</small>` +
-            `</div>`;
-    } else {
+    if (!(value > 0)) {
         resultDiv.style.color = "#d32f2f";
-        resultDiv.innerHTML = "يرجى إدخال عدد صحيح أكبر من صفر.";
+        resultDiv.innerHTML = t.error;
+        return;
     }
+
+    const perWeek = value * 2;
+
+    const hours = { week: perWeek, month: perWeek * 4, year: perWeek * 52 };
+
+    // لو مفيش قائمة اختيار، يعرض الثلاثة كما كان
+    const chosen = detectPeriod(input);
+    const periods = chosen ? [chosen] : ["week", "month", "year"];
+
+    const lines = periods.map(function (p) {
+        return "<strong>" + hours[p] + " " + t.hours + "</strong> " + t.label[p];
+    });
+
+    const methodLines = periods.map(function (p) {
+        return t.method[p];
+    });
+
+    resultDiv.style.color = "#2e7d32";
+
+    resultDiv.innerHTML =
+        t.intro + (chosen ? " " : ":<br>") + lines.join("<br>") + (chosen ? "!" : "") +
+        '<br><div class="calc-method" style="display:block;margin-top:20px;padding-top:14px;border-top:1px dashed #cbd5e1;font-size:14px;font-weight:normal;line-height:1.8;">' +
+        "<b>" + t.methodTitle + "</b><br>" +
+        methodLines.join("<br>") + "<br>" +
+        "<small>" + t.note + "</small>" +
+        "</div>";
+}
+
+function calculateSavings() {
+    runCalculator("lessonsInput", "calcResult", "ar");
 }
 
 function calculateSavingsEn() {
-    const input = document.getElementById('lessonsInputEn');
-    const resultDiv = document.getElementById('calcResultEn');
-
-    if (!input || !resultDiv) {
-        return;
-    }
-
-    const inputVal = Number(input.value);
-
-    resultDiv.style.display = "block";
-
-    if (inputVal > 0) {
-        const perWeek = inputVal * 2;
-        const perMonth = perWeek * 4;
-        const perYear = perWeek * 52;
-        resultDiv.style.color = "#2e7d32";
-        resultDiv.innerHTML = `Thanks to digital services, you save approximately:<br>` +
-            `<strong>${perWeek} hours</strong> per week<br>` +
-            `<strong>${perMonth} hours</strong> per month<br>` +
-            `<strong>${perYear} hours</strong> per year` +
-            `<br><div class="calc-method" style="display:block;margin-top:20px;padding-top:14px;border-top:1px dashed #cbd5e1;font-size:14px;font-weight:normal;line-height:1.8;">` +
-            `<b>How it is calculated:</b><br>` +
-            `Weekly hours = number of services × 2<br>` +
-            `Monthly hours = weekly hours × 4<br>` +
-            `Yearly hours = weekly hours × 52<br>` +
-            `<small>(number of services per week)</small>` +
-            `</div>`;
-    } else {
-        resultDiv.style.color = "#d32f2f";
-        resultDiv.innerHTML = "Please enter a valid number greater than zero.";
-    }
+    runCalculator("lessonsInputEn", "calcResultEn", "en");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
