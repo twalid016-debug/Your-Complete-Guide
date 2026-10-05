@@ -20,6 +20,6 @@
 
 الطريقة الثانية (التشغيل عبر رابط الاستضافة المباشر):
 افتح الرابط التالي في المتصفح لاستعراض الموقع كاملاً أونلاين:
-https://twalid016-debug.github.io/Your-Complete-Guide/index-ar.html
+https://twalid016-debug.github.io/Your-Complete-Guide/
 
 
