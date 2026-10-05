@@ -365,13 +365,13 @@ function calculateSavings() {
             `<strong>${perWeek} ساعة</strong> في الأسبوع<br>` +
             `<strong>${perMonth} ساعة</strong> في الشهر<br>` +
             `<strong>${perYear} ساعة</strong> في السنة` +
-            `<span class="calc-method" style="display:block;margin-top:16px;padding-top:12px;border-top:1px dashed #cbd5e1;font-size:14px;font-weight:normal;line-height:1.8;">` +
+            `<br><div class="calc-method" style="display:block;margin-top:20px;padding-top:14px;border-top:1px dashed #cbd5e1;font-size:14px;font-weight:normal;line-height:1.8;">` +
             `<b>طريقة الحساب:</b><br>` +
             `ساعات الأسبوع = عدد الخدمات × 2<br>` +
             `ساعات الشهر = ساعات الأسبوع × 4<br>` +
             `ساعات السنة = ساعات الأسبوع × 52<br>` +
             `<small>(عدد الخدمات في الأسبوع)</small>` +
-            `</span>`;
+            `</div>`;
     } else {
         resultDiv.style.color = "#d32f2f";
         resultDiv.innerHTML = "يرجى إدخال عدد صحيح أكبر من صفر.";
@@ -399,13 +399,13 @@ function calculateSavingsEn() {
             `<strong>${perWeek} hours</strong> per week<br>` +
             `<strong>${perMonth} hours</strong> per month<br>` +
             `<strong>${perYear} hours</strong> per year` +
-            `<span class="calc-method" style="display:block;margin-top:16px;padding-top:12px;border-top:1px dashed #cbd5e1;font-size:14px;font-weight:normal;line-height:1.8;">` +
+            `<br><div class="calc-method" style="display:block;margin-top:20px;padding-top:14px;border-top:1px dashed #cbd5e1;font-size:14px;font-weight:normal;line-height:1.8;">` +
             `<b>How it is calculated:</b><br>` +
             `Weekly hours = number of services × 2<br>` +
             `Monthly hours = weekly hours × 4<br>` +
             `Yearly hours = weekly hours × 52<br>` +
             `<small>(number of services per week)</small>` +
-            `</span>`;
+            `</div>`;
     } else {
         resultDiv.style.color = "#d32f2f";
         resultDiv.innerHTML = "Please enter a valid number greater than zero.";
