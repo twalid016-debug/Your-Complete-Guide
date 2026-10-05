@@ -1,361 +1,405 @@
-
-/* =========================
-   Settings Menu
-========================= */
+// يفعّل تأثيرات الظهور فقط عند تحميل هذا الملف بنجاح
+document.documentElement.classList.add("js");
 
 function toggleSettings() {
-
+ 
     const menu = document.getElementById("settingsMenu");
-
+ 
     if (menu) {
         menu.classList.toggle("show");
     }
-
+ 
 }
-
-
-/* =========================
-   Close Settings When Clicking Outside
-========================= */
-
+ 
+ 
 document.addEventListener("click", function (event) {
-
+ 
     const settingsContainer =
         document.querySelector(".settings-container");
-
+ 
     const menu =
         document.getElementById("settingsMenu");
-
+ 
     if (!settingsContainer || !menu) {
         return;
     }
-
+ 
     if (!settingsContainer.contains(event.target)) {
         menu.classList.remove("show");
     }
-
+ 
 });
-
-
-/* =========================
-   Change Language
-========================= */
-
+ 
+ 
 function changeLanguage() {
-
-    const currentPage = window.location.pathname;
-
-    if (currentPage.includes("-en.html")) {
-
-        window.location.href =
-            currentPage.replace("-en.html", "-ar.html");
-
+    let page = location.pathname.split('/').pop() || 'index.html';
+ 
+    if (page === 'index.html') {
+        page = 'index-en.html';
+    } else if (page === 'index-en.html') {
+        page = 'index.html';
+    } else if (page.includes('-ar')) {
+        page = page.replace('-ar', '-en');
+    } else if (page.includes('-en')) {
+        page = page.replace('-en', '-ar');
     }
-
-    else if (currentPage.includes("-ar.html")) {
-
-        window.location.href =
-            currentPage.replace("-ar.html", "-en.html");
-
-    }
-
+ 
+    location.href = page;
 }
-
-
-/* =========================
-   Dark / Light Mode
-========================= */
-
+ 
+ 
 function toggleTheme() {
-
+ 
     document.body.classList.toggle("dark-mode");
-
+ 
     const isDarkMode =
         document.body.classList.contains("dark-mode");
-
+ 
     localStorage.setItem(
         "theme",
         isDarkMode ? "dark" : "light"
     );
-
+ 
 }
-
-
-/* =========================
-   Load Saved Theme
-========================= */
-
+ 
+ 
 document.addEventListener("DOMContentLoaded", function () {
-
+ 
     const savedTheme =
         localStorage.getItem("theme");
-
+ 
     if (savedTheme === "dark") {
         document.body.classList.add("dark-mode");
     }
-
+ 
 });
-
-
-/* =========================
-   About Popup
-========================= */
-
+ 
+ 
 function showAbout() {
-
+ 
     const aboutOverlay =
         document.getElementById("aboutOverlay");
-
+ 
     if (aboutOverlay) {
         aboutOverlay.classList.add("show");
     }
-
+ 
 }
-
-
-/* =========================
-   Close About Popup
-========================= */
-
+ 
+ 
 function closeAbout() {
-
+ 
     const aboutOverlay =
         document.getElementById("aboutOverlay");
-
+ 
     if (aboutOverlay) {
         aboutOverlay.classList.remove("show");
     }
-
+ 
 }
-
-
-/* =========================
-   Close About When Clicking Outside
-========================= */
-
+ 
+ 
 document.addEventListener("click", function (event) {
-
+ 
     const aboutOverlay =
         document.getElementById("aboutOverlay");
-
+ 
     if (!aboutOverlay) {
         return;
     }
-
+ 
     if (event.target === aboutOverlay) {
         aboutOverlay.classList.remove("show");
     }
-
+ 
 });
-
-
-/* =========================
-   Platform Tabs
-========================= */
-
+ 
+ 
 document.addEventListener("DOMContentLoaded", function () {
-
+ 
     const buttons =
         document.querySelectorAll(".platform-tab");
-
+ 
     const sections =
         document.querySelectorAll(".platform-content");
-
-
+ 
+ 
     buttons.forEach(function (button) {
-
+ 
         button.addEventListener("click", function () {
-
+ 
             const target =
                 button.getAttribute("data-target");
-
-
+ 
+ 
             buttons.forEach(function (btn) {
                 btn.classList.remove("active");
             });
-
-
+ 
+ 
             sections.forEach(function (section) {
                 section.classList.remove("active");
             });
-
-
+ 
+ 
             button.classList.add("active");
-
-
+ 
+ 
             sections.forEach(function (section) {
-
+ 
                 if (
                     section.getAttribute("data-section")
                     === target
                 ) {
-
+ 
                     section.classList.add("active");
-
+ 
                 }
-
+ 
             });
-
+ 
         });
-
+ 
     });
-
+ 
 });
-
-
-/* =========================
-   Animated Particles
-========================= */
-
+ 
+ 
 document.addEventListener("DOMContentLoaded", function () {
-
+ 
     const particlesContainer =
         document.getElementById("particles");
-
+ 
     if (!particlesContainer) {
         return;
     }
-
-
+ 
+ 
     const numberOfParticles = 35;
-
+ 
     for (let i = 0; i < numberOfParticles; i++) {
-
+ 
         const particle =
             document.createElement("div");
-
+ 
         particle.classList.add("particle");
-
-
-        /* Random position */
-
+ 
+ 
         particle.style.left =
             Math.random() * 100 + "%";
-
+ 
         particle.style.top =
             Math.random() * 100 + "%";
-
-
-        /* Random size */
-
+ 
+ 
         const size =
             Math.random() * 5 + 3;
-
+ 
         particle.style.width =
             size + "px";
-
+ 
         particle.style.height =
             size + "px";
-
-
-        /* Random animation */
-
+ 
+ 
         particle.style.animationDuration =
             (Math.random() * 8 + 6) + "s";
-
+ 
         particle.style.animationDelay =
             (Math.random() * 5) + "s";
-
-
+ 
+ 
         particlesContainer.appendChild(particle);
-
+ 
     }
-
+ 
 });
+ 
+ 
+document.addEventListener("DOMContentLoaded", function () {
+ 
+    document.querySelectorAll(".counter").forEach(function (el) {
+ 
+        const target = Number(el.dataset.target);
+ 
+        const step = Math.max(1, Math.ceil(target / 50));
+ 
+        let n = 0;
+ 
+        const timer = setInterval(function () {
+ 
+            n += step;
+ 
+            if (n >= target) {
+                n = target;
+                clearInterval(timer);
+            }
+ 
+            el.textContent = n;
+ 
+        }, 30);
+ 
+    });
+ 
+ 
+    const revealItems = document.querySelectorAll(".reveal");
+ 
+    if (revealItems.length) {
+ 
+        const observer = new IntersectionObserver(function (entries) {
+ 
+            entries.forEach(function (entry) {
+ 
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    observer.unobserve(entry.target);
+                }
+ 
+            });
+ 
+        }, { threshold: 0.15 });
+ 
+        revealItems.forEach(function (item) {
+            observer.observe(item);
+        });
+ 
+    }
+ 
+ 
+    document.querySelectorAll(".acc-btn").forEach(function (btn) {
+ 
+        btn.addEventListener("click", function () {
+ 
+            const isOpen = btn.parentElement.classList.toggle("open");
+ 
+            btn.setAttribute("aria-expanded", isOpen);
+ 
+        });
+ 
+    });
+ 
+ 
+    const pwInput = document.getElementById("pwInput");
+ 
+    if (pwInput) {
+ 
+        const pwFill = document.getElementById("pwFill");
+ 
+        const pwText = document.getElementById("pwText");
+ 
+        const isEn = document.documentElement.lang === "en";
+ 
+        const labels = isEn
+            ? ["Very weak", "Weak", "Medium", "Strong", "Very strong"]
+            : ["ضعيفة جداً", "ضعيفة", "متوسطة", "قوية", "قوية جداً"];
+ 
+        const colors = ["#ef4444", "#f97316", "#eab308", "#22c55e", "#15803d"];
+ 
+        pwInput.addEventListener("input", function () {
+ 
+            const v = pwInput.value;
+ 
+            if (!v) {
+                pwFill.style.width = "0";
+                pwText.textContent = isEn ? "Type something to start" : "اكتب شيئاً لتبدأ";
+                return;
+            }
+ 
+            // الطول: من 0 إلى 3 نقاط
+            const lengthPts =
+                (v.length >= 8 ? 1 : 0) +
+                (v.length >= 12 ? 1 : 0) +
+                (v.length >= 16 ? 1 : 0);
 
+            // التنوع: عدد أنواع الأحرف (صغيرة، كبيرة، أرقام، رموز) من 0 إلى 3 نقاط
+            const classes =
+                (/[a-z]/.test(v) ? 1 : 0) +
+                (/[A-Z]/.test(v) ? 1 : 0) +
+                (/\d/.test(v) ? 1 : 0) +
+                (/[^A-Za-z0-9]/.test(v) ? 1 : 0);
+
+            const varietyPts = Math.min(3, Math.max(0, classes - 1));
+
+            const total = lengthPts + varietyPts; // من 0 إلى 6
+
+            let i;
+            if (total <= 1) i = 0;
+            else if (total === 2) i = 1;
+            else if (total === 3) i = 2;
+            else if (total <= 5) i = 3;
+            else i = 4;
+
+            // كلمة المرور أقصر من 8 أحرف لا تتعدى "ضعيفة" مهما كان تنوعها
+            if (v.length < 8) i = Math.min(i, 1);
+
+            pwFill.style.width = (i + 1) * 20 + "%";
+            pwFill.style.backgroundColor = colors[i];
+            pwText.textContent = labels[i];
+ 
+        });
+ 
+    }
+ 
+});
+ 
+ 
 function calculateSavings() {
-    const count = parseFloat(document.getElementById('lessonsInput').value);
-    const period = document.getElementById('periodSelect').value;
+    const inputVal = document.getElementById('lessonsInput').value;
     const resultDiv = document.getElementById('calcResult');
-    
-    if (count && count > 0) {
-        let totalHours = 0;
-        let periodText = "";
-        let breakdownText = "";
-
-        if (period === "week") {
-            totalHours = count * 2;
-            periodText = "أسبوعياً";
-            breakdownText = `• التوفير الأسبوعي: ${count} معاملة × 2 ساعة = <strong>${totalHours} ساعات أسبوعياً</strong>.`;
-        } else if (period === "month") {
-            totalHours = count * 2 * 4;
-            periodText = "شهرياً";
-            breakdownText = `• التوفير الشهري: ${count} معاملة أسبوعياً × 2 ساعة × 4 أسابيع = <strong>${totalHours} ساعة شهرياً</strong>.`;
-        } else if (period === "year") {
-            totalHours = count * 2 * 52;
-            periodText = "سنوياً";
-            breakdownText = `• التوفير السنوي: ${count} معاملة أسبوعياً × 2 ساعة × 52 أسبوعاً = <strong>${totalHours} ساعة سنوياً</strong>.`;
-        }
-
-        resultDiv.style.display = "block";
-        resultDiv.style.backgroundColor = "#f0fdf4";
-        resultDiv.style.border = "1px solid #bbf7d0";
-        resultDiv.style.color = "#166534";
-        
-        resultDiv.innerHTML = `
-            <div style="font-size: 18px; margin-bottom: 10px;">
-                🎉 إجمالي الوقت الموفر: <strong>${totalHours} ساعة ${periodText}!</strong>
-            </div>
-            <div style="font-size: 13px; color: #4b5563; border-top: 1px dashed #cbd5e1; padding-top: 10px; line-height: 1.6; text-align: right;">
-                <strong>طريقة الحساب:</strong><br>
-                • الوقت التقديري للخدمة الميدانية (تنقل + انتظار): <strong>2 ساعة</strong> لكل معاملة.<br>
-                ${breakdownText}
-            </div>
-        `;
+ 
+    if (inputVal && inputVal > 0) {
+ 
+        const hoursSaved = inputVal * 2 * 4;
+        resultDiv.style.color = "#2e7d32";
+        resultDiv.innerHTML = `بفضل استخدامك للخدمات الرقمية، توفر حوالي <strong>${hoursSaved} ساعة</strong> شهرياً!`;
     } else {
-        resultDiv.style.display = "block";
-        resultDiv.style.backgroundColor = "#fef2f2";
-        resultDiv.style.border = "1px solid #fecaca";
-        resultDiv.style.color = "#991b1b";
+        resultDiv.style.color = "#d32f2f";
         resultDiv.innerHTML = "يرجى إدخال عدد صحيح أكبر من صفر.";
     }
 }
-
-
+ 
 function calculateSavingsEn() {
-    const count = parseFloat(document.getElementById('lessonsInputEn').value);
-    const period = document.getElementById('periodSelectEn').value;
+    const inputVal = document.getElementById('lessonsInputEn').value;
     const resultDiv = document.getElementById('calcResultEn');
-    
-    if (count && count > 0) {
-        let totalHours = 0;
-        let periodText = "";
-        let breakdownText = "";
-
-        if (period === "week") {
-            totalHours = count * 2;
-            periodText = "weekly";
-            breakdownText = `• Weekly Savings: ${count} transactions × 2 hours = <strong>${totalHours} hours/week</strong>.`;
-        } else if (period === "month") {
-            totalHours = count * 2 * 4;
-            periodText = "monthly";
-            breakdownText = `• Monthly Savings: ${count} transactions/week × 2 hours × 4 weeks = <strong>${totalHours} hours/month</strong>.`;
-        } else if (period === "year") {
-            totalHours = count * 2 * 52;
-            periodText = "yearly";
-            breakdownText = `• Yearly Savings: ${count} transactions/week × 2 hours × 52 weeks = <strong>${totalHours} hours/year</strong>.`;
-        }
-
-        resultDiv.style.display = "block";
-        resultDiv.style.backgroundColor = "#f0fdf4";
-        resultDiv.style.border = "1px solid #bbf7d0";
-        resultDiv.style.color = "#166534";
-        
-        resultDiv.innerHTML = `
-            <div style="font-size: 18px; margin-bottom: 10px;">
-                🎉 Total Saved Time: <strong>${totalHours} hours ${periodText}!</strong>
-            </div>
-            <div style="font-size: 13px; color: #4b5563; border-top: 1px dashed #cbd5e1; padding-top: 10px; line-height: 1.6; text-align: left;">
-                <strong>Calculation Method:</strong><br>
-                • Estimated time per physical visit (travel + waiting): <strong>2 hours</strong>.<br>
-                ${breakdownText}
-            </div>
-        `;
+ 
+    if (inputVal && inputVal > 0) {
+        const hoursSaved = inputVal * 2 * 4;
+        resultDiv.style.color = "#2e7d32";
+        resultDiv.innerHTML = `Thanks to digital services, you save approximately <strong>${hoursSaved} hours</strong> monthly!`;
     } else {
-        resultDiv.style.display = "block";
-        resultDiv.style.backgroundColor = "#fef2f2";
-        resultDiv.style.border = "1px solid #fecaca";
-        resultDiv.style.color = "#991b1b";
+        resultDiv.style.color = "#d32f2f";
         resultDiv.innerHTML = "Please enter a valid number greater than zero.";
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const page = location.pathname.split("/").pop() || "index.html";
+
+    if (page === "index.html" || page === "index-en.html") {
+        return;
+    }
+
+    const isEn = document.documentElement.lang === "en";
+
+    const backButton = document.createElement("button");
+
+    backButton.className = "back-arrow";
+
+    backButton.setAttribute("aria-label", isEn ? "Back" : "رجوع");
+
+    backButton.textContent = isEn ? "←" : "→";
+
+    backButton.addEventListener("click", function () {
+
+        if (history.length > 1) {
+            history.back();
+        } else {
+            location.href = isEn ? "index-en.html" : "index.html";
+        }
+
+    });
+
+    document.body.appendChild(backButton);
+
+});
