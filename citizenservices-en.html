@@ -239,32 +239,27 @@
 
     </section>
 
-<section id="calculator" class="calc-section">
-    <div class="calc-container">
-        <h2 class="calc-title">Digital Transformation Time-Saver Calculator</h2>
-        <p class="calc-subtitle">Enter your weekly transactions/lessons and select a period to view total saved time:</p>
-        
-        <div class="calc-card">
-        
-            <div class="calc-input-group">
-                <label for="lessonsInputEn">Weekly Transactions / Lessons:</label>
-                <input type="number" id="lessonsInputEn" min="1"/>
-            </div>
-
-            <div class="calc-input-group">
-                <label for="periodSelectEn">Calculate Savings For:</label>
-                <select id="periodSelectEn" class="calc-select">
-                    <option value="week">Weekly</option>
-                    <option value="month" selected>Monthly</option>
-                    <option value="year">Yearly</option>
-                </select>
-            </div>
-            
-            <button type="button" class="calc-btn" onclick="calculateSavingsEn()">Calculate Saved Time</button>
-            
-            <div id="calcResultEn" class="calc-result-box"></div>
-        </div>
+<section class="calc-section">
+  <div class="calc-container">
+    <h2 class="calc-title">Time Calculator</h2>
+    <p class="calc-subtitle">See how many hours you save</p>
+    <div class="calc-card">
+      <div class="calc-input-group">
+        <label for="lessonsInputEn">Number of services per week</label>
+        <input type="number" id="lessonsInputEn" min="1">
+      </div>
+      <div class="calc-input-group">
+        <label for="periodSelectEn">Period</label>
+        <select id="periodSelectEn" class="calc-select">
+          <option value="week">Week</option>
+          <option value="month">Month</option>
+          <option value="year">Year</option>
+        </select>
+      </div>
+      <button type="button" class="calc-btn" onclick="calculateSavingsEn()">Calculate</button>
+      <div class="calc-result-box" id="calcResultEn"></div>
     </div>
+  </div>
 </section>
 
 
