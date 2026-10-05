@@ -1212,6 +1212,37 @@ body.dark-mode .hero a {
     background: #2563eb;
 }
 
+.back-arrow {
+    position: fixed;
+    top: 90px;
+    inset-inline-start: 20px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: #1e3a8a;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 900;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.back-arrow:hover {
+    background: #162d6b;
+    transform: scale(1.08);
+}
+
+.back-arrow:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 3px;
+}
+
+body.dark-mode .back-arrow {
+    background: #2563eb;
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
