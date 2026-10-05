@@ -366,7 +366,7 @@ function calculateSavings() {
             `<strong>${perMonth} ساعة</strong> في الشهر<br>` +
             `<strong>${perYear} ساعة</strong> في السنة` +
             `<span class="calc-method">` +
-            `<b>طريقة الحساب:</b><br>` +
+            `<b> طريقة الحساب :</b><br>` +
             `ساعات الأسبوع = عدد الخدمات × 2<br>` +
             `ساعات الشهر = ساعات الأسبوع × 4<br>` +
             `ساعات السنة = ساعات الأسبوع × 52<br>` +
