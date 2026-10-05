@@ -343,24 +343,49 @@ document.addEventListener("DOMContentLoaded", function () {
 });
  
  
-// يقرأ الفترة المختارة (أسبوع / شهر / سنة) من القائمة المنسدلة داخل نفس كارت الحاسبة
+// يقرأ الفترة المختارة (أسبوع / شهر / سنة) من القائمة المنسدلة أو من خيارات الراديو
 function detectPeriod(input) {
 
-    const card = input.closest(".calc-card") || document;
+    const scopes = [
+        input.closest(".calc-card"),
+        input.closest(".calc-container"),
+        input.closest(".calc-section"),
+        document
+    ];
 
-    const select = card.querySelector("select");
+    let text = "";
 
-    if (!select || select.selectedIndex < 0) {
-        return null;
+    for (let i = 0; i < scopes.length && !text; i++) {
+
+        const scope = scopes[i];
+
+        if (!scope) {
+            continue;
+        }
+
+        const select = scope.querySelector("select");
+
+        if (select && select.selectedIndex >= 0) {
+            text = select.value + " " + select.options[select.selectedIndex].text;
+            break;
+        }
+
+        const radio = scope.querySelector("input[type='radio']:checked");
+
+        if (radio) {
+            const label = radio.id
+                ? scope.querySelector("label[for='" + radio.id + "']")
+                : null;
+            text = radio.value + " " + (label ? label.textContent : "");
+            break;
+        }
     }
 
-    const text = (
-        select.value + " " + select.options[select.selectedIndex].text
-    ).toLowerCase();
+    text = text.toLowerCase();
 
     if (/week|أسبوع|اسبوع/.test(text)) return "week";
     if (/month|شهر/.test(text)) return "month";
-    if (/year|سنة|سنه|عام/.test(text)) return "year";
+    if (/year|سنة|سنه|سنو|عام/.test(text)) return "year";
 
     return null;
 }
