@@ -1086,6 +1086,7 @@ body.dark-mode .platform-content h2,
 body.dark-mode .security-section > h2,
 body.dark-mode .pw-box h3,
 body.dark-mode .security-card h3,
+body.dark-mode .info-card h3,
 body.dark-mode .counter {
     color: #93c5fd;
 }
@@ -1170,6 +1171,63 @@ body.dark-mode .close-about {
 body.dark-mode .particle {
     background-color: #60a5fa;
     opacity: 0.35;
+}
+
+/* ===== index.html / index-en.html additions ===== */
+
+.pw-box input::placeholder {
+    color: #94a3b8;
+}
+
+.login-icon {
+    line-height: 1;
+}
+
+.hero a:focus-visible,
+.login-button:focus-visible,
+.settings-button:focus-visible,
+.settings-menu button:focus-visible,
+.pw-box input:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 3px;
+}
+
+body.dark-mode .security-card {
+    border-top-color: #3b82f6;
+}
+
+body.dark-mode .security-number {
+    color: #60a5fa;
+}
+
+body.dark-mode .hero-small-title {
+    color: #93c5fd !important;
+}
+
+body.dark-mode .pw-box input::placeholder {
+    color: #64748b;
+}
+
+body.dark-mode .hero a {
+    background: #2563eb;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .hero h1,
+    .hero > p,
+    .settings-menu {
+        animation: none;
+    }
 }
 
 @media (max-width: 768px) {
